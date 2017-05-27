@@ -4,8 +4,6 @@ modified master work dwarf fortress
 
 This is the amostubal produced varient of masterwork dwarf fortress, it is updated to 43.05 x64, and has many fixes implemented over the last 2 months since its production.  the product is still considered to be owned by Meph and this will be deleted upon his request.
 
-This is the version 1.27 planned branch of the repository.  
+This is a fork with some support for Macs.  Sorry, no launcher/configuration tool, but you can run the windows version from a shared folder in a VM and it will work.  A cross platform configuration tool would be great, but that will take some time.
 
-Note to Contributors:  
- Please fork the 1.27 planned branch and make your pull request to that branch.
 
