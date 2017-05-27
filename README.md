@@ -1,4 +1,4 @@
-# modified MWDF
+# modified MWDF for mac
 modified master work dwarf fortress
 
 
