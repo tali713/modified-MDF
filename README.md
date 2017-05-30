@@ -6,4 +6,4 @@ This is the amostubal produced variant of masterwork dwarf fortress, it is updat
 
 This is a fork with some support for Macs.  Sorry, no launcher/configuration tool, but you can either run the windows version from a shared folder in a VM or launch it via wine and it will work for configuring, though you will still need to launch dwarf fortress manually via dfhack.  A cross platform configuration tool would be great, but that will take some time.
 
-
+Though every effort is made to make sure this branch reflects the most recent updates on Amostubal's fork while maintaing mac compatibility, there may well be some minor bug that slips through.  If you find a bug in this fork please report it here.

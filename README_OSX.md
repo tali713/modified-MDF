@@ -7,7 +7,3 @@ Assuming you have winetricks installed set up a prefix, for example `WINEPREFIX=
 
 ## Running in wine
 Assuming everything is set up exactly as described above, just open a terminal in the directory containing "Masterwork Dwarf Fortress.exe" and run `WINEPREFIX="$HOME/prefix32" WINEARCH=win32 wine Masterwork\ Dwarf\ Fortress.exe`
-
-
-
-
