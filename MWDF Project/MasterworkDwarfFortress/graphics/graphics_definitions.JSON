@@ -125,6 +125,11 @@
 		"ColorScheme":"MEPH"
 	},
 	{
+		"Name":"Meph - 24x24",
+		"TilesetType":"MDF",
+		"ColorScheme":"MEPH"
+	},
+	{
 		"Name":"Meph - 32x32",
 		"TilesetType":"MDF",
 		"ColorScheme":"MEPH"
