@@ -1,483 +1,640 @@
-* General World
-** Temperature
-   d_init.txt
-** Weather
-   d_init.txt
-** Cave-ins
-   d_init.txt
-** Invaders
-   d_init.txt
-** Liquid Depth
-   d_init.txt
-** Adventurer Traps
-   d_init.txt
-** Adventurer Center
-   d_init.txt
-** No Pet Coffins
-   d_init.txt
-** Population Cap
-   d_init.txt
-** Child/Baby Cap
-   d_init.txt
+* Functions
+* Init Page
+** General World
+    - File :: d_init.txt
+*** Temperature
+    - Token :: TEMPERATURE
+    - Type :: Boolean
+    - Values :: YES|NO
 
-* Save & Load
+*** Weather
+    - Token :: WEATHER
+    - Type :: Boolean
+    - Values :: YES|NO
 
-        OptionSingleReplace1.disabledValue = "]NO_STOP_TRANSFORMATION"
-        OptionSingleReplace1.enabledValue = ":BOX:P:R]YES_STOP_TRANS"
-        OptionSingleReplace2.disabledValue = "]NO_STOP_DIGGIN"
-        OptionSingleReplace2.enabledValue = ":P:R]YESSTOPDIG"
-        Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
-        Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
-        RawToken1.optionOffValue = "NO_STANDARDIZED_MEAT_!"
-        RawToken1.optionOnValue = "YES_STANDARDIZED_MEAT["
-        RawToken2.optionOffValue = "NO_STANDARDIZED_MEAT_["
-        RawToken2.optionOnValue = "YES_STANDARDIZED_MEAT!"
-        RawToken3.optionOffValue = "NO_STANDARDIZED_LEATHER_!"
-        RawToken3.optionOnValue = "YES_STANDARDIZED_LEATHER["
-        RawToken4.optionOffValue = "NO_STANDARDIZED_LEATHER_["
-        RawToken4.optionOnValue = "YES_STANDARDIZED_LEATHER!"
-        OptionSingleReplace3.disabledValue = "YES__DIVERSE__WOOD__MOD[TREE:LOCAL_PLANT_MAT"
-        OptionSingleReplace3.enabledValue = "NO_DIVERSE_WOOD[TREE:PLANT_MAT:STANDARD_WOOD"
-        OptionSingleReplace4.disabledValue = "!NO_CREATURES_TRAINABLE!"
-        OptionSingleReplace4.enabledValue = "ALL_CREATURES_TRAINABLE["
-        OptionSingleReplace5.disabledValue = "YESGARRISON!"
-        OptionSingleReplace5.enabledValue = "YESGARRISON["
-        OptionSingleReplace6.disabledValue = "YESGUILDHALL!"
-        OptionSingleReplace6.enabledValue = "YESGUILDHALL["
-        OptionSingleReplace7.disabledValue = "YES_LIAISON!"
-        OptionSingleReplace7.enabledValue = "YES_LIAISON["
-        OptionSingleReplace8.disabledValue = "YES_LIBRARY!"
-        OptionSingleReplace8.enabledValue = "YES_LIBRARY["
-        OptionSingleReplace9.disabledValue = "YES_WEAPONRY!"
-        OptionSingleReplace9.enabledValue = "YES_WEAPONRY["
-        OptionSingleReplace10.disabledValue = "YES_ARMORY!"
-        OptionSingleReplace10.enabledValue = "YES_ARMORY["
-        OptionSingleReplace11.disabledValue = "YES_JAVELIN!"
-        OptionSingleReplace11.enabledValue = "YES_JAVELIN["
-        OptionSingleReplace12.disabledValue = "!NOHEAVYSIEGE!"
-        OptionSingleReplace12.enabledValue = "YESHEAVYSIEGE["
-        OptionSingleReplace13.disabledValue = "YES_FINISHING!"
-        OptionSingleReplace13.enabledValue = "YES_FINISHING["
-        OptionSingleReplace14.disabledValue = "!NO_METALLURGIST!"
-        OptionSingleReplace14.enabledValue = "YES_METALLURGIST["
-        OptionSingleReplace15.disabledValue = "YES_CRUCIBLE!"
-        OptionSingleReplace15.enabledValue = "YES_CRUCIBLE["
-        OptionSingleReplace16.disabledValue = "YES_BLASTFURNACE!"
-        OptionSingleReplace16.enabledValue = "YES_BLASTFURNACE["
-        OptionSingleReplace17.disabledValue = "YES_VOLCANIC!"
-        OptionSingleReplace17.enabledValue = "YES_VOLCANIC["
-        OptionSingleReplace18.disabledValue = "YES_BRICKOVEN!"
-        OptionSingleReplace18.enabledValue = "YES_BRICKOVEN["
-        OptionSingleReplace19.disabledValue = "YES_CREMATORY!"
-        OptionSingleReplace19.enabledValue = "YES_CREMATORY["
-        OptionSingleReplace20.disabledValue = "YES_OREPROCESSOR!"
-        OptionSingleReplace20.enabledValue = "YES_OREPROCESSOR["
-        OptionSingleReplace21.disabledValue = "!NOARCHEOLOGIST!"
-        OptionSingleReplace21.enabledValue = "YESARCHEOLOGIST["
-        OptionSingleReplace22.disabledValue = "YES_WEIGHTBENCH!"
-        OptionSingleReplace22.enabledValue = "YES_WEIGHTBENCH["
-        OptionSingleReplace23.disabledValue = "YES_SHRINE!"
-        OptionSingleReplace23.enabledValue = "YES_SHRINE["
-        OptionSingleReplace24.disabledValue = "YES_ALCHEMIST!"
-        OptionSingleReplace24.enabledValue = "YES_ALCHEMIST["
-        OptionSingleReplace25.disabledValue = "YES_TITLES!"
-        OptionSingleReplace25.enabledValue = "YES_TITLES["
-        OptionSingleReplace26.disabledValue = "YES_BONECARVER!"
-        OptionSingleReplace26.enabledValue = "YES_BONECARVER["
-        OptionSingleReplace27.disabledValue = "YES_GEMCUTTER!"
-        OptionSingleReplace27.enabledValue = "YES_GEMCUTTER["
-        OptionSingleReplace28.disabledValue = "YES_WOODCRAFTER!"
-        OptionSingleReplace28.enabledValue = "YES_WOODCRAFTER["
-        OptionSingleReplace29.disabledValue = "YES_STONECRAFTER!"
-        OptionSingleReplace29.enabledValue = "YES_STONECRAFTER["
-        OptionSingleReplace30.disabledValue = "YES_FURNITURE!"
-        OptionSingleReplace30.enabledValue = "YES_FURNITURE["
-        OptionSingleReplace31.disabledValue = "YES_TAILOR!"
-        OptionSingleReplace31.enabledValue = "YES_TAILOR["
-        OptionSingleReplace32.disabledValue = "YES_POTTERY!"
-        OptionSingleReplace32.enabledValue = "YES_POTTERY["
-        OptionSingleReplace33.disabledValue = "!NO_DDD!"
-        OptionSingleReplace33.enabledValue = "YES_DDD["
-        Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumEndYear.Value = New Decimal(New Integer() {2, 0, 0, 0})
-        Me.optNumPopSize.Value = New Decimal(New Integer() {1, 0, 0, -2147483648})
-        Me.optNumCaveSizeMin.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumCaveSizeMax.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        OptionSingleReplace34.disabledValue = "0"
-        OptionSingleReplace34.enabledValue = "1"
-        Me.optNumCaverns.Value = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.optNumAboveCav1.Value = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.optNumAboveCav2.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumAboveCav3.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumAboveMagma.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.optNumAboveHFS.Value = New Decimal(New Integer() {2, 0, 0, 0})
-        OptionSingleReplace35.disabledValue = "0"
-        OptionSingleReplace35.enabledValue = "1"
-        OptionSingleReplace36.disabledValue = "0"
-        OptionSingleReplace36.enabledValue = "1"
-        OptionSingleReplace37.disabledValue = "!NO_MMM_MYTH!"
-        OptionSingleReplace37.enabledValue = "YES_MMM_MYTH["
-        OptionSingleReplace38.disabledValue = "!NO_MMM_GHOST!"
-        OptionSingleReplace38.enabledValue = "YES_MMM_GHOST["
-        OptionSingleReplace39.disabledValue = "!NO_MMM_HUNT!"
-        OptionSingleReplace39.enabledValue = "YES_MMM_HUNT["
-        OptionSingleReplace40.disabledValue = "!NO_MMM_PLUMP!"
-        OptionSingleReplace40.enabledValue = "YES_MMM_PLUMP["
-        OptionSingleReplace41.disabledValue = "!NO_MMM_BOGEY!"
-        OptionSingleReplace41.enabledValue = "YES_MMM_BOGEY["
-        OptionSingleReplace42.disabledValue = "!NO_MMM_CULT!"
-        OptionSingleReplace42.enabledValue = "YES_MMM_CULT["
-        OptionSingleReplace43.disabledValue = "!NO_MMM_MANCY!"
-        OptionSingleReplace43.enabledValue = "YES_MMM_MANCY["
-        RawToken5.optionOffValue = "NO_MORE_LEATHERMOD_["
-        RawToken5.optionOnValue = "YES_MORE_LEATHERMOD!"
-        RawToken6.optionOffValue = "NO_MORE_LEATHERMOD_!"
-        RawToken6.optionOnValue = "YES_MORE_LEATHERMOD["
-        OptionSingleReplace44.disabledValue = "!AQUIFER!"
-        OptionSingleReplace44.enabledValue = "[AQUIFER]"
-        OptionSingleReplace45.disabledValue = "YES_HARDERLEARNING!"
-        OptionSingleReplace45.enabledValue = "YES_HARDERLEARNING["
-        OptionSingleReplace46.disabledValue = "!NOWANDERER!"
-        OptionSingleReplace46.enabledValue = "YESWANDERER["
-        OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
-        OptionSingleReplace47.enabledValue = "YES_MERCHANTS_DWARF["
-        OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
-        OptionSingleReplace48.enabledValue = "YES_RANDOM_WEREBEAST["
-        OptionSingleReplace49.disabledValue = "YES_RANDOM_MEGABEAST!"
-        OptionSingleReplace49.enabledValue = "YES_RANDOM_MEGABEAST["
-        OptionSingleReplace50.disabledValue = "YES_RANDOM_DEMON!"
-        OptionSingleReplace50.enabledValue = "YES_RANDOM_DEMON["
-        OptionSingleReplace51.disabledValue = "YES_RANDOM_PET!"
-        OptionSingleReplace51.enabledValue = "YES_RANDOM_PET["
-        OptionSingleReplace52.disabledValue = "YES_RANDOM_CAVERN_CREATURE!"
-        OptionSingleReplace52.enabledValue = "YES_RANDOM_CAVERN_CREATURE["
-        OptionSingleReplace53.disabledValue = "YES_RANDOM_AQUATIC_CREATURE!"
-        OptionSingleReplace53.enabledValue = "YES_RANDOM_AQUATIC_CREATURE["
-        OptionSingleReplace54.disabledValue = "YES_RANDOM_VERMIN!"
-        OptionSingleReplace54.enabledValue = "YES_RANDOM_VERMIN["
-        OptionSingleReplace55.disabledValue = "YES_RANDOM_SAPIENT!"
-        OptionSingleReplace55.enabledValue = "YES_RANDOM_SAPIENT["
-        OptionSingleReplace56.disabledValue = "YES_RANDOM_CREATURE!"
-        OptionSingleReplace56.enabledValue = "YES_RANDOM_CREATURE["
-        OptionSingleReplace57.disabledValue = "YES_RANDOM_FLIER!"
-        OptionSingleReplace57.enabledValue = "YES_RANDOM_FLIER["
-        OptionSingleReplace58.disabledValue = "YES_RANDOM_VAMPIRE!"
-        OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
-        OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
-        OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
-        OptionSingleReplace60.disabledValue = "YES_VANILLA_FLIER!"
-        OptionSingleReplace60.enabledValue = "YES_VANILLA_FLIER["
-        OptionSingleReplace61.disabledValue = "YES_SURFACE_CREATURE_VANILLA!"
-        OptionSingleReplace61.enabledValue = "YES_SURFACE_CREATURE_VANILLA["
-        OptionSingleReplace62.disabledValue = "YES_VANILLA_SAPIENT!"
-        OptionSingleReplace62.enabledValue = "YES_VANILLA_SAPIENT["
-        OptionSingleReplace63.disabledValue = "YES_MEGABEAST_VANILLA!"
-        OptionSingleReplace63.enabledValue = "YES_MEGABEAST_VANILLA["
-        OptionSingleReplace64.disabledValue = "YES_CREATURE_DOMESTIC_VANILLA!"
-        OptionSingleReplace64.enabledValue = "YES_CREATURE_DOMESTIC_VANILLA["
-        OptionSingleReplace65.disabledValue = "YES_CAVERN_CREATURE_VANILLA!"
-        OptionSingleReplace65.enabledValue = "YES_CAVERN_CREATURE_VANILLA["
-        OptionSingleReplace66.disabledValue = "YES_AQUATIC_CREATURES_VANILLA!"
-        OptionSingleReplace66.enabledValue = "YES_AQUATIC_CREATURES_VANILLA["
-        OptionSingleReplace67.disabledValue = "YES_VERMIN_VANILLA!"
-        OptionSingleReplace67.enabledValue = "YES_VERMIN_VANILLA["
-        OptionSingleReplace68.disabledValue = "YES_WAGON_VANILLA!"
-        OptionSingleReplace68.enabledValue = "YES_WAGON_VANILLA["
-        OptionSingleReplace69.disabledValue = "YES_CREATURE_FANCIFUL_VANILLA!"
-        OptionSingleReplace69.enabledValue = "YES_CREATURE_FANCIFUL_VANILLA["
-        Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
-        Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
-        Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        OptionSingleReplace70.disabledValue = "YES_DISPLAYCASE!"
-        OptionSingleReplace70.enabledValue = "YES_DISPLAYCASE["
-        OptionSingleReplace71.disabledValue = "YES_BANNER!"
-        OptionSingleReplace71.enabledValue = "YES_BANNER["
-        OptionSingleReplace72.disabledValue = "NO__STANDARD__BLOOD__MOD_[BLOOD:LOCAL_CREATURE_MAT"
-        OptionSingleReplace72.enabledValue = "YES_STANDARD_BLOOD[BLOOD:CREATURE_MAT:ANIMAL_BLOOD"
-        OptionSingleReplace73.disabledValue = "NO__STANDARD__MILK__MOD[MILKABLE:LOCAL_CREATURE:MAT:MILK"
-        OptionSingleReplace73.enabledValue = "YES_STANDARD_MILK[MILKABLE:CREATURE_MAT:ANIMAL_MILK:MILK"
-        OptionSingleReplace74.disabledValue = "!NO_KAZOO_SILK!"
-        OptionSingleReplace74.enabledValue = "YES_KAZOO_SILK["
-        OptionSingleReplace75.disabledValue = "YES_CAMPFIRE!"
-        OptionSingleReplace75.enabledValue = "YES_CAMPFIRE["
-        OptionSingleReplace76.disabledValue = "tesb-add-pets -race TESB_PET_ROCK -"
-        OptionSingleReplace76.enabledValue = "#tesb-add-pets -race TESB_PET_ROCK#"
-        RawToken7.optionOffValue = "!NO_TESB!"
-        RawToken7.optionOnValue = "YES_TESB["
-        RawToken8.optionOffValue = "#tesb-job-monitor#"
-        RawToken8.optionOnValue = "tesb-job-monitor -"
-        RawToken9.optionOffValue = "#modtools/reaction-trigger#reactionName TESB_"
-        RawToken9.optionOnValue = "modtools/reaction-trigger -reactionName TESB_"
-        OptionSingleReplace77.disabledValue = "!NO_SECRET_TESB!"
-        OptionSingleReplace77.enabledValue = "YES_SECRET_TESB["
-        OptionSingleReplace78.disabledValue = "#hi#de#"
-        OptionSingleReplace78.enabledValue = "hide "
-        OptionSingleReplace79.disabledValue = "YES_STANDARD_GRASS["
-        OptionSingleReplace79.enabledValue = "YES_STANDARD_GRASS!"
-        OptionSingleReplace80.disabledValue = "YES_CARPET!"
-        OptionSingleReplace80.enabledValue = "YES_CARPET["
-        OptionSingleReplace81.disabledValue = "YES_PREFSTRING!"
-        OptionSingleReplace81.enabledValue = "YES_PREFSTRING["
-        OptionSingleReplace82.disabledValue = "YES_DESCRIPTOR_UMIMAN!"
-        OptionSingleReplace82.enabledValue = "YES_DESCRIPTOR_UMIMAN["
-        OptionSingleReplace83.disabledValue = "!NO_ARCTIC_CREATURE!"
-        OptionSingleReplace83.enabledValue = "YES_ARCTIC_CREATURE["
-        OptionSingleReplace84.disabledValue = "!NO_ARCTIC_PLANT!"
-        OptionSingleReplace84.enabledValue = "YES_ARCTIC_PLANT["
-        OptionSingleReplace85.disabledValue = "!NO_ARCTIC_ENTITY!"
-        OptionSingleReplace85.enabledValue = "YES_ARCTIC_ENTITY["
-        OptionSingleReplace86.disabledValue = "!NO_MORE_FOOD!"
-        OptionSingleReplace86.enabledValue = "YES_MORE_FOOD["
-        OptionSingleReplace87.disabledValue = "YES_ROCKFORGE!"
-        OptionSingleReplace87.enabledValue = "YES_ROCKFORGE["
-        OptionSingleReplace88.disabledValue = "YES_GEMFORGE!"
-        OptionSingleReplace88.enabledValue = "YES_GEMFORGE["
-        OptionSingleReplace89.disabledValue = "YES_BONEFORGE!"
-        OptionSingleReplace89.enabledValue = "YES_BONEFORGE["
-        OptionSingleReplace90.disabledValue = "YES_GLASSFORGE!"
-        OptionSingleReplace90.enabledValue = "YES_GLASSFORGE["
-        OptionSingleReplace91.disabledValue = "YES_DYER_STUDIO!"
-        OptionSingleReplace91.enabledValue = "YES_DYER_STUDIO["
-        OptionSingleReplace92.disabledValue = "YES_EMBROIDERY_STUDIO!"
-        OptionSingleReplace92.enabledValue = "YES_EMBROIDERY_STUDIO["
-        OptionSingleReplace93.disabledValue = "YES_THATCHERY_DWARF!"
-        OptionSingleReplace93.enabledValue = "YES_THATCHERY_DWARF["
-        OptionSingleReplace94.disabledValue = "YES_POISON_VAT!"
-        OptionSingleReplace94.enabledValue = "YES_POISON_VAT["
-        OptionSingleReplace95.disabledValue = "!NO_75LEGENDS!"
-        OptionSingleReplace95.enabledValue = "YES_75LEGENDS["
-        OptionSingleReplace96.disabledValue = "!NO_STAL_ARMORY_MELEE!"
-        OptionSingleReplace96.enabledValue = "YES_STAL_ARMORY_MELEE["
-        OptionSingleReplace97.disabledValue = "!NO_STAL_ARMORY_RANGED!"
-        OptionSingleReplace97.enabledValue = "YES_STAL_ARMORY_RANGED["
-        OptionSingleReplace98.disabledValue = "!NO_STAL_ARMORY_ARMOR!"
-        OptionSingleReplace98.enabledValue = "YES_STAL_ARMORY_ARMOR["
-        OptionSingleReplace99.disabledValue = "!NO_TERRIBLE_WEAPONS!"
-        OptionSingleReplace99.enabledValue = "YES_TERRIBLE_WEAPONS["
-        OptionSingleReplace100.disabledValue = "!NO_GRIM_ARMOR!"
-        OptionSingleReplace100.enabledValue = "YES_GRIM_ARMOR["
-        OptionSingleReplace101.disabledValue = "!NO_GRIM_TRAPCOMP!"
-        OptionSingleReplace101.enabledValue = "YES_GRIM_TRAPCOMP["
-        OptionSingleReplace102.disabledValue = "!NO_GRIM_WEAPON!"
-        OptionSingleReplace102.enabledValue = "YES_GRIM_WEAPON["
-        OptionSingleReplace103.disabledValue = "#starvingdead #start"
-        OptionSingleReplace103.enabledValue = "starvingdead start"
-        OptionSingleReplace104.disabledValue = "#deterioratefood #start"
-        OptionSingleReplace104.enabledValue = "deterioratefood start"
-        OptionSingleReplace105.disabledValue = "#deteriorateclothes #start"
-        OptionSingleReplace105.enabledValue = "deteriorateclothes start"
-        OptionSingleReplace106.disabledValue = "#deterioratecorpses #start"
-        OptionSingleReplace106.enabledValue = "deterioratecorpses start"
-        OptionSingleReplace107.disabledValue = "YES_HERMETIC_ORC!"
-        OptionSingleReplace107.enabledValue = "YES_HERMETIC_ORC["
-        OptionSingleReplace108.disabledValue = "YES_SPARRINGPIT_ORC!"
-        OptionSingleReplace108.enabledValue = "YES_SPARRINGPIT_ORC["
-        OptionSingleReplace109.disabledValue = "YES_ANATOMIC_ORC!"
-        OptionSingleReplace109.enabledValue = "YES_ANATOMIC_ORC["
-        OptionSingleReplace110.disabledValue = "YES_BLOODBOWL_ORC!"
-        OptionSingleReplace110.enabledValue = "YES_BLOODBOWL_ORC["
-        OptionSingleReplace111.disabledValue = "YES_CARAVAN_SHADOW_ORC!"
-        OptionSingleReplace111.enabledValue = "YES_CARAVAN_SHADOW_ORC["
-        OptionSingleReplace112.disabledValue = "YES_CARAVAN_FARM_ORC!"
-        OptionSingleReplace112.enabledValue = "YES_CARAVAN_FARM_ORC["
-        OptionSingleReplace113.disabledValue = "YES_CARAVAN_ARMS_ORC!"
-        OptionSingleReplace113.enabledValue = "YES_CARAVAN_ARMS_ORC["
-        OptionSingleReplace114.disabledValue = "YES_CARAVAN_GENERAL_ORC!"
-        OptionSingleReplace114.enabledValue = "YES_CARAVAN_GENERAL_ORC["
-        OptionSingleReplace115.disabledValue = "YES_TINKERER_ORC!"
-        OptionSingleReplace115.enabledValue = "YES_TINKERER_ORC["
-        OptionSingleReplace116.disabledValue = "YES_MUCKRACKER_ORC!"
-        OptionSingleReplace116.enabledValue = "YES_MUCKRACKER_ORC["
-        OptionSingleReplace117.disabledValue = "YES_QUARRY_ORC!"
-        OptionSingleReplace117.enabledValue = "YES_QUARRY_ORC["
-        OptionSingleReplace118.disabledValue = "YES_OVERSEER_ORC!"
-        OptionSingleReplace118.enabledValue = "YES_OVERSEER_ORC["
-        OptionSingleReplace119.disabledValue = "YES_CARPET_ORC!"
-        OptionSingleReplace119.enabledValue = "YES_CARPET_ORC["
-        OptionSingleReplace120.disabledValue = "YES_BANNER_ORC!"
-        OptionSingleReplace120.enabledValue = "YES_BANNER_ORC["
-        OptionSingleReplace121.disabledValue = "YES_CAMPFIRE_ORC!"
-        OptionSingleReplace121.enabledValue = "YES_CAMPFIRE_ORC["
-        OptionSingleReplace122.disabledValue = "YES_DISPLAYCASE_ORC!"
-        OptionSingleReplace122.enabledValue = "YES_DISPLAYCASE_ORC["
-        OptionSingleReplace123.disabledValue = "YES_FLUIDCASTER_ORC!"
-        OptionSingleReplace123.enabledValue = "YES_FLUIDCASTER_ORC["
-        OptionSingleReplace124.disabledValue = "YES_ANCIENT_FOUNDRY_ORC!"
-        OptionSingleReplace124.enabledValue = "YES_ANCIENT_FOUNDRY_ORC["
-        OptionSingleReplace125.disabledValue = "YES_BLACKSMOKE_ORC!"
-        OptionSingleReplace125.enabledValue = "YES_BLACKSMOKE_ORC["
-        OptionSingleReplace126.disabledValue = "YES_MOLTEN_PIT!"
-        OptionSingleReplace126.enabledValue = "YES_MOLTEN_PIT["
-        OptionSingleReplace127.disabledValue = "YES_POISONGHETTO_ORC!"
-        OptionSingleReplace127.enabledValue = "YES_POISONGHETTO_ORC["
-        OptionSingleReplace128.disabledValue = "YES_BONEGHETTO_ORC!"
-        OptionSingleReplace128.enabledValue = "YES_BONEGHETTO_ORC["
-        OptionSingleReplace129.disabledValue = "YES_TAILOR_ORC!"
-        OptionSingleReplace129.enabledValue = "YES_TAILOR_ORC["
-        OptionSingleReplace130.disabledValue = "YES_SAWMILL_ORC!"
-        OptionSingleReplace130.enabledValue = "YES_SAWMILL_ORC["
-        OptionSingleReplace131.disabledValue = "YES_THIEVES_ORC!"
-        OptionSingleReplace131.enabledValue = "YES_THIEVES_ORC["
-        OptionSingleReplace132.disabledValue = "YES_DWARF_CELL!"
-        OptionSingleReplace132.enabledValue = "YES_DWARF_CELL["
-        OptionSingleReplace133.disabledValue = "YES_ELF_CELL!"
-        OptionSingleReplace133.enabledValue = "YES_ELF_CELL["
-        OptionSingleReplace134.disabledValue = "YES_HUMAN_CELL!"
-        OptionSingleReplace134.enabledValue = "YES_HUMAN_CELL["
-        OptionSingleReplace135.disabledValue = "YES_ARCHIVE_ORC!"
-        OptionSingleReplace135.enabledValue = "YES_ARCHIVE_ORC["
-        OptionSingleReplace136.disabledValue = "YES_POISON_VAT_ORC!"
-        OptionSingleReplace136.enabledValue = "YES_POISON_VAT_ORC["
-        OptionSingleReplace137.disabledValue = "YES_HANDPUMP_ORC!"
-        OptionSingleReplace137.enabledValue = "YES_HANDPUMP_ORC["
-        OptionSingleReplace138.disabledValue = "YES_FREELANCER_ORC!"
-        OptionSingleReplace138.enabledValue = "YES_FREELANCER_ORC["
-        OptionSingleReplace139.disabledValue = "YES_RAIDER_ORC!"
-        OptionSingleReplace139.enabledValue = "YES_RAIDER_ORC["
-        OptionSingleReplace140.disabledValue = "YES_TRIBAL_ORC!"
-        OptionSingleReplace140.enabledValue = "YES_TRIBAL_ORC["
-        OptionSingleReplace141.disabledValue = "YES_BONEFORGE_ORC!"
-        OptionSingleReplace141.enabledValue = "YES_BONEFORGE_ORC["
-        OptionSingleReplace142.disabledValue = "YES_FACTORY_ORC!"
-        OptionSingleReplace142.enabledValue = "YES_FACTORY_ORC["
-        OptionSingleReplace143.disabledValue = "YES_FLETCHER_ORC!"
-        OptionSingleReplace143.enabledValue = "YES_FLETCHER_ORC["
-        OptionSingleReplace144.disabledValue = "YES_DAMASCFORGE_ORC!"
-        OptionSingleReplace144.enabledValue = "YES_DAMASCFORGE_ORC["
-        OptionSingleReplace145.disabledValue = "YES_TOTEMPOLE_ORC!"
-        OptionSingleReplace145.enabledValue = "YES_TOTEMPOLE_ORC["
-        OptionSingleReplace146.disabledValue = "YES_ASHLANDGLASS_ORC!"
-        OptionSingleReplace146.enabledValue = "YES_ASHLANDGLASS_ORC["
-        OptionSingleReplace147.disabledValue = "YES_INVENTOR!"
-        OptionSingleReplace147.enabledValue = "YES_INVENTOR["
-        OptionSingleReplace148.disabledValue = "YES_HANDPUMP_DWARF!"
-        OptionSingleReplace148.enabledValue = "YES_HANDPUMP_DWARF["
-        OptionSingleReplace149.disabledValue = "YES_METALLURGIST_ORC!"
-        OptionSingleReplace149.enabledValue = "YES_METALLURGIST_ORC["
-        OptionSingleReplace150.disabledValue = "YES_ORC_LABEL!"
-        OptionSingleReplace150.enabledValue = "YES_ORC_LABEL["
-        OptionSingleReplace151.disabledValue = "!NO_MODEST_ATTACKS!"
-        OptionSingleReplace151.enabledValue = "YES_MODEST_ATTACKS["
-        OptionSingleReplace152.disabledValue = "!NO_MODEST_REACTIONS!"
-        OptionSingleReplace152.enabledValue = "YES_MODEST_REACTIONS["
-        OptionSingleReplace153.disabledValue = "!NO_MODEST_ORIENTATION!"
-        OptionSingleReplace153.enabledValue = "YES_MODEST_ORIENTATION["
-        OptionSingleReplace154.disabledValue = "YES_OUTPOST_ORC!"
-        OptionSingleReplace154.enabledValue = "YES_OUTPOST_ORC["
-        OptionSingleReplace155.disabledValue = "YES_LABEL_KOBOLD!"
-        OptionSingleReplace155.enabledValue = "YES_LABEL_KOBOLD["
-        OptionSingleReplace156.disabledValue = "YES_ARCHIVE_KOBOLD!"
-        OptionSingleReplace156.enabledValue = "YES_ARCHIVE_KOBOLD["
-        OptionSingleReplace157.disabledValue = "YES_POISON_VAT_KOBOLD!"
-        OptionSingleReplace157.enabledValue = "YES_POISON_VAT_KOBOLD["
-        OptionSingleReplace158.disabledValue = "YES_HANDPUMP_KOBOLD!"
-        OptionSingleReplace158.enabledValue = "YES_HANDPUMP_KOBOLD["
-        OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
-        OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
-        OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
-        OptionSingleReplace160.enabledValue = "[PET_EXOTIC]REDUCE_PET_MOD"
-        OptionSingleReplace161.disabledValue = "YES_DISPLAYCASE_KOBOLD!"
-        OptionSingleReplace161.enabledValue = "YES_DISPLAYCASE_KOBOLD["
-        OptionSingleReplace162.disabledValue = "YES_CAMPFIRE_KOBOLD!"
-        OptionSingleReplace162.enabledValue = "YES_CAMPFIRE_KOBOLD["
-        OptionSingleReplace163.disabledValue = "YES_CREMATORY_KOBOLD!"
-        OptionSingleReplace163.enabledValue = "YES_CREMATORY_KOBOLD["
-        OptionSingleReplace164.disabledValue = "YES_BRICK_KOBOLD!"
-        OptionSingleReplace164.enabledValue = "YES_BRICK_KOBOLD["
-        OptionSingleReplace165.disabledValue = "YES_BOOZEBURNER_KOBOLD!"
-        OptionSingleReplace165.enabledValue = "YES_BOOZEBURNER_KOBOLD["
-        OptionSingleReplace166.disabledValue = "YES_TOTEMPOLE_KOBOLD!"
-        OptionSingleReplace166.enabledValue = "YES_TOTEMPOLE_KOBOLD["
-        OptionSingleReplace167.disabledValue = "season-palette stop "
-        OptionSingleReplace167.enabledValue = "season-palette start"
-        OptionSingleReplace168.disabledValue = "YES_CLOTH_KOBOLD!"
-        OptionSingleReplace168.enabledValue = "YES_CLOTH_KOBOLD["
-        OptionSingleReplace169.disabledValue = "YES_GLASS_KOBOLD!"
-        OptionSingleReplace169.enabledValue = "YES_GLASS_KOBOLD["
-        OptionSingleReplace170.disabledValue = "YES_SHELL_KOBOLD!"
-        OptionSingleReplace170.enabledValue = "YES_SHELL_KOBOLD["
-        OptionSingleReplace171.disabledValue = "YES_SCALE_KOBOLD!"
-        OptionSingleReplace171.enabledValue = "YES_SCALE_KOBOLD["
-        OptionSingleReplace172.disabledValue = "YES_LEATHERTRIMMER_KOBOLD!"
-        OptionSingleReplace172.enabledValue = "YES_LEATHERTRIMMER_KOBOLD["
-        OptionSingleReplace173.disabledValue = "YES_UPHOLSTERY_KOBOLD!"
-        OptionSingleReplace173.enabledValue = "YES_UPHOLSTERY_KOBOLD["
-        OptionSingleReplace174.disabledValue = "YES_BONECHIPPER_KOBOLD!"
-        OptionSingleReplace174.enabledValue = "YES_BONECHIPPER_KOBOLD["
-        OptionSingleReplace175.disabledValue = "YES_CHITIN_KOBOLD!"
-        OptionSingleReplace175.enabledValue = "YES_CHITIN_KOBOLD["
-        OptionSingleReplace176.disabledValue = "YES_THATCH_KOBOLD!"
-        OptionSingleReplace176.enabledValue = "YES_THATCH_KOBOLD["
-        OptionSingleReplace177.disabledValue = "YES_BREEDINGWARREN_KOBOLD!"
-        OptionSingleReplace177.enabledValue = "YES_BREEDINGWARREN_KOBOLD["
-        OptionSingleReplace178.disabledValue = "YES_TRAINING_KOBOLD!"
-        OptionSingleReplace178.enabledValue = "YES_TRAINING_KOBOLD["
-        OptionSingleReplace179.disabledValue = "YES_PARCOUR_KOBOLD!"
-        OptionSingleReplace179.enabledValue = "YES_PARCOUR_KOBOLD["
-        OptionSingleReplace180.disabledValue = "YES_TRAP_KOBOLD!"
-        OptionSingleReplace180.enabledValue = "YES_TRAP_KOBOLD["
-        OptionSingleReplace181.disabledValue = "YES_WOODCARVER_KOBOLD!"
-        OptionSingleReplace181.enabledValue = "YES_WOODCARVER_KOBOLD["
-        OptionSingleReplace182.disabledValue = "YES_KOBOLD_MINING!"
-        OptionSingleReplace182.enabledValue = "YES_KOBOLD_MINING["
-        OptionSingleReplace183.disabledValue = "!NO_PATREON_REWARDS!"
-        OptionSingleReplace183.enabledValue = "YES_PATREON_REWARDS["
-        OptionSingleReplace184.disabledValue = "!NO_MORE_TOYS!"
-        OptionSingleReplace184.enabledValue = "YES_MORE_TOYS["
-        RawToken10.optionOffValue = "NO_STANDARD_TOYS_!"
-        RawToken10.optionOnValue = "YES_STANDARD_TOYS["
-        RawToken11.optionOffValue = "NO_STANDARD_TOYS_["
-        RawToken11.optionOnValue = "YES_STANDARD_TOYS!"
-        OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
-        OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
-        RawToken12.optionOffValue = "NO_PICKY_NOBLES_!"
-        RawToken12.optionOnValue = "YES_PICKY_NOBLES["
-        RawToken13.optionOffValue = "NO_PICKY_NOBLES_["
-        RawToken13.optionOnValue = "YES_PICKY_NOBLES!"
-        RawToken14.optionOffValue = "!NO_SLOWER_FARMING!"
-        RawToken14.optionOnValue = "YES_SLOWER_FARMING["
-        RawToken15.optionOffValue = "!NO_SLOWER_FARMING["
-        RawToken15.optionOnValue = "YES_SLOWER_FARMING!"
-        RawToken16.optionOffValue = "NO_GREEDY_NOBLES_!"
-        RawToken16.optionOnValue = "YES_GREEDY_NOBLES["
-        RawToken17.optionOffValue = "NO_GREEDY_NOBLES_["
-        RawToken17.optionOnValue = "YES_GREEDY_NOBLES!"
-        OptionSingleReplace186.disabledValue = "!NO_TANTRUM!"
-        OptionSingleReplace186.enabledValue = "YES_TANTRUM["
-        OptionSingleReplace187.disabledValue = "YES_CREATURES_MASTERWORK_VERMIN!"
-        OptionSingleReplace187.enabledValue = "YES_CREATURES_MASTERWORK_VERMIN["
-        OptionSingleReplace188.disabledValue = "YES_CREATURE_MASTERWORK_FISH!"
-        OptionSingleReplace188.enabledValue = "YES_CREATURE_MASTERWORK_FISH["
-        OptionSingleReplace189.disabledValue = "YES_CREATURE_MASTERWORK_ANIMAL!"
-        OptionSingleReplace189.enabledValue = "YES_CREATURE_MASTERWORK_ANIMAL["
-        OptionSingleReplace190.disabledValue = "YES_CREATURE_MASTERWORK_CAVERN!"
-        OptionSingleReplace190.enabledValue = "YES_CREATURE_MASTERWORK_CAVERN["
-        OptionSingleReplace191.disabledValue = "YES_CREATURES_MASTERWORK_FLIERS!"
-        OptionSingleReplace191.enabledValue = "YES_CREATURES_MASTERWORK_FLIERS["
-        OptionSingleReplace192.disabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE!"
-        OptionSingleReplace192.enabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE["
-        OptionSingleReplace193.disabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST!"
-        OptionSingleReplace193.enabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST["
-        OptionSingleReplace194.disabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS!"
-        OptionSingleReplace194.enabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS["
-        OptionSingleReplace195.disabledValue = "YES_CREATURE_MASTERWORK_HFS!"
-        OptionSingleReplace195.enabledValue = "YES_CREATURE_MASTERWORK_HFS["
-        OptionSingleReplace196.disabledValue = "YES_MASTERWORK_PETS!"
-        OptionSingleReplace196.enabledValue = "YES_MASTERWORK_PETS["
-        OptionSingleReplace197.disabledValue = "YES_CREATURE_MASTERWORK_MONSTER!"
-        OptionSingleReplace197.enabledValue = "YES_CREATURE_MASTERWORK_MONSTER["
-        OptionSingleReplace198.disabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL!"
-        OptionSingleReplace198.enabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL["
-        OptionSingleReplace199.disabledValue = "!NO_ZM5_DRAGONSDOGMA!"
-        OptionSingleReplace199.enabledValue = "YES_ZM5_DRAGONSDOGMA["
-        OptionSingleReplace200.disabledValue = "!NO_ZM5_BEASTS!"
-        OptionSingleReplace200.enabledValue = "YES_ZM5_BEASTS["
-        OptionSingleReplace201.disabledValue = "!NO_ZM5_MEGABEASTS!"
-        OptionSingleReplace201.enabledValue = "YES_ZM5_MEGABEASTS["
-        OptionSingleReplace202.disabledValue = "!NO_FEAR_THE_NIGHT!"
-        OptionSingleReplace202.enabledValue = "YES_FEAR_THE_NIGHT["
-        OptionSingleReplace203.disabledValue = "!NO_CREATURE_MEN!"
-        OptionSingleReplace203.enabledValue = "YES_CREATURE_MEN["
-        Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
+*** Cave-ins
+    - Token :: CAVEINS
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Invaders
+    - Token :: INVADERS
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Liquid Depth
+    - Token :: SHOW_FLOW_AMOUNTS
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Adventurer Traps
+    - Token :: ADVENTURER_TRAPS
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Adventurer Center
+    - Token :: ADVENTURER_ALWAYS_CENTER
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** No Pet Coffins
+    - Token :: COFFIN_NO_PETS_DEFAULT
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Population Cap
+    - Token :: POPULATION_CAP
+    - Type :: Integer
+    - Values :: 0-9999
+
+*** Child/Baby Cap
+    - Token :: BABY_CHILD_CAP
+    - Type :: Integer:Integer
+    - Values :: Cap|Percentage
+
+** Save & Load
+    - File :: d_init.txt
+*** Auto-Save
+    - Token :: AUTOSAVE
+    - Type :: Menu
+    - Values :: NONE|SEASONAL|YEARLY
+
+*** Auto-Save Pause
+    - Token :: AUTOSAVE_PAUSE
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Auto-Backup Saves
+    - Token :: AUTOBACKUP
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Initial Save
+    - Token :: INITIAL_SAVE
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Compressed Saves
+    - Token :: COMPRESSED_SAVES
+    - Type :: Boolean
+    - Values :: YES|NO
+
+*** Pause on Load
+    - Token :: PAUSE_ON_LOAD
+    - Type :: Boolean
+    - Values :: YES|NO
+
+** Announcements
+   announcements.txt
+*** Transform Message
+    - Type :: Boolean
+    - t_pattern :: ":BOX:P:R]YES_STOP_TRANS"
+    - f_pattern :: "]NO_STOP_TRANSFORMATION"
+    - Action :: String Replace
+
+*** Digging Stop
+    - Type :: Boolean
+    - t_pattern :: ":P:R]YESSTOPDIG"
+    - f_pattern :: "]NO_STOP_DIGGIN"
+    - Action :: String Replace
+
+** Graphics
+*** Color
+    colors.txt
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/Settings/Colors/
+    - Values :: f(get themes from file name)
+    - Action :: Copy file to data/init/colors.txt
+
+*** Print Mode
+    init.txt
+    - Token :: PRINT_MODE
+    - Type :: Menu
+    - Values :: 2D|2DSW|2DASYNC|STANDARD|ACCUM|FRAME|VBO|TWBT
+
+*** Font
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/Settings/Colors/
+    - Values :: f(get fonts from file name)
+    - Action :: Copy file to data/art/font.ttf
+
+*** Tileset
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/graphics/graphics_definitions.JSON
+    - Values :: f(get tilesets from json)
+    - Action :: Copy contents of directory to correct locations,
+                optionally set color theme, maybe do something depending on ASCII/MDF?
+
+*** Truetype Font
+    init.txt
+    - Type :: Boolean
+    - Token :: TRUETYPE
+    - Values YES|NO
+
+*** Creature Sprites
+    init.txt
+    - Type :: Boolean
+    - Token :: GRAPHICS
+    - Values :: YES|NO
+
+** Text-Will-Be-Text Plugin
+*** TWBT Font
+    font.png
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/Settings/TwbtFonts/
+    - Values :: f(get fonts from file name)
+    - Action :: Copy file to data/art/font.png
+
+*** Z-Levels
+    dfhack.init
+    - Type :: Integer
+    - token :: multilevel (special)
+    - Values :: 0-15
+
+** FPS & Sound
+*** FPS Display
+    init.txt
+    - Type :: Boolean
+    - Token :: FPS
+    - Values :: YES|NO
+
+*** Graphics Cap
+    init.txt
+    - Type :: Integer
+    - Token :: G_FPS_CAP
+    - Values :: 0-9999
+
+*** FPS Cap
+    init.txt
+    - Type :: Integer
+    - Token :: FPS_CAP
+    - Values :: 0-9999
+
+*** Sound
+    init.txt
+    - Type :: Boolean
+    - Token :: SOUND
+    - Values :: YES|NO
+
+*** Volume
+    init.txt
+    - Type :: Integer
+    - Token :: VOLUME
+    - Values :: 0-255
+
+* Data
+            Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
+            Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
+            RawToken1.optionOffValue = "NO_STANDARDIZED_MEAT_!"
+            RawToken1.optionOnValue = "YES_STANDARDIZED_MEAT["
+            RawToken2.optionOffValue = "NO_STANDARDIZED_MEAT_["
+            RawToken2.optionOnValue = "YES_STANDARDIZED_MEAT!"
+            RawToken3.optionOffValue = "NO_STANDARDIZED_LEATHER_!"
+            RawToken3.optionOnValue = "YES_STANDARDIZED_LEATHER["
+            RawToken4.optionOffValue = "NO_STANDARDIZED_LEATHER_["
+            RawToken4.optionOnValue = "YES_STANDARDIZED_LEATHER!"
+            OptionSingleReplace3.disabledValue = "YES__DIVERSE__WOOD__MOD[TREE:LOCAL_PLANT_MAT"
+            OptionSingleReplace3.enabledValue = "NO_DIVERSE_WOOD[TREE:PLANT_MAT:STANDARD_WOOD"
+            OptionSingleReplace4.disabledValue = "!NO_CREATURES_TRAINABLE!"
+            OptionSingleReplace4.enabledValue = "ALL_CREATURES_TRAINABLE["
+            OptionSingleReplace5.disabledValue = "YESGARRISON!"
+            OptionSingleReplace5.enabledValue = "YESGARRISON["
+            OptionSingleReplace6.disabledValue = "YESGUILDHALL!"
+            OptionSingleReplace6.enabledValue = "YESGUILDHALL["
+            OptionSingleReplace7.disabledValue = "YES_LIAISON!"
+            OptionSingleReplace7.enabledValue = "YES_LIAISON["
+            OptionSingleReplace8.disabledValue = "YES_LIBRARY!"
+            OptionSingleReplace8.enabledValue = "YES_LIBRARY["
+            OptionSingleReplace9.disabledValue = "YES_WEAPONRY!"
+            OptionSingleReplace9.enabledValue = "YES_WEAPONRY["
+            OptionSingleReplace10.disabledValue = "YES_ARMORY!"
+            OptionSingleReplace10.enabledValue = "YES_ARMORY["
+            OptionSingleReplace11.disabledValue = "YES_JAVELIN!"
+            OptionSingleReplace11.enabledValue = "YES_JAVELIN["
+            OptionSingleReplace12.disabledValue = "!NOHEAVYSIEGE!"
+            OptionSingleReplace12.enabledValue = "YESHEAVYSIEGE["
+            OptionSingleReplace13.disabledValue = "YES_FINISHING!"
+            OptionSingleReplace13.enabledValue = "YES_FINISHING["
+            OptionSingleReplace14.disabledValue = "!NO_METALLURGIST!"
+            OptionSingleReplace14.enabledValue = "YES_METALLURGIST["
+            OptionSingleReplace15.disabledValue = "YES_CRUCIBLE!"
+            OptionSingleReplace15.enabledValue = "YES_CRUCIBLE["
+            OptionSingleReplace16.disabledValue = "YES_BLASTFURNACE!"
+            OptionSingleReplace16.enabledValue = "YES_BLASTFURNACE["
+            OptionSingleReplace17.disabledValue = "YES_VOLCANIC!"
+            OptionSingleReplace17.enabledValue = "YES_VOLCANIC["
+            OptionSingleReplace18.disabledValue = "YES_BRICKOVEN!"
+            OptionSingleReplace18.enabledValue = "YES_BRICKOVEN["
+            OptionSingleReplace19.disabledValue = "YES_CREMATORY!"
+            OptionSingleReplace19.enabledValue = "YES_CREMATORY["
+            OptionSingleReplace20.disabledValue = "YES_OREPROCESSOR!"
+            OptionSingleReplace20.enabledValue = "YES_OREPROCESSOR["
+            OptionSingleReplace21.disabledValue = "!NOARCHEOLOGIST!"
+            OptionSingleReplace21.enabledValue = "YESARCHEOLOGIST["
+            OptionSingleReplace22.disabledValue = "YES_WEIGHTBENCH!"
+            OptionSingleReplace22.enabledValue = "YES_WEIGHTBENCH["
+            OptionSingleReplace23.disabledValue = "YES_SHRINE!"
+            OptionSingleReplace23.enabledValue = "YES_SHRINE["
+            OptionSingleReplace24.disabledValue = "YES_ALCHEMIST!"
+            OptionSingleReplace24.enabledValue = "YES_ALCHEMIST["
+            OptionSingleReplace25.disabledValue = "YES_TITLES!"
+            OptionSingleReplace25.enabledValue = "YES_TITLES["
+            OptionSingleReplace26.disabledValue = "YES_BONECARVER!"
+            OptionSingleReplace26.enabledValue = "YES_BONECARVER["
+            OptionSingleReplace27.disabledValue = "YES_GEMCUTTER!"
+            OptionSingleReplace27.enabledValue = "YES_GEMCUTTER["
+            OptionSingleReplace28.disabledValue = "YES_WOODCRAFTER!"
+            OptionSingleReplace28.enabledValue = "YES_WOODCRAFTER["
+            OptionSingleReplace29.disabledValue = "YES_STONECRAFTER!"
+            OptionSingleReplace29.enabledValue = "YES_STONECRAFTER["
+            OptionSingleReplace30.disabledValue = "YES_FURNITURE!"
+            OptionSingleReplace30.enabledValue = "YES_FURNITURE["
+            OptionSingleReplace31.disabledValue = "YES_TAILOR!"
+            OptionSingleReplace31.enabledValue = "YES_TAILOR["
+            OptionSingleReplace32.disabledValue = "YES_POTTERY!"
+            OptionSingleReplace32.enabledValue = "YES_POTTERY["
+            OptionSingleReplace33.disabledValue = "!NO_DDD!"
+            OptionSingleReplace33.enabledValue = "YES_DDD["
+            Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
+            Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumEndYear.Value = New Decimal(New Integer() {2, 0, 0, 0})
+            Me.optNumPopSize.Value = New Decimal(New Integer() {1, 0, 0, -2147483648})
+            Me.optNumCaveSizeMin.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumCaveSizeMax.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            OptionSingleReplace34.disabledValue = "0"
+            OptionSingleReplace34.enabledValue = "1"
+            Me.optNumCaverns.Value = New Decimal(New Integer() {3, 0, 0, 0})
+            Me.optNumAboveCav1.Value = New Decimal(New Integer() {5, 0, 0, 0})
+            Me.optNumAboveCav2.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumAboveCav3.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumAboveMagma.Value = New Decimal(New Integer() {1, 0, 0, 0})
+            Me.optNumAboveHFS.Value = New Decimal(New Integer() {2, 0, 0, 0})
+            OptionSingleReplace35.disabledValue = "0"
+            OptionSingleReplace35.enabledValue = "1"
+            OptionSingleReplace36.disabledValue = "0"
+            OptionSingleReplace36.enabledValue = "1"
+            OptionSingleReplace37.disabledValue = "!NO_MMM_MYTH!"
+            OptionSingleReplace37.enabledValue = "YES_MMM_MYTH["
+            OptionSingleReplace38.disabledValue = "!NO_MMM_GHOST!"
+            OptionSingleReplace38.enabledValue = "YES_MMM_GHOST["
+            OptionSingleReplace39.disabledValue = "!NO_MMM_HUNT!"
+            OptionSingleReplace39.enabledValue = "YES_MMM_HUNT["
+            OptionSingleReplace40.disabledValue = "!NO_MMM_PLUMP!"
+            OptionSingleReplace40.enabledValue = "YES_MMM_PLUMP["
+            OptionSingleReplace41.disabledValue = "!NO_MMM_BOGEY!"
+            OptionSingleReplace41.enabledValue = "YES_MMM_BOGEY["
+            OptionSingleReplace42.disabledValue = "!NO_MMM_CULT!"
+            OptionSingleReplace42.enabledValue = "YES_MMM_CULT["
+            OptionSingleReplace43.disabledValue = "!NO_MMM_MANCY!"
+            OptionSingleReplace43.enabledValue = "YES_MMM_MANCY["
+            RawToken5.optionOffValue = "NO_MORE_LEATHERMOD_["
+            RawToken5.optionOnValue = "YES_MORE_LEATHERMOD!"
+            RawToken6.optionOffValue = "NO_MORE_LEATHERMOD_!"
+            RawToken6.optionOnValue = "YES_MORE_LEATHERMOD["
+            OptionSingleReplace44.disabledValue = "!AQUIFER!"
+            OptionSingleReplace44.enabledValue = "[AQUIFER]"
+            OptionSingleReplace45.disabledValue = "YES_HARDERLEARNING!"
+            OptionSingleReplace45.enabledValue = "YES_HARDERLEARNING["
+            OptionSingleReplace46.disabledValue = "!NOWANDERER!"
+            OptionSingleReplace46.enabledValue = "YESWANDERER["
+            OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
+            OptionSingleReplace47.enabledValue = "YES_MERCHANTS_DWARF["
+            OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
+            OptionSingleReplace48.enabledValue = "YES_RANDOM_WEREBEAST["
+            OptionSingleReplace49.disabledValue = "YES_RANDOM_MEGABEAST!"
+            OptionSingleReplace49.enabledValue = "YES_RANDOM_MEGABEAST["
+            OptionSingleReplace50.disabledValue = "YES_RANDOM_DEMON!"
+            OptionSingleReplace50.enabledValue = "YES_RANDOM_DEMON["
+            OptionSingleReplace51.disabledValue = "YES_RANDOM_PET!"
+            OptionSingleReplace51.enabledValue = "YES_RANDOM_PET["
+            OptionSingleReplace52.disabledValue = "YES_RANDOM_CAVERN_CREATURE!"
+            OptionSingleReplace52.enabledValue = "YES_RANDOM_CAVERN_CREATURE["
+            OptionSingleReplace53.disabledValue = "YES_RANDOM_AQUATIC_CREATURE!"
+            OptionSingleReplace53.enabledValue = "YES_RANDOM_AQUATIC_CREATURE["
+            OptionSingleReplace54.disabledValue = "YES_RANDOM_VERMIN!"
+            OptionSingleReplace54.enabledValue = "YES_RANDOM_VERMIN["
+            OptionSingleReplace55.disabledValue = "YES_RANDOM_SAPIENT!"
+            OptionSingleReplace55.enabledValue = "YES_RANDOM_SAPIENT["
+            OptionSingleReplace56.disabledValue = "YES_RANDOM_CREATURE!"
+            OptionSingleReplace56.enabledValue = "YES_RANDOM_CREATURE["
+            OptionSingleReplace57.disabledValue = "YES_RANDOM_FLIER!"
+            OptionSingleReplace57.enabledValue = "YES_RANDOM_FLIER["
+            OptionSingleReplace58.disabledValue = "YES_RANDOM_VAMPIRE!"
+            OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
+            OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
+            OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
+            OptionSingleReplace60.disabledValue = "YES_VANILLA_FLIER!"
+            OptionSingleReplace60.enabledValue = "YES_VANILLA_FLIER["
+            OptionSingleReplace61.disabledValue = "YES_SURFACE_CREATURE_VANILLA!"
+            OptionSingleReplace61.enabledValue = "YES_SURFACE_CREATURE_VANILLA["
+            OptionSingleReplace62.disabledValue = "YES_VANILLA_SAPIENT!"
+            OptionSingleReplace62.enabledValue = "YES_VANILLA_SAPIENT["
+            OptionSingleReplace63.disabledValue = "YES_MEGABEAST_VANILLA!"
+            OptionSingleReplace63.enabledValue = "YES_MEGABEAST_VANILLA["
+            OptionSingleReplace64.disabledValue = "YES_CREATURE_DOMESTIC_VANILLA!"
+            OptionSingleReplace64.enabledValue = "YES_CREATURE_DOMESTIC_VANILLA["
+            OptionSingleReplace65.disabledValue = "YES_CAVERN_CREATURE_VANILLA!"
+            OptionSingleReplace65.enabledValue = "YES_CAVERN_CREATURE_VANILLA["
+            OptionSingleReplace66.disabledValue = "YES_AQUATIC_CREATURES_VANILLA!"
+            OptionSingleReplace66.enabledValue = "YES_AQUATIC_CREATURES_VANILLA["
+            OptionSingleReplace67.disabledValue = "YES_VERMIN_VANILLA!"
+            OptionSingleReplace67.enabledValue = "YES_VERMIN_VANILLA["
+            OptionSingleReplace68.disabledValue = "YES_WAGON_VANILLA!"
+            OptionSingleReplace68.enabledValue = "YES_WAGON_VANILLA["
+            OptionSingleReplace69.disabledValue = "YES_CREATURE_FANCIFUL_VANILLA!"
+            OptionSingleReplace69.enabledValue = "YES_CREATURE_FANCIFUL_VANILLA["
+            Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
+            Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
+            Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
+            OptionSingleReplace70.disabledValue = "YES_DISPLAYCASE!"
+            OptionSingleReplace70.enabledValue = "YES_DISPLAYCASE["
+            OptionSingleReplace71.disabledValue = "YES_BANNER!"
+            OptionSingleReplace71.enabledValue = "YES_BANNER["
+            OptionSingleReplace72.disabledValue = "NO__STANDARD__BLOOD__MOD_[BLOOD:LOCAL_CREATURE_MAT"
+            OptionSingleReplace72.enabledValue = "YES_STANDARD_BLOOD[BLOOD:CREATURE_MAT:ANIMAL_BLOOD"
+            OptionSingleReplace73.disabledValue = "NO__STANDARD__MILK__MOD[MILKABLE:LOCAL_CREATURE:MAT:MILK"
+            OptionSingleReplace73.enabledValue = "YES_STANDARD_MILK[MILKABLE:CREATURE_MAT:ANIMAL_MILK:MILK"
+            OptionSingleReplace74.disabledValue = "!NO_KAZOO_SILK!"
+            OptionSingleReplace74.enabledValue = "YES_KAZOO_SILK["
+            OptionSingleReplace75.disabledValue = "YES_CAMPFIRE!"
+            OptionSingleReplace75.enabledValue = "YES_CAMPFIRE["
+            OptionSingleReplace76.disabledValue = "tesb-add-pets -race TESB_PET_ROCK -"
+            OptionSingleReplace76.enabledValue = "#tesb-add-pets -race TESB_PET_ROCK#"
+            RawToken7.optionOffValue = "!NO_TESB!"
+            RawToken7.optionOnValue = "YES_TESB["
+            RawToken8.optionOffValue = "#tesb-job-monitor#"
+            RawToken8.optionOnValue = "tesb-job-monitor -"
+            RawToken9.optionOffValue = "#modtools/reaction-trigger#reactionName TESB_"
+            RawToken9.optionOnValue = "modtools/reaction-trigger -reactionName TESB_"
+            OptionSingleReplace77.disabledValue = "!NO_SECRET_TESB!"
+            OptionSingleReplace77.enabledValue = "YES_SECRET_TESB["
+            OptionSingleReplace78.disabledValue = "#hi#de#"
+            OptionSingleReplace78.enabledValue = "hide "
+            OptionSingleReplace79.disabledValue = "YES_STANDARD_GRASS["
+            OptionSingleReplace79.enabledValue = "YES_STANDARD_GRASS!"
+            OptionSingleReplace80.disabledValue = "YES_CARPET!"
+            OptionSingleReplace80.enabledValue = "YES_CARPET["
+            OptionSingleReplace81.disabledValue = "YES_PREFSTRING!"
+            OptionSingleReplace81.enabledValue = "YES_PREFSTRING["
+            OptionSingleReplace82.disabledValue = "YES_DESCRIPTOR_UMIMAN!"
+            OptionSingleReplace82.enabledValue = "YES_DESCRIPTOR_UMIMAN["
+            OptionSingleReplace83.disabledValue = "!NO_ARCTIC_CREATURE!"
+            OptionSingleReplace83.enabledValue = "YES_ARCTIC_CREATURE["
+            OptionSingleReplace84.disabledValue = "!NO_ARCTIC_PLANT!"
+            OptionSingleReplace84.enabledValue = "YES_ARCTIC_PLANT["
+            OptionSingleReplace85.disabledValue = "!NO_ARCTIC_ENTITY!"
+            OptionSingleReplace85.enabledValue = "YES_ARCTIC_ENTITY["
+            OptionSingleReplace86.disabledValue = "!NO_MORE_FOOD!"
+            OptionSingleReplace86.enabledValue = "YES_MORE_FOOD["
+            OptionSingleReplace87.disabledValue = "YES_ROCKFORGE!"
+            OptionSingleReplace87.enabledValue = "YES_ROCKFORGE["
+            OptionSingleReplace88.disabledValue = "YES_GEMFORGE!"
+            OptionSingleReplace88.enabledValue = "YES_GEMFORGE["
+            OptionSingleReplace89.disabledValue = "YES_BONEFORGE!"
+            OptionSingleReplace89.enabledValue = "YES_BONEFORGE["
+            OptionSingleReplace90.disabledValue = "YES_GLASSFORGE!"
+            OptionSingleReplace90.enabledValue = "YES_GLASSFORGE["
+            OptionSingleReplace91.disabledValue = "YES_DYER_STUDIO!"
+            OptionSingleReplace91.enabledValue = "YES_DYER_STUDIO["
+            OptionSingleReplace92.disabledValue = "YES_EMBROIDERY_STUDIO!"
+            OptionSingleReplace92.enabledValue = "YES_EMBROIDERY_STUDIO["
+            OptionSingleReplace93.disabledValue = "YES_THATCHERY_DWARF!"
+            OptionSingleReplace93.enabledValue = "YES_THATCHERY_DWARF["
+            OptionSingleReplace94.disabledValue = "YES_POISON_VAT!"
+            OptionSingleReplace94.enabledValue = "YES_POISON_VAT["
+            OptionSingleReplace95.disabledValue = "!NO_75LEGENDS!"
+            OptionSingleReplace95.enabledValue = "YES_75LEGENDS["
+            OptionSingleReplace96.disabledValue = "!NO_STAL_ARMORY_MELEE!"
+            OptionSingleReplace96.enabledValue = "YES_STAL_ARMORY_MELEE["
+            OptionSingleReplace97.disabledValue = "!NO_STAL_ARMORY_RANGED!"
+            OptionSingleReplace97.enabledValue = "YES_STAL_ARMORY_RANGED["
+            OptionSingleReplace98.disabledValue = "!NO_STAL_ARMORY_ARMOR!"
+            OptionSingleReplace98.enabledValue = "YES_STAL_ARMORY_ARMOR["
+            OptionSingleReplace99.disabledValue = "!NO_TERRIBLE_WEAPONS!"
+            OptionSingleReplace99.enabledValue = "YES_TERRIBLE_WEAPONS["
+            OptionSingleReplace100.disabledValue = "!NO_GRIM_ARMOR!"
+            OptionSingleReplace100.enabledValue = "YES_GRIM_ARMOR["
+            OptionSingleReplace101.disabledValue = "!NO_GRIM_TRAPCOMP!"
+            OptionSingleReplace101.enabledValue = "YES_GRIM_TRAPCOMP["
+            OptionSingleReplace102.disabledValue = "!NO_GRIM_WEAPON!"
+            OptionSingleReplace102.enabledValue = "YES_GRIM_WEAPON["
+            OptionSingleReplace103.disabledValue = "#starvingdead #start"
+            OptionSingleReplace103.enabledValue = "starvingdead start"
+            OptionSingleReplace104.disabledValue = "#deterioratefood #start"
+            OptionSingleReplace104.enabledValue = "deterioratefood start"
+            OptionSingleReplace105.disabledValue = "#deteriorateclothes #start"
+            OptionSingleReplace105.enabledValue = "deteriorateclothes start"
+            OptionSingleReplace106.disabledValue = "#deterioratecorpses #start"
+            OptionSingleReplace106.enabledValue = "deterioratecorpses start"
+            OptionSingleReplace107.disabledValue = "YES_HERMETIC_ORC!"
+            OptionSingleReplace107.enabledValue = "YES_HERMETIC_ORC["
+            OptionSingleReplace108.disabledValue = "YES_SPARRINGPIT_ORC!"
+            OptionSingleReplace108.enabledValue = "YES_SPARRINGPIT_ORC["
+            OptionSingleReplace109.disabledValue = "YES_ANATOMIC_ORC!"
+            OptionSingleReplace109.enabledValue = "YES_ANATOMIC_ORC["
+            OptionSingleReplace110.disabledValue = "YES_BLOODBOWL_ORC!"
+            OptionSingleReplace110.enabledValue = "YES_BLOODBOWL_ORC["
+            OptionSingleReplace111.disabledValue = "YES_CARAVAN_SHADOW_ORC!"
+            OptionSingleReplace111.enabledValue = "YES_CARAVAN_SHADOW_ORC["
+            OptionSingleReplace112.disabledValue = "YES_CARAVAN_FARM_ORC!"
+            OptionSingleReplace112.enabledValue = "YES_CARAVAN_FARM_ORC["
+            OptionSingleReplace113.disabledValue = "YES_CARAVAN_ARMS_ORC!"
+            OptionSingleReplace113.enabledValue = "YES_CARAVAN_ARMS_ORC["
+            OptionSingleReplace114.disabledValue = "YES_CARAVAN_GENERAL_ORC!"
+            OptionSingleReplace114.enabledValue = "YES_CARAVAN_GENERAL_ORC["
+            OptionSingleReplace115.disabledValue = "YES_TINKERER_ORC!"
+            OptionSingleReplace115.enabledValue = "YES_TINKERER_ORC["
+            OptionSingleReplace116.disabledValue = "YES_MUCKRACKER_ORC!"
+            OptionSingleReplace116.enabledValue = "YES_MUCKRACKER_ORC["
+            OptionSingleReplace117.disabledValue = "YES_QUARRY_ORC!"
+            OptionSingleReplace117.enabledValue = "YES_QUARRY_ORC["
+            OptionSingleReplace118.disabledValue = "YES_OVERSEER_ORC!"
+            OptionSingleReplace118.enabledValue = "YES_OVERSEER_ORC["
+            OptionSingleReplace119.disabledValue = "YES_CARPET_ORC!"
+            OptionSingleReplace119.enabledValue = "YES_CARPET_ORC["
+            OptionSingleReplace120.disabledValue = "YES_BANNER_ORC!"
+            OptionSingleReplace120.enabledValue = "YES_BANNER_ORC["
+            OptionSingleReplace121.disabledValue = "YES_CAMPFIRE_ORC!"
+            OptionSingleReplace121.enabledValue = "YES_CAMPFIRE_ORC["
+            OptionSingleReplace122.disabledValue = "YES_DISPLAYCASE_ORC!"
+            OptionSingleReplace122.enabledValue = "YES_DISPLAYCASE_ORC["
+            OptionSingleReplace123.disabledValue = "YES_FLUIDCASTER_ORC!"
+            OptionSingleReplace123.enabledValue = "YES_FLUIDCASTER_ORC["
+            OptionSingleReplace124.disabledValue = "YES_ANCIENT_FOUNDRY_ORC!"
+            OptionSingleReplace124.enabledValue = "YES_ANCIENT_FOUNDRY_ORC["
+            OptionSingleReplace125.disabledValue = "YES_BLACKSMOKE_ORC!"
+            OptionSingleReplace125.enabledValue = "YES_BLACKSMOKE_ORC["
+            OptionSingleReplace126.disabledValue = "YES_MOLTEN_PIT!"
+            OptionSingleReplace126.enabledValue = "YES_MOLTEN_PIT["
+            OptionSingleReplace127.disabledValue = "YES_POISONGHETTO_ORC!"
+            OptionSingleReplace127.enabledValue = "YES_POISONGHETTO_ORC["
+            OptionSingleReplace128.disabledValue = "YES_BONEGHETTO_ORC!"
+            OptionSingleReplace128.enabledValue = "YES_BONEGHETTO_ORC["
+            OptionSingleReplace129.disabledValue = "YES_TAILOR_ORC!"
+            OptionSingleReplace129.enabledValue = "YES_TAILOR_ORC["
+            OptionSingleReplace130.disabledValue = "YES_SAWMILL_ORC!"
+            OptionSingleReplace130.enabledValue = "YES_SAWMILL_ORC["
+            OptionSingleReplace131.disabledValue = "YES_THIEVES_ORC!"
+            OptionSingleReplace131.enabledValue = "YES_THIEVES_ORC["
+            OptionSingleReplace132.disabledValue = "YES_DWARF_CELL!"
+            OptionSingleReplace132.enabledValue = "YES_DWARF_CELL["
+            OptionSingleReplace133.disabledValue = "YES_ELF_CELL!"
+            OptionSingleReplace133.enabledValue = "YES_ELF_CELL["
+            OptionSingleReplace134.disabledValue = "YES_HUMAN_CELL!"
+            OptionSingleReplace134.enabledValue = "YES_HUMAN_CELL["
+            OptionSingleReplace135.disabledValue = "YES_ARCHIVE_ORC!"
+            OptionSingleReplace135.enabledValue = "YES_ARCHIVE_ORC["
+            OptionSingleReplace136.disabledValue = "YES_POISON_VAT_ORC!"
+            OptionSingleReplace136.enabledValue = "YES_POISON_VAT_ORC["
+            OptionSingleReplace137.disabledValue = "YES_HANDPUMP_ORC!"
+            OptionSingleReplace137.enabledValue = "YES_HANDPUMP_ORC["
+            OptionSingleReplace138.disabledValue = "YES_FREELANCER_ORC!"
+            OptionSingleReplace138.enabledValue = "YES_FREELANCER_ORC["
+            OptionSingleReplace139.disabledValue = "YES_RAIDER_ORC!"
+            OptionSingleReplace139.enabledValue = "YES_RAIDER_ORC["
+            OptionSingleReplace140.disabledValue = "YES_TRIBAL_ORC!"
+            OptionSingleReplace140.enabledValue = "YES_TRIBAL_ORC["
+            OptionSingleReplace141.disabledValue = "YES_BONEFORGE_ORC!"
+            OptionSingleReplace141.enabledValue = "YES_BONEFORGE_ORC["
+            OptionSingleReplace142.disabledValue = "YES_FACTORY_ORC!"
+            OptionSingleReplace142.enabledValue = "YES_FACTORY_ORC["
+            OptionSingleReplace143.disabledValue = "YES_FLETCHER_ORC!"
+            OptionSingleReplace143.enabledValue = "YES_FLETCHER_ORC["
+            OptionSingleReplace144.disabledValue = "YES_DAMASCFORGE_ORC!"
+            OptionSingleReplace144.enabledValue = "YES_DAMASCFORGE_ORC["
+            OptionSingleReplace145.disabledValue = "YES_TOTEMPOLE_ORC!"
+            OptionSingleReplace145.enabledValue = "YES_TOTEMPOLE_ORC["
+            OptionSingleReplace146.disabledValue = "YES_ASHLANDGLASS_ORC!"
+            OptionSingleReplace146.enabledValue = "YES_ASHLANDGLASS_ORC["
+            OptionSingleReplace147.disabledValue = "YES_INVENTOR!"
+            OptionSingleReplace147.enabledValue = "YES_INVENTOR["
+            OptionSingleReplace148.disabledValue = "YES_HANDPUMP_DWARF!"
+            OptionSingleReplace148.enabledValue = "YES_HANDPUMP_DWARF["
+            OptionSingleReplace149.disabledValue = "YES_METALLURGIST_ORC!"
+            OptionSingleReplace149.enabledValue = "YES_METALLURGIST_ORC["
+            OptionSingleReplace150.disabledValue = "YES_ORC_LABEL!"
+            OptionSingleReplace150.enabledValue = "YES_ORC_LABEL["
+            OptionSingleReplace151.disabledValue = "!NO_MODEST_ATTACKS!"
+            OptionSingleReplace151.enabledValue = "YES_MODEST_ATTACKS["
+            OptionSingleReplace152.disabledValue = "!NO_MODEST_REACTIONS!"
+            OptionSingleReplace152.enabledValue = "YES_MODEST_REACTIONS["
+            OptionSingleReplace153.disabledValue = "!NO_MODEST_ORIENTATION!"
+            OptionSingleReplace153.enabledValue = "YES_MODEST_ORIENTATION["
+            OptionSingleReplace154.disabledValue = "YES_OUTPOST_ORC!"
+            OptionSingleReplace154.enabledValue = "YES_OUTPOST_ORC["
+            OptionSingleReplace155.disabledValue = "YES_LABEL_KOBOLD!"
+            OptionSingleReplace155.enabledValue = "YES_LABEL_KOBOLD["
+            OptionSingleReplace156.disabledValue = "YES_ARCHIVE_KOBOLD!"
+            OptionSingleReplace156.enabledValue = "YES_ARCHIVE_KOBOLD["
+            OptionSingleReplace157.disabledValue = "YES_POISON_VAT_KOBOLD!"
+            OptionSingleReplace157.enabledValue = "YES_POISON_VAT_KOBOLD["
+            OptionSingleReplace158.disabledValue = "YES_HANDPUMP_KOBOLD!"
+            OptionSingleReplace158.enabledValue = "YES_HANDPUMP_KOBOLD["
+            OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
+            OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
+            OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
+            OptionSingleReplace160.enabledValue = "[PET_EXOTIC]REDUCE_PET_MOD"
+            OptionSingleReplace161.disabledValue = "YES_DISPLAYCASE_KOBOLD!"
+            OptionSingleReplace161.enabledValue = "YES_DISPLAYCASE_KOBOLD["
+            OptionSingleReplace162.disabledValue = "YES_CAMPFIRE_KOBOLD!"
+            OptionSingleReplace162.enabledValue = "YES_CAMPFIRE_KOBOLD["
+            OptionSingleReplace163.disabledValue = "YES_CREMATORY_KOBOLD!"
+            OptionSingleReplace163.enabledValue = "YES_CREMATORY_KOBOLD["
+            OptionSingleReplace164.disabledValue = "YES_BRICK_KOBOLD!"
+            OptionSingleReplace164.enabledValue = "YES_BRICK_KOBOLD["
+            OptionSingleReplace165.disabledValue = "YES_BOOZEBURNER_KOBOLD!"
+            OptionSingleReplace165.enabledValue = "YES_BOOZEBURNER_KOBOLD["
+            OptionSingleReplace166.disabledValue = "YES_TOTEMPOLE_KOBOLD!"
+            OptionSingleReplace166.enabledValue = "YES_TOTEMPOLE_KOBOLD["
+            OptionSingleReplace167.disabledValue = "season-palette stop "
+            OptionSingleReplace167.enabledValue = "season-palette start"
+            OptionSingleReplace168.disabledValue = "YES_CLOTH_KOBOLD!"
+            OptionSingleReplace168.enabledValue = "YES_CLOTH_KOBOLD["
+            OptionSingleReplace169.disabledValue = "YES_GLASS_KOBOLD!"
+            OptionSingleReplace169.enabledValue = "YES_GLASS_KOBOLD["
+            OptionSingleReplace170.disabledValue = "YES_SHELL_KOBOLD!"
+            OptionSingleReplace170.enabledValue = "YES_SHELL_KOBOLD["
+            OptionSingleReplace171.disabledValue = "YES_SCALE_KOBOLD!"
+            OptionSingleReplace171.enabledValue = "YES_SCALE_KOBOLD["
+            OptionSingleReplace172.disabledValue = "YES_LEATHERTRIMMER_KOBOLD!"
+            OptionSingleReplace172.enabledValue = "YES_LEATHERTRIMMER_KOBOLD["
+            OptionSingleReplace173.disabledValue = "YES_UPHOLSTERY_KOBOLD!"
+            OptionSingleReplace173.enabledValue = "YES_UPHOLSTERY_KOBOLD["
+            OptionSingleReplace174.disabledValue = "YES_BONECHIPPER_KOBOLD!"
+            OptionSingleReplace174.enabledValue = "YES_BONECHIPPER_KOBOLD["
+            OptionSingleReplace175.disabledValue = "YES_CHITIN_KOBOLD!"
+            OptionSingleReplace175.enabledValue = "YES_CHITIN_KOBOLD["
+            OptionSingleReplace176.disabledValue = "YES_THATCH_KOBOLD!"
+            OptionSingleReplace176.enabledValue = "YES_THATCH_KOBOLD["
+            OptionSingleReplace177.disabledValue = "YES_BREEDINGWARREN_KOBOLD!"
+            OptionSingleReplace177.enabledValue = "YES_BREEDINGWARREN_KOBOLD["
+            OptionSingleReplace178.disabledValue = "YES_TRAINING_KOBOLD!"
+            OptionSingleReplace178.enabledValue = "YES_TRAINING_KOBOLD["
+            OptionSingleReplace179.disabledValue = "YES_PARCOUR_KOBOLD!"
+            OptionSingleReplace179.enabledValue = "YES_PARCOUR_KOBOLD["
+            OptionSingleReplace180.disabledValue = "YES_TRAP_KOBOLD!"
+            OptionSingleReplace180.enabledValue = "YES_TRAP_KOBOLD["
+            OptionSingleReplace181.disabledValue = "YES_WOODCARVER_KOBOLD!"
+            OptionSingleReplace181.enabledValue = "YES_WOODCARVER_KOBOLD["
+            OptionSingleReplace182.disabledValue = "YES_KOBOLD_MINING!"
+            OptionSingleReplace182.enabledValue = "YES_KOBOLD_MINING["
+            OptionSingleReplace183.disabledValue = "!NO_PATREON_REWARDS!"
+            OptionSingleReplace183.enabledValue = "YES_PATREON_REWARDS["
+            OptionSingleReplace184.disabledValue = "!NO_MORE_TOYS!"
+            OptionSingleReplace184.enabledValue = "YES_MORE_TOYS["
+            RawToken10.optionOffValue = "NO_STANDARD_TOYS_!"
+            RawToken10.optionOnValue = "YES_STANDARD_TOYS["
+            RawToken11.optionOffValue = "NO_STANDARD_TOYS_["
+            RawToken11.optionOnValue = "YES_STANDARD_TOYS!"
+            OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
+            OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
+            RawToken12.optionOffValue = "NO_PICKY_NOBLES_!"
+            RawToken12.optionOnValue = "YES_PICKY_NOBLES["
+            RawToken13.optionOffValue = "NO_PICKY_NOBLES_["
+            RawToken13.optionOnValue = "YES_PICKY_NOBLES!"
+            RawToken14.optionOffValue = "!NO_SLOWER_FARMING!"
+            RawToken14.optionOnValue = "YES_SLOWER_FARMING["
+            RawToken15.optionOffValue = "!NO_SLOWER_FARMING["
+            RawToken15.optionOnValue = "YES_SLOWER_FARMING!"
+            RawToken16.optionOffValue = "NO_GREEDY_NOBLES_!"
+            RawToken16.optionOnValue = "YES_GREEDY_NOBLES["
+            RawToken17.optionOffValue = "NO_GREEDY_NOBLES_["
+            RawToken17.optionOnValue = "YES_GREEDY_NOBLES!"
+            OptionSingleReplace186.disabledValue = "!NO_TANTRUM!"
+            OptionSingleReplace186.enabledValue = "YES_TANTRUM["
+            OptionSingleReplace187.disabledValue = "YES_CREATURES_MASTERWORK_VERMIN!"
+            OptionSingleReplace187.enabledValue = "YES_CREATURES_MASTERWORK_VERMIN["
+            OptionSingleReplace188.disabledValue = "YES_CREATURE_MASTERWORK_FISH!"
+            OptionSingleReplace188.enabledValue = "YES_CREATURE_MASTERWORK_FISH["
+            OptionSingleReplace189.disabledValue = "YES_CREATURE_MASTERWORK_ANIMAL!"
+            OptionSingleReplace189.enabledValue = "YES_CREATURE_MASTERWORK_ANIMAL["
+            OptionSingleReplace190.disabledValue = "YES_CREATURE_MASTERWORK_CAVERN!"
+            OptionSingleReplace190.enabledValue = "YES_CREATURE_MASTERWORK_CAVERN["
+            OptionSingleReplace191.disabledValue = "YES_CREATURES_MASTERWORK_FLIERS!"
+            OptionSingleReplace191.enabledValue = "YES_CREATURES_MASTERWORK_FLIERS["
+            OptionSingleReplace192.disabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE!"
+            OptionSingleReplace192.enabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE["
+            OptionSingleReplace193.disabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST!"
+            OptionSingleReplace193.enabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST["
+            OptionSingleReplace194.disabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS!"
+            OptionSingleReplace194.enabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS["
+            OptionSingleReplace195.disabledValue = "YES_CREATURE_MASTERWORK_HFS!"
+            OptionSingleReplace195.enabledValue = "YES_CREATURE_MASTERWORK_HFS["
+            OptionSingleReplace196.disabledValue = "YES_MASTERWORK_PETS!"
+            OptionSingleReplace196.enabledValue = "YES_MASTERWORK_PETS["
+            OptionSingleReplace197.disabledValue = "YES_CREATURE_MASTERWORK_MONSTER!"
+            OptionSingleReplace197.enabledValue = "YES_CREATURE_MASTERWORK_MONSTER["
+            OptionSingleReplace198.disabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL!"
+            OptionSingleReplace198.enabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL["
+            OptionSingleReplace199.disabledValue = "!NO_ZM5_DRAGONSDOGMA!"
+            OptionSingleReplace199.enabledValue = "YES_ZM5_DRAGONSDOGMA["
+            OptionSingleReplace200.disabledValue = "!NO_ZM5_BEASTS!"
+            OptionSingleReplace200.enabledValue = "YES_ZM5_BEASTS["
+            OptionSingleReplace201.disabledValue = "!NO_ZM5_MEGABEASTS!"
+            OptionSingleReplace201.enabledValue = "YES_ZM5_MEGABEASTS["
+            OptionSingleReplace202.disabledValue = "!NO_FEAR_THE_NIGHT!"
+            OptionSingleReplace202.enabledValue = "YES_FEAR_THE_NIGHT["
+            OptionSingleReplace203.disabledValue = "!NO_CREATURE_MEN!"
+            OptionSingleReplace203.enabledValue = "YES_CREATURE_MEN["
+            Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
