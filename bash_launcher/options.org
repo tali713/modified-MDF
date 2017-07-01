@@ -182,6 +182,62 @@
     - Token :: VOLUME
     - Values :: 0-255
 
+** Embark & Migrants
+*** Size
+    d_init.txt
+    - Type :: Integer
+    - Token :: EMBARK_RECTANGLE
+    - Values :: 1-16
+
+*** Points
+    world_gen.txt
+    - Type :: Integer
+    - Token :: EMBARK_POINTS
+    - Values :: 0-999999
+
+*** Group Size
+    onLoad.init
+    - Type :: Integer
+    - Token :: startdwarf (special)
+    - Values :: 7-999999
+
+*** Embark Warning
+    d_init.txt
+    - Type :: Boolean
+    - Token :: EMBARK_WARNING_ALWAYS
+    - Values :: YES|NO
+
+*** Migrant Labors
+    d_init.txt
+    - Type :: Menu
+    - Token :: SET_LABOR_LISTS
+    - Values :: NO|UNIT_TYPE|SKILLS
+
+** Miscellaneous
+*** Keybinds
+    interface.txt
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/Settings/Keybinds/
+    - Values :: f(get names from files)
+    - Action :: Copy file to data/init/interface.txt
+*** Arena
+    arena.txt
+    - Type :: Menu
+    - Data Source :: MasterworkDwarfFortress/Settings/Arena/
+    - Values :: f(get names from files)
+    - Action :: Copy file to data/init/arena.txt
+
+*** Window
+    
+
+*** Priority
+*** Macro
+*** Intro Movie
+*** Calendar
+*** Seasonal Colors
+*** Hide dfhack
+
+
 * Data
             Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
             Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
