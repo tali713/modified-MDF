@@ -375,38 +375,346 @@
 
 ** Additions
 *** Food Types
+    raw/objects/item_*
     - Type :: Boolean
+    - t_pattern :: "YES_MORE_FOOD["
+    - f_pattern :: "!NO_MORE_FOOD!"
 
 *** Toy Types
+    raw/objects/entity_*
+    raw/objects/item_toy.txt
     - Type :: Boolean
+    - t_pattern :: "YES_MORE_TOYS["
+    - f_pattern :: "!NO_MORE_TOYS!"
 
 *** Patreon Rewards
+    raw/objects/*_patreon.txt
+    raw/objects/entity_*
     - Type :: Boolean
+    - t_pattern :: "YES_PATREON_REWARDS["
+    - f_pattern :: "!NO_PATREON_REWARDS!" 
 
 *** Display Case
+    raw/objects/entity_*
     - Type :: Boolean
+    - t_pattern :: "YES_DISPLAYCASE["
+    - f_pattern :: "YES_DISPLAYCASE!" 
 
 *** Decorations
+    raw/objects/entity_*
     - Type :: Boolean
+    - t_pattern :: "YES_BANNER["
+    - f_pattern :: "YES_BANNER!"
 
 *** Campfire
+    raw/objects/entity_*
     - Type :: Boolean
+    - t_pattern :: "YES_CAMPFIRE["
+    - f_pattern :: "YES_CAMPFIRE!"
 
 *** Carpets
+    raw/objects/entity_*
     - Type :: Boolean
+    - t_pattern :: "YES_CARPET["
+    - f_pattern :: "YES_CARPET!"
 
 ** FPS - Boosters
+   dfhack.init
 *** Decaying Undead
     - Type :: Boolean
+    - t_pattern :: "starvingdead start"
+    - f_pattern :: "#starvingdead #start"
 
 *** Decaying Food
     - Type :: Boolean
+    - t_pattern :: "deterioratefood start"
+    - f_pattern :: "#deterioratefood #start"
 
 *** Decaying Clothing
     - Type :: Boolean
+    - t_pattern :: "deteriorateclothes start"
+    - f_pattern :: "#deteriorateclothes #start"
 
 *** Decaying Corpses
     - Type :: Boolean
+    - t_pattern :: "deterioratecorpses start"
+    - f_pattern :: "#deterioratecorpses #start"
+
+* Mods Page
+** Deeper Dwarven
+*** Domestication
+    - Type :: Boolean
+    - t_pattern :: "YES_DDD["
+    - f_pattern :: "!NO_DDD!"
+
+** More Leather Mod
+*** More Leather
+    - Type :: Boolean
+    - t_pattern :: "YES_MORE_LEATHERMOD!" "YES_MORE_LEATHERMOD["
+    - f_pattern :: "NO_MORE_LEATHERMOD_[" "NO_MORE_LEATHERMOD_!"
+
+** Wanderers Friend
+*** Adv Mode Reeactions
+    - Type :: Boolean
+    - t_pattern :: "YESWANDERER["
+    - f_pattern :: "!NOWANDERER!"
+
+** Silk Eggs Mod
+*** Silk Eggs
+    - Type :: Boolean
+    - t_pattern :: "YES_KAZOO_SILK["
+    - f_pattern :: "!NO_KAZOO_SILK!"
+
+** Mythical Monsters
+*** Mythical Beasts
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_MYTH["
+    - f_pattern :: "!NO_MMM_MYTH!"
+
+*** Hungry Ghosts
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_GHOST["
+    - f_pattern :: "!NO_MMM_GHOST!"
+
+*** The Wild Hunt
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_HUNT["
+    - f_pattern :: "!NO_MMM_HUNT!"
+
+*** Plump Helmets
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_PLUMP["
+    - f_pattern :: "!NO_MMM_PLUMP!"
+
+*** Bogyemen
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_BOGEY["
+    - f_pattern :: "!NO_MMM_BOGEY!"
+
+*** Deep Ones - Cult
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_CULT["
+    - f_pattern :: "!NO_MMM_CULT!"
+
+*** *-mancers
+    - Type :: Boolean
+    - t_pattern :: "YES_MMM_MANCY["
+    - f_pattern :: "!NO_MMM_MANCY!"
+
+** The Earth Strikes Back!
+*** Earth Strikes Back!
+    - Type :: Boolean  
+    - Files_1 :: raw/objects/entity_*
+    - t_pattern_1 :: "YES_TESB["
+    - f_pattern_1 :: "!NO_TESB!"
+    - Files_2 :: raw/onLoad.init
+    - t_pattern_2 :: "tesb-job-monitor -" "modtools/reaction-trigger -reactionName TESB_"
+    - f_pattern_2 :: "#tesb-job-monitor#" "#modtools/reaction-trigger#reactionName TESB_"
+
+*** Pet Rock
+    FIXME
+    raw/onLoad.init
+    - Type :: Boolean
+    - t_pattern :: "#tesb-add-pets -race TESB_PET_ROCK#"
+    - f_pattern :: "tesb-add-pets -race TESB_PET_ROCK -"
+
+*** Secrets
+    raw/objects/interaction_TESB_favors.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_SECRET_TESB["
+    - f_pattern :: "!NO_SECRET_TESB!"
+
+** Arctic Additions Mod
+*** Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_ARCTIC_CREATURE["
+    - f_pattern :: "!NO_ARCTIC_CREATURE!"
+
+*** Plants
+    - Type :: Boolean
+    - t_pattern :: "YES_ARCTIC_PLANT["
+    - f_pattern :: "!NO_ARCTIC_PLANT!"
+
+*** Jotun Civ
+    - Type :: Boolean
+    - t_pattern :: "YES_ARCTIC_ENTITY["
+    - f_pattern :: "!NO_ARCTIC_ENTITY!"
+
+** Small Things Mod
+*** Pref-Strings
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "YES_PREFSTRING["
+    - f_pattern :: "YES_PREFSTRING!"
+
+*** Engravings
+    raw/objects/descriptor_shape_umiman.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_DESCRIPTOR_UMIMAN["
+    - f_pattern :: "YES_DESCRIPTOR_UMIMAN!"
+
+** Procedural Decorations
+*** More Engravings
+    raw/objects/descriptor_shape_legends.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_75LEGENDS["
+    - f_pattern :: "!NO_75LEGENDS!"
+
+** Wizards Tower
+*** Secrets
+    raw/objects/creature_wizards_tower.txt
+    raw/objects/interaction_wizards_tower.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MEN["
+    - f_pattern :: "!NO_CREATURE_MEN!"
+
+** Stal's Armoury Pack
+   raw/objects/entity_*
+   raw/objects/item_z_stal_*
+*** Melee Weapons
+    - Type :: Boolean
+    - t_pattern :: "YES_STAL_ARMORY_MELEE["
+    - f_pattern :: "!NO_STAL_ARMORY_MELEE!"
+
+*** Ranged Weapons
+    - Type :: Boolean
+    - t_pattern :: "YES_STAL_ARMORY_RANGED["
+    - f_pattern :: "!NO_STAL_ARMORY_RANGED!"
+
+*** Armors
+    - Type :: Boolean
+    - t_pattern :: "YES_STAL_ARMORY_ARMOR["
+    - f_pattern :: "!NO_STAL_ARMORY_ARMOR!"
+
+** Historic Arms and Armors
+    raw/objects/entity_*
+    raw/objects/item_z_grim_*
+*** Weapons
+    - Type :: Boolean
+    - t_pattern :: "YES_GRIM_WEAPON["
+    - f_pattern :: "!NO_GRIM_WEAPON!"
+
+*** Trap Componants
+    - Type :: Boolean
+    - t_pattern :: "YES_GRIM_TRAPCOMP["
+    - f_pattern :: "!NO_GRIM_TRAPCOMP!"
+
+*** Armors
+    - Type :: Boolean
+    - t_pattern :: "YES_GRIM_ARMOR["
+    - f_pattern :: "!NO_GRIM_ARMOR!"
+
+** Terrible Weapons
+   raw/objects/entity_*
+   raw/objects/item_z_weapon_terrible.txt
+*** Melee Weapons
+    - Type :: Boolean
+    - t_pattern :: "YES_TERRIBLE_WEAPONS["
+    - f_pattern :: "!NO_TERRIBLE_WEAPONS!"
+
+** Modest Mod
+*** More Attacks
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "YES_MODEST_ATTACKS["
+    - f_pattern :: "!NO_MODEST_ATTACKS!"
+
+*** Specific Reactions
+    raw/objects/entity_*
+    raw/objects/reaction_modest_*
+    - Type :: Boolean
+    - t_pattern :: "YES_MODEST_REACTIONS["
+    - f_pattern :: "!NO_MODEST_REACTIONS!"
+
+*** Orientations
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "YES_MODEST_ORIENTATION["
+    - f_pattern :: "!NO_MODEST_ORIENTATION!"
+
+** Creature Pack
+*** Megabeasts
+    - Type :: Boolean
+    - t_pattern :: "YES_ZM5_MEGABEASTS["
+    - f_pattern :: "!NO_ZM5_MEGABEASTS!"
+
+*** Warcraft
+    - Type :: Boolean
+    - t_pattern :: "YES_ZM5_BEASTS["
+    - f_pattern :: "!NO_ZM5_BEASTS!"
+
+*** DragonsDogma
+    - Type :: Boolean
+    - t_pattern :: "YES_ZM5_DRAGONSDOGMA["
+    - f_pattern :: "!NO_ZM5_DRAGONSDOGMA!"
+
+** Fear the Night
+*** Secrets
+    - Type :: Boolean
+    - t_pattern :: "YES_FEAR_THE_NIGHT["
+    - f_pattern :: "!NO_FEAR_THE_NIGHT!"
+
+* Civs Page
+  TODO This Section
+
+* Invaders Page
+  TODO This Section
+
+* Creatures Page
+** Vanilla Creatures
+*** Vermin
+    - Type :: Boolean
+    - t_pattern :: "YES_VERMIN_VANILLA["
+    - f_pattern :: "YES_VERMIN_VANILLA!"
+
+*** Aquatic Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_AQUATIC_CREATURES_VANILLA["
+    - f_pattern :: "YES_AQUATIC_CREATURES_VANILLA!"
+
+*** Cavern Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_CAVERN_CREATURE_VANILLA["
+    - f_pattern :: "YES_CAVERN_CREATURE_VANILLA!"
+
+*** Domestic Pets
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_DOMESTIC_VANILLA["
+    - f_pattern :: "YES_CREATURE_DOMESTIC_VANILLA!"
+
+*** Wagon
+    - Type :: Boolean
+    - t_pattern :: "YES_WAGON_VANILLA["
+    - f_pattern :: "YES_WAGON_VANILLA!"
+
+*** Sapient Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_VANILLA_SAPIENT["
+    - f_pattern :: "YES_VANILLA_SAPIENT!"
+
+*** Surface Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_SURFACE_CREATURE_VANILLA["
+    - f_pattern :: "YES_SURFACE_CREATURE_VANILLA!"
+
+*** Flying Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_VANILLA_FLIER["
+    - f_pattern :: "YES_VANILLA_FLIER!"
+
+*** Megabeasts
+    - Type :: Boolean
+    - t_pattern :: "YES_MEGABEAST_VANILLA["
+    - f_pattern :: "YES_MEGABEAST_VANILLA!"
+
+*** Fanciful
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_FANCIFUL_VANILLA["
+    - f_pattern :: "YES_CREATURE_FANCIFUL_VANILLA!"
+
+** Random Creatures
+** MasterworkDF Creatures
+** Creature Settings
 
 * Data
             Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
@@ -467,8 +775,6 @@
             OptionSingleReplace31.enabledValue = "YES_TAILOR["
             OptionSingleReplace32.disabledValue = "YES_POTTERY!"
             OptionSingleReplace32.enabledValue = "YES_POTTERY["
-            OptionSingleReplace33.disabledValue = "!NO_DDD!"
-            OptionSingleReplace33.enabledValue = "YES_DDD["
             Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
             Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
             Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -488,26 +794,6 @@
             OptionSingleReplace35.enabledValue = "1"
             OptionSingleReplace36.disabledValue = "0"
             OptionSingleReplace36.enabledValue = "1"
-            OptionSingleReplace37.disabledValue = "!NO_MMM_MYTH!"
-            OptionSingleReplace37.enabledValue = "YES_MMM_MYTH["
-            OptionSingleReplace38.disabledValue = "!NO_MMM_GHOST!"
-            OptionSingleReplace38.enabledValue = "YES_MMM_GHOST["
-            OptionSingleReplace39.disabledValue = "!NO_MMM_HUNT!"
-            OptionSingleReplace39.enabledValue = "YES_MMM_HUNT["
-            OptionSingleReplace40.disabledValue = "!NO_MMM_PLUMP!"
-            OptionSingleReplace40.enabledValue = "YES_MMM_PLUMP["
-            OptionSingleReplace41.disabledValue = "!NO_MMM_BOGEY!"
-            OptionSingleReplace41.enabledValue = "YES_MMM_BOGEY["
-            OptionSingleReplace42.disabledValue = "!NO_MMM_CULT!"
-            OptionSingleReplace42.enabledValue = "YES_MMM_CULT["
-            OptionSingleReplace43.disabledValue = "!NO_MMM_MANCY!"
-            OptionSingleReplace43.enabledValue = "YES_MMM_MANCY["
-            RawToken5.optionOffValue = "NO_MORE_LEATHERMOD_["
-            RawToken5.optionOnValue = "YES_MORE_LEATHERMOD!"
-            RawToken6.optionOffValue = "NO_MORE_LEATHERMOD_!"
-            RawToken6.optionOnValue = "YES_MORE_LEATHERMOD["
-            OptionSingleReplace46.disabledValue = "!NOWANDERER!"
-            OptionSingleReplace46.enabledValue = "YESWANDERER["
             OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
             OptionSingleReplace47.enabledValue = "YES_MERCHANTS_DWARF["
             OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
@@ -534,63 +820,11 @@
             OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
             OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
             OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
-            OptionSingleReplace60.disabledValue = "YES_VANILLA_FLIER!"
-            OptionSingleReplace60.enabledValue = "YES_VANILLA_FLIER["
-            OptionSingleReplace61.disabledValue = "YES_SURFACE_CREATURE_VANILLA!"
-            OptionSingleReplace61.enabledValue = "YES_SURFACE_CREATURE_VANILLA["
-            OptionSingleReplace62.disabledValue = "YES_VANILLA_SAPIENT!"
-            OptionSingleReplace62.enabledValue = "YES_VANILLA_SAPIENT["
-            OptionSingleReplace63.disabledValue = "YES_MEGABEAST_VANILLA!"
-            OptionSingleReplace63.enabledValue = "YES_MEGABEAST_VANILLA["
-            OptionSingleReplace64.disabledValue = "YES_CREATURE_DOMESTIC_VANILLA!"
-            OptionSingleReplace64.enabledValue = "YES_CREATURE_DOMESTIC_VANILLA["
-            OptionSingleReplace65.disabledValue = "YES_CAVERN_CREATURE_VANILLA!"
-            OptionSingleReplace65.enabledValue = "YES_CAVERN_CREATURE_VANILLA["
-            OptionSingleReplace66.disabledValue = "YES_AQUATIC_CREATURES_VANILLA!"
-            OptionSingleReplace66.enabledValue = "YES_AQUATIC_CREATURES_VANILLA["
-            OptionSingleReplace67.disabledValue = "YES_VERMIN_VANILLA!"
-            OptionSingleReplace67.enabledValue = "YES_VERMIN_VANILLA["
-            OptionSingleReplace68.disabledValue = "YES_WAGON_VANILLA!"
-            OptionSingleReplace68.enabledValue = "YES_WAGON_VANILLA["
-            OptionSingleReplace69.disabledValue = "YES_CREATURE_FANCIFUL_VANILLA!"
-            OptionSingleReplace69.enabledValue = "YES_CREATURE_FANCIFUL_VANILLA["
             Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
-            OptionSingleReplace70.disabledValue = "YES_DISPLAYCASE!"
-            OptionSingleReplace70.enabledValue = "YES_DISPLAYCASE["
-            OptionSingleReplace71.disabledValue = "YES_BANNER!"
-            OptionSingleReplace71.enabledValue = "YES_BANNER["
-            OptionSingleReplace74.disabledValue = "!NO_KAZOO_SILK!"
-            OptionSingleReplace74.enabledValue = "YES_KAZOO_SILK["
-            OptionSingleReplace75.disabledValue = "YES_CAMPFIRE!"
-            OptionSingleReplace75.enabledValue = "YES_CAMPFIRE["
-            OptionSingleReplace76.disabledValue = "tesb-add-pets -race TESB_PET_ROCK -"
-            OptionSingleReplace76.enabledValue = "#tesb-add-pets -race TESB_PET_ROCK#"
-            RawToken7.optionOffValue = "!NO_TESB!"
-            RawToken7.optionOnValue = "YES_TESB["
-            RawToken8.optionOffValue = "#tesb-job-monitor#"
-            RawToken8.optionOnValue = "tesb-job-monitor -"
-            RawToken9.optionOffValue = "#modtools/reaction-trigger#reactionName TESB_"
-            RawToken9.optionOnValue = "modtools/reaction-trigger -reactionName TESB_"
-            OptionSingleReplace77.disabledValue = "!NO_SECRET_TESB!"
-            OptionSingleReplace77.enabledValue = "YES_SECRET_TESB["
             OptionSingleReplace78.disabledValue = "#hi#de#"
             OptionSingleReplace78.enabledValue = "hide "
-            OptionSingleReplace80.disabledValue = "YES_CARPET!"
-            OptionSingleReplace80.enabledValue = "YES_CARPET["
-            OptionSingleReplace81.disabledValue = "YES_PREFSTRING!"
-            OptionSingleReplace81.enabledValue = "YES_PREFSTRING["
-            OptionSingleReplace82.disabledValue = "YES_DESCRIPTOR_UMIMAN!"
-            OptionSingleReplace82.enabledValue = "YES_DESCRIPTOR_UMIMAN["
-            OptionSingleReplace83.disabledValue = "!NO_ARCTIC_CREATURE!"
-            OptionSingleReplace83.enabledValue = "YES_ARCTIC_CREATURE["
-            OptionSingleReplace84.disabledValue = "!NO_ARCTIC_PLANT!"
-            OptionSingleReplace84.enabledValue = "YES_ARCTIC_PLANT["
-            OptionSingleReplace85.disabledValue = "!NO_ARCTIC_ENTITY!"
-            OptionSingleReplace85.enabledValue = "YES_ARCTIC_ENTITY["
-            OptionSingleReplace86.disabledValue = "!NO_MORE_FOOD!"
-            OptionSingleReplace86.enabledValue = "YES_MORE_FOOD["
             OptionSingleReplace87.disabledValue = "YES_ROCKFORGE!"
             OptionSingleReplace87.enabledValue = "YES_ROCKFORGE["
             OptionSingleReplace88.disabledValue = "YES_GEMFORGE!"
@@ -607,30 +841,6 @@
             OptionSingleReplace93.enabledValue = "YES_THATCHERY_DWARF["
             OptionSingleReplace94.disabledValue = "YES_POISON_VAT!"
             OptionSingleReplace94.enabledValue = "YES_POISON_VAT["
-            OptionSingleReplace95.disabledValue = "!NO_75LEGENDS!"
-            OptionSingleReplace95.enabledValue = "YES_75LEGENDS["
-            OptionSingleReplace96.disabledValue = "!NO_STAL_ARMORY_MELEE!"
-            OptionSingleReplace96.enabledValue = "YES_STAL_ARMORY_MELEE["
-            OptionSingleReplace97.disabledValue = "!NO_STAL_ARMORY_RANGED!"
-            OptionSingleReplace97.enabledValue = "YES_STAL_ARMORY_RANGED["
-            OptionSingleReplace98.disabledValue = "!NO_STAL_ARMORY_ARMOR!"
-            OptionSingleReplace98.enabledValue = "YES_STAL_ARMORY_ARMOR["
-            OptionSingleReplace99.disabledValue = "!NO_TERRIBLE_WEAPONS!"
-            OptionSingleReplace99.enabledValue = "YES_TERRIBLE_WEAPONS["
-            OptionSingleReplace100.disabledValue = "!NO_GRIM_ARMOR!"
-            OptionSingleReplace100.enabledValue = "YES_GRIM_ARMOR["
-            OptionSingleReplace101.disabledValue = "!NO_GRIM_TRAPCOMP!"
-            OptionSingleReplace101.enabledValue = "YES_GRIM_TRAPCOMP["
-            OptionSingleReplace102.disabledValue = "!NO_GRIM_WEAPON!"
-            OptionSingleReplace102.enabledValue = "YES_GRIM_WEAPON["
-            OptionSingleReplace103.disabledValue = "#starvingdead #start"
-            OptionSingleReplace103.enabledValue = "starvingdead start"
-            OptionSingleReplace104.disabledValue = "#deterioratefood #start"
-            OptionSingleReplace104.enabledValue = "deterioratefood start"
-            OptionSingleReplace105.disabledValue = "#deteriorateclothes #start"
-            OptionSingleReplace105.enabledValue = "deteriorateclothes start"
-            OptionSingleReplace106.disabledValue = "#deterioratecorpses #start"
-            OptionSingleReplace106.enabledValue = "deterioratecorpses start"
             OptionSingleReplace107.disabledValue = "YES_HERMETIC_ORC!"
             OptionSingleReplace107.enabledValue = "YES_HERMETIC_ORC["
             OptionSingleReplace108.disabledValue = "YES_SPARRINGPIT_ORC!"
@@ -719,12 +929,6 @@
             OptionSingleReplace149.enabledValue = "YES_METALLURGIST_ORC["
             OptionSingleReplace150.disabledValue = "YES_ORC_LABEL!"
             OptionSingleReplace150.enabledValue = "YES_ORC_LABEL["
-            OptionSingleReplace151.disabledValue = "!NO_MODEST_ATTACKS!"
-            OptionSingleReplace151.enabledValue = "YES_MODEST_ATTACKS["
-            OptionSingleReplace152.disabledValue = "!NO_MODEST_REACTIONS!"
-            OptionSingleReplace152.enabledValue = "YES_MODEST_REACTIONS["
-            OptionSingleReplace153.disabledValue = "!NO_MODEST_ORIENTATION!"
-            OptionSingleReplace153.enabledValue = "YES_MODEST_ORIENTATION["
             OptionSingleReplace154.disabledValue = "YES_OUTPOST_ORC!"
             OptionSingleReplace154.enabledValue = "YES_OUTPOST_ORC["
             OptionSingleReplace155.disabledValue = "YES_LABEL_KOBOLD!"
@@ -783,10 +987,6 @@
             OptionSingleReplace181.enabledValue = "YES_WOODCARVER_KOBOLD["
             OptionSingleReplace182.disabledValue = "YES_KOBOLD_MINING!"
             OptionSingleReplace182.enabledValue = "YES_KOBOLD_MINING["
-            OptionSingleReplace183.disabledValue = "!NO_PATREON_REWARDS!"
-            OptionSingleReplace183.enabledValue = "YES_PATREON_REWARDS["
-            OptionSingleReplace184.disabledValue = "!NO_MORE_TOYS!"
-            OptionSingleReplace184.enabledValue = "YES_MORE_TOYS["
             OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
             OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
             OptionSingleReplace187.disabledValue = "YES_CREATURES_MASTERWORK_VERMIN!"
@@ -813,16 +1013,6 @@
             OptionSingleReplace197.enabledValue = "YES_CREATURE_MASTERWORK_MONSTER["
             OptionSingleReplace198.disabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL!"
             OptionSingleReplace198.enabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL["
-            OptionSingleReplace199.disabledValue = "!NO_ZM5_DRAGONSDOGMA!"
-            OptionSingleReplace199.enabledValue = "YES_ZM5_DRAGONSDOGMA["
-            OptionSingleReplace200.disabledValue = "!NO_ZM5_BEASTS!"
-            OptionSingleReplace200.enabledValue = "YES_ZM5_BEASTS["
-            OptionSingleReplace201.disabledValue = "!NO_ZM5_MEGABEASTS!"
-            OptionSingleReplace201.enabledValue = "YES_ZM5_MEGABEASTS["
-            OptionSingleReplace202.disabledValue = "!NO_FEAR_THE_NIGHT!"
-            OptionSingleReplace202.enabledValue = "YES_FEAR_THE_NIGHT["
-            OptionSingleReplace203.disabledValue = "!NO_CREATURE_MEN!"
-            OptionSingleReplace203.enabledValue = "YES_CREATURE_MEN["
             Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
 
 
