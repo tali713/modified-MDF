@@ -1,4 +1,9 @@
 * Functions
+** Primitives
+  1. setInFile(filepath, token, value)
+  2. replaceInFile(filepath, pattern, replacement)
+  3. replaceFiles(source, destination)
+
 * Init Page
 ** General World
     - File :: d_init.txt
@@ -228,31 +233,184 @@
     - Action :: Copy file to data/init/arena.txt
 
 *** Window
-    
+    init.txt
+    - Type :: Boolean
+    - Token :: WINDOWED
+    - Values :: YES|NO
 
 *** Priority
-*** Macro
-*** Intro Movie
-*** Calendar
-*** Seasonal Colors
-*** Hide dfhack
+    init.txt
+    - Type :: Menu
+    - Token :: PRIORITY
+    - Values :: IDLE|BELOW_NORMAL|NORMAL|ABOVE_NORMAL|HIGH|REALTIME
 
+*** Macro
+    init.txt
+    - Type :: Integer
+    - Token :: MACRO_MS
+    - Values :: 0-999999
+
+*** Intro Movie
+    init.txt
+    - Type :: Boolean
+    - Token :: INTRO
+    - Values :: YES|NO
+
+*** Calendar
+    dfhack.init
+    - Type :: Menu
+    - Token :: timestream (special)
+    - Values :: 0.125|0.250|0.500|1.000|2.000|4.000|8.000
+
+*** Seasonal Colors
+    dfhack.init
+    - Type :: Boolean
+    - t_pattern :: "season-palette start"
+    - f_pattern :: "season-palette stop "
+    - Action :: String Replace
+
+*** Hide dfhack
+    UNKNOWN
+        OptionSingleReplace78.disabledValue = "#hi#de#"
+        OptionSingleReplace78.enabledValue = "hide "
+
+* Settings Page
+** Standardization
+*** Standardized Leather
+    raw/objects/tissue_*
+    tissue_template_default.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARDIZED_LEATHER[" "YES_STANDARDIZED_LEATHER!"
+    - f_pattern :: "NO_STANDARDIZED_LEATHER_!" "NO_STANDARDIZED_LEATHER_["
+              
+*** Standardized Meat
+    raw/objects/tissue_*
+    tissue_template_default.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARDIZED_MEAT!" "YES_STANDARDIZED_MEAT["
+    - f_pattern :: "NO_STANDARDIZED_MEAT_[" "NO_STANDARDIZED_MEAT_!"
+
+*** Standardized Wood
+    raw/objects/plant_*
+    plant_fake.txt
+    plant_new_trees.txt
+    plant_standard.txt
+    - Type :: Boolean
+    - t_pattern :: "YES__DIVERSE__WOOD__MOD[TREE:LOCAL_PLANT_MAT"
+    - f_pattern :: "NO_DIVERSE_WOOD[TREE:PLANT_MAT:STANDARD_WOOD"
+*** Standardized Blood
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARD_BLOOD[BLOOD:CREATURE_MAT:ANIMAL_BLOOD"
+    - f_pattern :: "NO__STANDARD__BLOOD__MOD_[BLOOD:LOCAL_CREATURE_MAT"
+
+*** Standardized Milk
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARD_MILK[MILKABLE:CREATURE_MAT:ANIMAL_MILK:MILK"
+    - f_pattern :: "NO__STANDARD__MILK__MOD[MILKABLE:LOCAL_CREATURE:MAT:MILK"
+
+*** Standardized Grass
+    raw/objects/plant_*
+    plant_grasses.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARD_GRASS["
+    - f_pattern :: "YES_STANDARD_GRASS!"
+
+*** Standardized Toys
+    raw/objects/entity_*
+    raw/objects/item_toy.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_STANDARD_TOYS!" "YES_STANDARD_TOYS["
+    - f_pattern :: "NO_STANDARD_TOYS_[" "NO_STANDARD_TOYS_!"
+
+** Balancing
+*** All Creatures Trainable
+    raw/objects/creature_*
+    - Type :: Boolean
+    - t_pattern :: "ALL_CREATURES_TRAINABLE["
+    - f_pattern :: "!NO_CREATURES_TRAINABLE!"
+            
+*** Aquifers
+    raw/objects/inorganic_*
+    - Type :: Boolean
+    - t_pattern :: "[AQUIFER]"
+    - f_pattern :: "!AQUIFER!"
+
+*** Slower Learning
+    raw/objects/creature_civ_*
+    - Type :: Boolean
+    - t_pattern :: "YES_HARDERLEARNING["
+    - f_pattern :: "YES_HARDERLEARNING!"
+
+*** Slower Farming
+    raw/objects/plant_*
+    - Type :: Boolean
+    - t_pattern :: "YES_SLOWER_FARMING[" "YES_SLOWER_FARMING!"
+    - f_pattern :: "!NO_SLOWER_FARMING!" "!NO_SLOWER_FARMING["
+
+*** Greedy Nobles
+    raw/objects/entity_good_dwarf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_GREEDY_NOBLES[" "YES_GREEDY_NOBLES!"
+    - f_pattern :: "NO_GREEDY_NOBLES_!" "NO_GREEDY_NOBLES_["
+
+*** Picky Nobles
+    raw/objects/entity_good_dwarf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_PICKY_NOBLES[" "YES_PICKY_NOBLES!"
+    - f_pattern :: "NO_PICKY_NOBLES_!" "NO_PICKY_NOBLES_["
+
+*** Tantrums
+    raw/objects/creature_civ_dwarf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_TANTRUM["
+    - f_pattern :: "!NO_TANTRUM!"
+
+*** Grazing Coefficient
+    d_init.txt
+    - Type :: Integer
+    - Token :: GRAZE_COEFFICIENT
+    - Values :: 1-9999
+
+** Additions
+*** Food Types
+    - Type :: Boolean
+
+*** Toy Types
+    - Type :: Boolean
+
+*** Patreon Rewards
+    - Type :: Boolean
+
+*** Display Case
+    - Type :: Boolean
+
+*** Decorations
+    - Type :: Boolean
+
+*** Campfire
+    - Type :: Boolean
+
+*** Carpets
+    - Type :: Boolean
+
+** FPS - Boosters
+*** Decaying Undead
+    - Type :: Boolean
+
+*** Decaying Food
+    - Type :: Boolean
+
+*** Decaying Clothing
+    - Type :: Boolean
+
+*** Decaying Corpses
+    - Type :: Boolean
 
 * Data
             Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
             Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
-            RawToken1.optionOffValue = "NO_STANDARDIZED_MEAT_!"
-            RawToken1.optionOnValue = "YES_STANDARDIZED_MEAT["
-            RawToken2.optionOffValue = "NO_STANDARDIZED_MEAT_["
-            RawToken2.optionOnValue = "YES_STANDARDIZED_MEAT!"
-            RawToken3.optionOffValue = "NO_STANDARDIZED_LEATHER_!"
-            RawToken3.optionOnValue = "YES_STANDARDIZED_LEATHER["
-            RawToken4.optionOffValue = "NO_STANDARDIZED_LEATHER_["
-            RawToken4.optionOnValue = "YES_STANDARDIZED_LEATHER!"
-            OptionSingleReplace3.disabledValue = "YES__DIVERSE__WOOD__MOD[TREE:LOCAL_PLANT_MAT"
-            OptionSingleReplace3.enabledValue = "NO_DIVERSE_WOOD[TREE:PLANT_MAT:STANDARD_WOOD"
-            OptionSingleReplace4.disabledValue = "!NO_CREATURES_TRAINABLE!"
-            OptionSingleReplace4.enabledValue = "ALL_CREATURES_TRAINABLE["
             OptionSingleReplace5.disabledValue = "YESGARRISON!"
             OptionSingleReplace5.enabledValue = "YESGARRISON["
             OptionSingleReplace6.disabledValue = "YESGUILDHALL!"
@@ -348,10 +506,6 @@
             RawToken5.optionOnValue = "YES_MORE_LEATHERMOD!"
             RawToken6.optionOffValue = "NO_MORE_LEATHERMOD_!"
             RawToken6.optionOnValue = "YES_MORE_LEATHERMOD["
-            OptionSingleReplace44.disabledValue = "!AQUIFER!"
-            OptionSingleReplace44.enabledValue = "[AQUIFER]"
-            OptionSingleReplace45.disabledValue = "YES_HARDERLEARNING!"
-            OptionSingleReplace45.enabledValue = "YES_HARDERLEARNING["
             OptionSingleReplace46.disabledValue = "!NOWANDERER!"
             OptionSingleReplace46.enabledValue = "YESWANDERER["
             OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
@@ -407,10 +561,6 @@
             OptionSingleReplace70.enabledValue = "YES_DISPLAYCASE["
             OptionSingleReplace71.disabledValue = "YES_BANNER!"
             OptionSingleReplace71.enabledValue = "YES_BANNER["
-            OptionSingleReplace72.disabledValue = "NO__STANDARD__BLOOD__MOD_[BLOOD:LOCAL_CREATURE_MAT"
-            OptionSingleReplace72.enabledValue = "YES_STANDARD_BLOOD[BLOOD:CREATURE_MAT:ANIMAL_BLOOD"
-            OptionSingleReplace73.disabledValue = "NO__STANDARD__MILK__MOD[MILKABLE:LOCAL_CREATURE:MAT:MILK"
-            OptionSingleReplace73.enabledValue = "YES_STANDARD_MILK[MILKABLE:CREATURE_MAT:ANIMAL_MILK:MILK"
             OptionSingleReplace74.disabledValue = "!NO_KAZOO_SILK!"
             OptionSingleReplace74.enabledValue = "YES_KAZOO_SILK["
             OptionSingleReplace75.disabledValue = "YES_CAMPFIRE!"
@@ -427,8 +577,6 @@
             OptionSingleReplace77.enabledValue = "YES_SECRET_TESB["
             OptionSingleReplace78.disabledValue = "#hi#de#"
             OptionSingleReplace78.enabledValue = "hide "
-            OptionSingleReplace79.disabledValue = "YES_STANDARD_GRASS["
-            OptionSingleReplace79.enabledValue = "YES_STANDARD_GRASS!"
             OptionSingleReplace80.disabledValue = "YES_CARPET!"
             OptionSingleReplace80.enabledValue = "YES_CARPET["
             OptionSingleReplace81.disabledValue = "YES_PREFSTRING!"
@@ -639,26 +787,8 @@
             OptionSingleReplace183.enabledValue = "YES_PATREON_REWARDS["
             OptionSingleReplace184.disabledValue = "!NO_MORE_TOYS!"
             OptionSingleReplace184.enabledValue = "YES_MORE_TOYS["
-            RawToken10.optionOffValue = "NO_STANDARD_TOYS_!"
-            RawToken10.optionOnValue = "YES_STANDARD_TOYS["
-            RawToken11.optionOffValue = "NO_STANDARD_TOYS_["
-            RawToken11.optionOnValue = "YES_STANDARD_TOYS!"
             OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
             OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
-            RawToken12.optionOffValue = "NO_PICKY_NOBLES_!"
-            RawToken12.optionOnValue = "YES_PICKY_NOBLES["
-            RawToken13.optionOffValue = "NO_PICKY_NOBLES_["
-            RawToken13.optionOnValue = "YES_PICKY_NOBLES!"
-            RawToken14.optionOffValue = "!NO_SLOWER_FARMING!"
-            RawToken14.optionOnValue = "YES_SLOWER_FARMING["
-            RawToken15.optionOffValue = "!NO_SLOWER_FARMING["
-            RawToken15.optionOnValue = "YES_SLOWER_FARMING!"
-            RawToken16.optionOffValue = "NO_GREEDY_NOBLES_!"
-            RawToken16.optionOnValue = "YES_GREEDY_NOBLES["
-            RawToken17.optionOffValue = "NO_GREEDY_NOBLES_["
-            RawToken17.optionOnValue = "YES_GREEDY_NOBLES!"
-            OptionSingleReplace186.disabledValue = "!NO_TANTRUM!"
-            OptionSingleReplace186.enabledValue = "YES_TANTRUM["
             OptionSingleReplace187.disabledValue = "YES_CREATURES_MASTERWORK_VERMIN!"
             OptionSingleReplace187.enabledValue = "YES_CREATURES_MASTERWORK_VERMIN["
             OptionSingleReplace188.disabledValue = "YES_CREATURE_MASTERWORK_FISH!"
@@ -694,3 +824,6 @@
             OptionSingleReplace203.disabledValue = "!NO_CREATURE_MEN!"
             OptionSingleReplace203.enabledValue = "YES_CREATURE_MEN["
             Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
+
+
+
