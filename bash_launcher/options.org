@@ -118,6 +118,7 @@
     - Values :: 2D|2DSW|2DASYNC|STANDARD|ACCUM|FRAME|VBO|TWBT
 
 *** Font
+    font.ttf
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/Colors/
     - Values :: f(get fonts from file name)
@@ -443,60 +444,89 @@
 * Mods Page
 ** Deeper Dwarven
 *** Domestication
+    raw/objects/creature_domestic_DDD.txt
     - Type :: Boolean
     - t_pattern :: "YES_DDD["
     - f_pattern :: "!NO_DDD!"
 
 ** More Leather Mod
 *** More Leather
+    raw/objects/creature_domestic_DDD.txt
+    raw/objects/creature_masterwork_pets.txt
+    raw/objects/entity_*
+    raw/objects/material_template_default.txt
+    raw/objects/reaction_*
     - Type :: Boolean
     - t_pattern :: "YES_MORE_LEATHERMOD!" "YES_MORE_LEATHERMOD["
     - f_pattern :: "NO_MORE_LEATHERMOD_[" "NO_MORE_LEATHERMOD_!"
 
 ** Wanderers Friend
 *** Adv Mode Reeactions
+    raw/objects/reaction_adventurer.txt
     - Type :: Boolean
     - t_pattern :: "YESWANDERER["
     - f_pattern :: "!NOWANDERER!"
 
 ** Silk Eggs Mod
 *** Silk Eggs
+    raw/objects/creature_kazoo.txt
+    raw/objects/entity_*
+    raw/objects/material_template_default.txt
+    raw/objects/reaction_silk.txt
     - Type :: Boolean
     - t_pattern :: "YES_KAZOO_SILK["
     - f_pattern :: "!NO_KAZOO_SILK!"
 
 ** Mythical Monsters
 *** Mythical Beasts
+    raw/objects/creature_bloodgod.txt
+    raw/objects/creature_mth.txt
+    raw/objects/interaction_bloodgod.txt
+    raw/objects/interaction_mth.txt
+    raw/objects/interaction_quiz.txt
+    raw/objects/reaction_bloodgod.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_MYTH["
     - f_pattern :: "!NO_MMM_MYTH!"
 
 *** Hungry Ghosts
+    raw/objects/creature_hungryghost.txt
+    raw/objects/interaction_hungryghost.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_GHOST["
     - f_pattern :: "!NO_MMM_GHOST!"
 
 *** The Wild Hunt
+    raw/objects/creature_wildhunt.txt
+    raw/objects/interaction_wildhunt.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_HUNT["
     - f_pattern :: "!NO_MMM_HUNT!"
 
 *** Plump Helmets
+    raw/objects/creature_phm.txt
+    raw/objects/interaction_phm.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_PLUMP["
     - f_pattern :: "!NO_MMM_PLUMP!"
 
-*** Bogyemen
+*** Bogeymen
+    raw/objects/creature_bogeyhunt.txt
+    raw/objects/interaction_bogeyhunt.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_BOGEY["
     - f_pattern :: "!NO_MMM_BOGEY!"
 
 *** Deep Ones - Cult
+    raw/objects/creature_deep_ones.txt
+    raw/objects/interaction_deep_ones.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_CULT["
     - f_pattern :: "!NO_MMM_CULT!"
 
 *** *-mancers
+    raw/objects/creature_mancy.txt
+    raw/objects/interaction_mancy.txt
     - Type :: Boolean
     - t_pattern :: "YES_MMM_MANCY["
     - f_pattern :: "!NO_MMM_MANCY!"
@@ -526,16 +556,19 @@
 
 ** Arctic Additions Mod
 *** Creatures
+    raw/objects/creature_arctic.txt
     - Type :: Boolean
     - t_pattern :: "YES_ARCTIC_CREATURE["
     - f_pattern :: "!NO_ARCTIC_CREATURE!"
 
 *** Plants
+    raw/objects/plant_arctic.txt
     - Type :: Boolean
     - t_pattern :: "YES_ARCTIC_PLANT["
     - f_pattern :: "!NO_ARCTIC_PLANT!"
 
 *** Jotun Civ
+    raw/objects/entity_arctic.txt
     - Type :: Boolean
     - t_pattern :: "YES_ARCTIC_ENTITY["
     - f_pattern :: "!NO_ARCTIC_ENTITY!"
@@ -634,22 +667,26 @@
 
 ** Creature Pack
 *** Megabeasts
+    raw/objects/creature_*_zm5.txt
     - Type :: Boolean
     - t_pattern :: "YES_ZM5_MEGABEASTS["
     - f_pattern :: "!NO_ZM5_MEGABEASTS!"
 
 *** Warcraft
+    raw/objects/creature_*_zm5.txt
     - Type :: Boolean
     - t_pattern :: "YES_ZM5_BEASTS["
     - f_pattern :: "!NO_ZM5_BEASTS!"
 
 *** DragonsDogma
+    raw/objects/creature_dragonsdogma_zm5.txt
     - Type :: Boolean
     - t_pattern :: "YES_ZM5_DRAGONSDOGMA["
     - f_pattern :: "!NO_ZM5_DRAGONSDOGMA!"
 
 ** Fear the Night
 *** Secrets
+    raw/objects/*_fearthenight.txt
     - Type :: Boolean
     - t_pattern :: "YES_FEAR_THE_NIGHT["
     - f_pattern :: "!NO_FEAR_THE_NIGHT!"
@@ -663,58 +700,187 @@
 * Creatures Page
 ** Vanilla Creatures
 *** Vermin
+    raw/objects/creature_*
     - Type :: Boolean
     - t_pattern :: "YES_VERMIN_VANILLA["
     - f_pattern :: "YES_VERMIN_VANILLA!"
 
 *** Aquatic Creatures
+    raw/objects/creature_*
     - Type :: Boolean
     - t_pattern :: "YES_AQUATIC_CREATURES_VANILLA["
     - f_pattern :: "YES_AQUATIC_CREATURES_VANILLA!"
 
 *** Cavern Creatures
+    raw/objects/creature_next_underground.txt
+    raw/objects/creature_subterranean.txt
     - Type :: Boolean
     - t_pattern :: "YES_CAVERN_CREATURE_VANILLA["
     - f_pattern :: "YES_CAVERN_CREATURE_VANILLA!"
 
 *** Domestic Pets
+    raw/objects/creature_domestic.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_DOMESTIC_VANILLA["
     - f_pattern :: "YES_CREATURE_DOMESTIC_VANILLA!"
 
 *** Wagon
+    raw/objects/creature_equipment.txt
     - Type :: Boolean
     - t_pattern :: "YES_WAGON_VANILLA["
     - f_pattern :: "YES_WAGON_VANILLA!"
 
 *** Sapient Creatures
+    raw/objects/creature_standard.txt
     - Type :: Boolean
     - t_pattern :: "YES_VANILLA_SAPIENT["
     - f_pattern :: "YES_VANILLA_SAPIENT!"
 
 *** Surface Creatures
+    raw/objects/creature_*
     - Type :: Boolean
     - t_pattern :: "YES_SURFACE_CREATURE_VANILLA["
     - f_pattern :: "YES_SURFACE_CREATURE_VANILLA!"
 
 *** Flying Creatures
+    raw/objects/creature_birds.txt
+    raw/objects/creature_birds_new.txt
     - Type :: Boolean
     - t_pattern :: "YES_VANILLA_FLIER["
     - f_pattern :: "YES_VANILLA_FLIER!"
 
 *** Megabeasts
+    raw/objects/creature_megabeast_vanilla.txt
     - Type :: Boolean
     - t_pattern :: "YES_MEGABEAST_VANILLA["
     - f_pattern :: "YES_MEGABEAST_VANILLA!"
 
 *** Fanciful
+    raw/objects/creature_fanciful.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_FANCIFUL_VANILLA["
     - f_pattern :: "YES_CREATURE_FANCIFUL_VANILLA!"
 
 ** Random Creatures
+*** Vermin
+            OptionSingleReplace52.disabledValue = "YES_RANDOM_VERMIN!"
+            OptionSingleReplace52.enabledValue = "YES_RANDOM_VERMIN["
+
+*** Aquatic Creatures
+            OptionSingleReplace53.disabledValue = "YES_RANDOM_AQUATIC_CREATURE!"
+            OptionSingleReplace53.enabledValue = "YES_RANDOM_AQUATIC_CREATURE["
+
+*** Cavern Creatures
+            OptionSingleReplace54.disabledValue = "YES_RANDOM_CAVERN_CREATURE!"
+            OptionSingleReplace54.enabledValue = "YES_RANDOM_CAVERN_CREATURE["
+
+*** Domestic Pets
+            OptionSingleReplace51.disabledValue = "YES_RANDOM_PET!"
+            OptionSingleReplace51.enabledValue = "YES_RANDOM_PET["
+
+*** HFS
+            OptionSingleReplace50.disabledValue = "YES_RANDOM_DEMON!"
+            OptionSingleReplace50.enabledValue = "YES_RANDOM_DEMON["
+
+*** Vampires
+            OptionSingleReplace58.disabledValue = "YES_RANDOM_VAMPIRE!"
+            OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
+
+*** Sapient Creatures
+            OptionSingleReplace55.disabledValue = "YES_RANDOM_SAPIENT!"
+            OptionSingleReplace55.enabledValue = "YES_RANDOM_SAPIENT["
+
+*** Surface Creatures
+            OptionSingleReplace56.disabledValue = "YES_RANDOM_CREATURE!"
+            OptionSingleReplace56.enabledValue = "YES_RANDOM_CREATURE["
+
+*** Flying Creatures
+            OptionSingleReplace57.disabledValue = "YES_RANDOM_FLIER!"
+            OptionSingleReplace57.enabledValue = "YES_RANDOM_FLIER["
+
+*** Megabeasts
+            OptionSingleReplace49.disabledValue = "YES_RANDOM_MEGABEAST!"
+            OptionSingleReplace49.enabledValue = "YES_RANDOM_MEGABEAST["
+
+*** Nightcreatures
+            OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
+            OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
+
+*** Werebeasts
+            OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
+            OptionSingleReplace48.enabledValue = "YES_RANDOM_WEREBEAST["
+
 ** MasterworkDF Creatures
+*** Vermin
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURES_MASTERWORK_VERMIN["
+    - f_pattern :: "YES_CREATURES_MASTERWORK_VERMIN!"
+
+*** Aquatic Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_FISH["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_FISH!"
+
+*** Cavern Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_CAVERN["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_CAVERN!"
+
+*** Domestic Pets
+    - Type :: Boolean
+    - t_pattern :: "YES_MASTERWORK_PETS["
+    - f_pattern :: "YES_MASTERWORK_PETS!"
+
+*** HFS
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_HFS["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_HFS!"
+
+*** Vampires
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_VAMPIRE["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_VAMPIRE!"
+
+*** Monsters
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_MONSTER["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_MONSTER!"
+
+*** Surface Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_ANIMAL["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_ANIMAL!"
+
+*** Flying Creatures
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURES_MASTERWORK_FLIERS["
+    - f_pattern :: "YES_CREATURES_MASTERWORK_FLIERS!"
+
+*** Megabeasts
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_MEGABEASTS["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_MEGABEASTS!"
+
+*** Fanciful
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_FANCIFUL["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_FANCIFUL!"
+
+*** Werebeasts
+    - Type :: Boolean
+    - t_pattern :: "YES_CREATURE_MASTERWORK_WEREBEAST["
+    - f_pattern :: "YES_CREATURE_MASTERWORK_WEREBEAST!"
+
 ** Creature Settings
+*** Animal Man Frequency
+    raw/objects/c_variation_default.txt
+    - Type :: Integer
+    CV_NEW_TAG:FREQUENCY
+
+*** Giant Animal Frequency
+    raw/objects/c_variation_giant.txt
+    - Type :: Integer
+    CV_NEW_TAG:FREQUENCY
 
 * Data
             Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
@@ -796,30 +962,6 @@
             OptionSingleReplace36.enabledValue = "1"
             OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
             OptionSingleReplace47.enabledValue = "YES_MERCHANTS_DWARF["
-            OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
-            OptionSingleReplace48.enabledValue = "YES_RANDOM_WEREBEAST["
-            OptionSingleReplace49.disabledValue = "YES_RANDOM_MEGABEAST!"
-            OptionSingleReplace49.enabledValue = "YES_RANDOM_MEGABEAST["
-            OptionSingleReplace50.disabledValue = "YES_RANDOM_DEMON!"
-            OptionSingleReplace50.enabledValue = "YES_RANDOM_DEMON["
-            OptionSingleReplace51.disabledValue = "YES_RANDOM_PET!"
-            OptionSingleReplace51.enabledValue = "YES_RANDOM_PET["
-            OptionSingleReplace52.disabledValue = "YES_RANDOM_CAVERN_CREATURE!"
-            OptionSingleReplace52.enabledValue = "YES_RANDOM_CAVERN_CREATURE["
-            OptionSingleReplace53.disabledValue = "YES_RANDOM_AQUATIC_CREATURE!"
-            OptionSingleReplace53.enabledValue = "YES_RANDOM_AQUATIC_CREATURE["
-            OptionSingleReplace54.disabledValue = "YES_RANDOM_VERMIN!"
-            OptionSingleReplace54.enabledValue = "YES_RANDOM_VERMIN["
-            OptionSingleReplace55.disabledValue = "YES_RANDOM_SAPIENT!"
-            OptionSingleReplace55.enabledValue = "YES_RANDOM_SAPIENT["
-            OptionSingleReplace56.disabledValue = "YES_RANDOM_CREATURE!"
-            OptionSingleReplace56.enabledValue = "YES_RANDOM_CREATURE["
-            OptionSingleReplace57.disabledValue = "YES_RANDOM_FLIER!"
-            OptionSingleReplace57.enabledValue = "YES_RANDOM_FLIER["
-            OptionSingleReplace58.disabledValue = "YES_RANDOM_VAMPIRE!"
-            OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
-            OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
-            OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
             Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
@@ -989,30 +1131,6 @@
             OptionSingleReplace182.enabledValue = "YES_KOBOLD_MINING["
             OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
             OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
-            OptionSingleReplace187.disabledValue = "YES_CREATURES_MASTERWORK_VERMIN!"
-            OptionSingleReplace187.enabledValue = "YES_CREATURES_MASTERWORK_VERMIN["
-            OptionSingleReplace188.disabledValue = "YES_CREATURE_MASTERWORK_FISH!"
-            OptionSingleReplace188.enabledValue = "YES_CREATURE_MASTERWORK_FISH["
-            OptionSingleReplace189.disabledValue = "YES_CREATURE_MASTERWORK_ANIMAL!"
-            OptionSingleReplace189.enabledValue = "YES_CREATURE_MASTERWORK_ANIMAL["
-            OptionSingleReplace190.disabledValue = "YES_CREATURE_MASTERWORK_CAVERN!"
-            OptionSingleReplace190.enabledValue = "YES_CREATURE_MASTERWORK_CAVERN["
-            OptionSingleReplace191.disabledValue = "YES_CREATURES_MASTERWORK_FLIERS!"
-            OptionSingleReplace191.enabledValue = "YES_CREATURES_MASTERWORK_FLIERS["
-            OptionSingleReplace192.disabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE!"
-            OptionSingleReplace192.enabledValue = "YES_CREATURE_MASTERWORK_VAMPIRE["
-            OptionSingleReplace193.disabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST!"
-            OptionSingleReplace193.enabledValue = "YES_CREATURE_MASTERWORK_WEREBEAST["
-            OptionSingleReplace194.disabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS!"
-            OptionSingleReplace194.enabledValue = "YES_CREATURE_MASTERWORK_MEGABEASTS["
-            OptionSingleReplace195.disabledValue = "YES_CREATURE_MASTERWORK_HFS!"
-            OptionSingleReplace195.enabledValue = "YES_CREATURE_MASTERWORK_HFS["
-            OptionSingleReplace196.disabledValue = "YES_MASTERWORK_PETS!"
-            OptionSingleReplace196.enabledValue = "YES_MASTERWORK_PETS["
-            OptionSingleReplace197.disabledValue = "YES_CREATURE_MASTERWORK_MONSTER!"
-            OptionSingleReplace197.enabledValue = "YES_CREATURE_MASTERWORK_MONSTER["
-            OptionSingleReplace198.disabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL!"
-            OptionSingleReplace198.enabledValue = "YES_CREATURE_MASTERWORK_FANCIFUL["
             Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
 
 
