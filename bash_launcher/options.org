@@ -763,110 +763,146 @@
 
 ** Random Creatures
 *** Vermin
-            OptionSingleReplace52.disabledValue = "YES_RANDOM_VERMIN!"
-            OptionSingleReplace52.enabledValue = "YES_RANDOM_VERMIN["
+    raw/objects/creature_random_vermin_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_VERMIN["
+    - f_pattern :: "YES_RANDOM_VERMIN!"
 
 *** Aquatic Creatures
-            OptionSingleReplace53.disabledValue = "YES_RANDOM_AQUATIC_CREATURE!"
-            OptionSingleReplace53.enabledValue = "YES_RANDOM_AQUATIC_CREATURE["
+    raw/objects/creature_random_myth_beast_aquatic_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_AQUATIC_CREATURE["
+    - f_pattern :: "YES_RANDOM_AQUATIC_CREATURE!"
 
 *** Cavern Creatures
-            OptionSingleReplace54.disabledValue = "YES_RANDOM_CAVERN_CREATURE!"
-            OptionSingleReplace54.enabledValue = "YES_RANDOM_CAVERN_CREATURE["
+    raw/objects/creature_random_myth_beast_cavern_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_CAVERN_CREATURE["
+    - f_pattern :: "YES_RANDOM_CAVERN_CREATURE!"
 
 *** Domestic Pets
-            OptionSingleReplace51.disabledValue = "YES_RANDOM_PET!"
-            OptionSingleReplace51.enabledValue = "YES_RANDOM_PET["
+    raw/objects/creature_random_myth_beast_domestic_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_PET["
+    - f_pattern :: "YES_RANDOM_PET!"
 
 *** HFS
-            OptionSingleReplace50.disabledValue = "YES_RANDOM_DEMON!"
-            OptionSingleReplace50.enabledValue = "YES_RANDOM_DEMON["
+    raw/objects/creature_random_myth_beast_fiend_mdf.txt
+   - Type :: Boolean
+   - t_pattern :: "YES_RANDOM_DEMON["
+   - f_pattern :: "YES_RANDOM_DEMON!"
 
 *** Vampires
-            OptionSingleReplace58.disabledValue = "YES_RANDOM_VAMPIRE!"
-            OptionSingleReplace58.enabledValue = "YES_RANDOM_VAMPIRE["
+    raw/objects/*_random_vampires_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_VAMPIRE["
+    - f_pattern :: "YES_RANDOM_VAMPIRE!"
 
 *** Sapient Creatures
-            OptionSingleReplace55.disabledValue = "YES_RANDOM_SAPIENT!"
-            OptionSingleReplace55.enabledValue = "YES_RANDOM_SAPIENT["
+    raw/objects/creature_random_myth_beast_sapient_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_SAPIENT["
+    - f_pattern :: "YES_RANDOM_SAPIENT!"
 
 *** Surface Creatures
-            OptionSingleReplace56.disabledValue = "YES_RANDOM_CREATURE!"
-            OptionSingleReplace56.enabledValue = "YES_RANDOM_CREATURE["
+    raw/objects/creature_random_myth_beast_standard_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_CREATURE["
+    - f_pattern :: "YES_RANDOM_CREATURE!"
 
 *** Flying Creatures
-            OptionSingleReplace57.disabledValue = "YES_RANDOM_FLIER!"
-            OptionSingleReplace57.enabledValue = "YES_RANDOM_FLIER["
+    raw/objects/creature_random_flier_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_FLIER["
+    - f_pattern :: "YES_RANDOM_FLIER!"
 
 *** Megabeasts
-            OptionSingleReplace49.disabledValue = "YES_RANDOM_MEGABEAST!"
-            OptionSingleReplace49.enabledValue = "YES_RANDOM_MEGABEAST["
+    raw/objects/creature_random_myth_beast_mega_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_MEGABEAST["
+    - f_pattern :: "YES_RANDOM_MEGABEAST!"
 
 *** Nightcreatures
-            OptionSingleReplace59.disabledValue = "YES_RANDOM_NIGHTCREATURE!"
-            OptionSingleReplace59.enabledValue = "YES_RANDOM_NIGHTCREATURE["
+    raw/objects/*_random_hag_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_NIGHTCREATURE["
+    - f_pattern :: "YES_RANDOM_NIGHTCREATURE!"
 
 *** Werebeasts
-            OptionSingleReplace48.disabledValue = "YES_RANDOM_WEREBEAST!"
-            OptionSingleReplace48.enabledValue = "YES_RANDOM_WEREBEAST["
+    raw/objects/*_random_myth_beast_mdf.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_RANDOM_WEREBEAST["
+    - f_pattern :: "YES_RANDOM_WEREBEAST!"
 
 ** MasterworkDF Creatures
 *** Vermin
+    raw/objects/creature_masterwork_vermin.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURES_MASTERWORK_VERMIN["
     - f_pattern :: "YES_CREATURES_MASTERWORK_VERMIN!"
 
 *** Aquatic Creatures
+    raw/objects/creature_masterwork_fish.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_FISH["
     - f_pattern :: "YES_CREATURE_MASTERWORK_FISH!"
 
 *** Cavern Creatures
+    raw/objects/creature_masterwork_cavern.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_CAVERN["
     - f_pattern :: "YES_CREATURE_MASTERWORK_CAVERN!"
 
 *** Domestic Pets
+    raw/objects/creature_masterwork_pets.txt
     - Type :: Boolean
     - t_pattern :: "YES_MASTERWORK_PETS["
     - f_pattern :: "YES_MASTERWORK_PETS!"
 
 *** HFS
+    raw/objects/creature_masterwork_hfs.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_HFS["
     - f_pattern :: "YES_CREATURE_MASTERWORK_HFS!"
 
 *** Vampires
+    raw/objects/creature_masterwork_vampire.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_VAMPIRE["
     - f_pattern :: "YES_CREATURE_MASTERWORK_VAMPIRE!"
 
 *** Monsters
+    raw/objects/creature_masterwork_monster.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_MONSTER["
     - f_pattern :: "YES_CREATURE_MASTERWORK_MONSTER!"
 
 *** Surface Creatures
+    raw/objects/creature_masterwork_animal.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_ANIMAL["
     - f_pattern :: "YES_CREATURE_MASTERWORK_ANIMAL!"
 
 *** Flying Creatures
+    raw/objects/creature_masterwork_fliers.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURES_MASTERWORK_FLIERS["
     - f_pattern :: "YES_CREATURES_MASTERWORK_FLIERS!"
 
 *** Megabeasts
+    raw/objects/creature_masterwork_megabeasts.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_MEGABEASTS["
     - f_pattern :: "YES_CREATURE_MASTERWORK_MEGABEASTS!"
 
 *** Fanciful
+    raw/objects/creature_masterwork_fanciful.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_FANCIFUL["
     - f_pattern :: "YES_CREATURE_MASTERWORK_FANCIFUL!"
 
 *** Werebeasts
+    raw/objects/creature_masterwork_werebeast.txt
     - Type :: Boolean
     - t_pattern :: "YES_CREATURE_MASTERWORK_WEREBEAST["
     - f_pattern :: "YES_CREATURE_MASTERWORK_WEREBEAST!"
@@ -875,72 +911,552 @@
 *** Animal Man Frequency
     raw/objects/c_variation_default.txt
     - Type :: Integer
-    CV_NEW_TAG:FREQUENCY
+    - Tag :: CV_NEW_TAG:FREQUENCY
 
 *** Giant Animal Frequency
     raw/objects/c_variation_giant.txt
     - Type :: Integer
-    CV_NEW_TAG:FREQUENCY
+    - Tag :: CV_NEW_TAG:FREQUENCY
+
+* Dwarf Page
+  raw/objects/entity_good_dwarf.txt
+  raw/objects/entity_hermit.txt
+** Workshops
+*** Bonecarver
+    - Type :: Boolean
+    - t_pattern :: "YES_BONECARVER["
+    - f_pattern :: "YES_BONECARVER!"
+
+*** Gemcutter    
+    - Type :: Boolean
+    - t_pattern :: "YES_GEMCUTTER["
+    - f_pattern :: "YES_GEMCUTTER!"
+
+*** Woodcrafter
+    - Type :: Boolean
+    - t_pattern :: "YES_WOODCRAFTER["
+    - f_pattern :: "YES_WOODCRAFTER!"
+
+*** Stonecrafter
+    - Type :: Boolean
+    - t_pattern :: "YES_STONECRAFTER["
+    - f_pattern :: "YES_STONECRAFTER!"
+
+*** Furniture Shop
+    - Type :: Boolean
+    - t_pattern :: "YES_FURNITURE["
+    - f_pattern :: "YES_FURNITURE!"
+
+*** Tailor
+    - Type :: Boolean
+    - t_pattern :: "YES_TAILOR["
+    - f_pattern :: "YES_TAILOR!"
+
+*** Pottery
+    - Type :: Boolean
+    - t_pattern :: "YES_POTTERY["
+    - f_pattern :: "YES_POTTERY!"
+
+*** Dyer Studio
+    - Type :: Boolean
+    - t_pattern :: "YES_DYER_STUDIO["
+    - f_pattern :: "YES_DYER_STUDIO!"
+
+*** Embroider Studio
+    - Type :: Boolean
+    - t_pattern :: "YES_EMBROIDERY_STUDIO["
+    - f_pattern :: "YES_EMBROIDERY_STUDIO!"
+
+*** Thatchery
+    - Type :: Boolean
+    - t_pattern :: "YES_THATCHERY_DWARF["
+    - f_pattern :: "YES_THATCHERY_DWARF!"
+
+** Misc
+*** Archaeology
+    - Type :: Boolean
+    - t_pattern :: "YESARCHEOLOGIST["
+    - f_pattern :: "!NOARCHEOLOGIST!"
+
+*** Alchemist
+    - Type :: Boolean
+    - t_pattern :: "YES_ALCHEMIST["
+    - f_pattern :: "YES_ALCHEMIST!"
+
+*** Weightbench
+    - Type :: Boolean
+    - t_pattern :: "YES_WEIGHTBENCH["
+    - f_pattern :: "YES_WEIGHTBENCH!"
+
+*** Shrine
+    - Type :: Boolean
+    - t_pattern :: "YES_SHRINE["
+    - f_pattern :: "YES_SHRINE!"
+
+*** Poison Vat
+    - Type :: Boolean
+    - t_pattern :: "YES_POISON_VAT["
+    - f_pattern :: "YES_POISON_VAT!"
+
+*** Handpump
+    - Type :: Boolean
+    - t_pattern :: "YES_HANDPUMP_DWARF["
+    - f_pattern :: "YES_HANDPUMP_DWARF!"
+
+*** Menu Titles
+    - Type :: Boolean
+    - t_pattern :: "YES_TITLES["
+    - f_pattern :: "YES_TITLES!"
+
+** Administration
+*** Liasons Office
+    - Type :: Boolean
+    - t_pattern :: "YES_LIAISON["
+    - f_pattern :: "YES_LIAISON!"
+
+*** Library
+    - Type :: Boolean
+    - t_pattern :: "YES_LIBRARY["
+    - f_pattern :: "YES_LIBRARY!"
+
+*** Guildhall
+    - Type :: Boolean
+    - t_pattern :: "YESGUILDHALL["
+    - f_pattern :: "YESGUILDHALL!"
+
+*** Garrison
+    - Type :: Boolean
+    - t_pattern :: "YESGARRISON["
+    - f_pattern :: "YESGARRISON!"
+
+*** Merchants
+    - Type :: Boolean
+    - t_pattern :: "YES_MERCHANTS_DWARF["
+    - f_pattern :: "YES_MERCHANTS_DWARF!"
+
+** Smelters
+*** Metallurgist
+    - Type :: Boolean
+    - t_pattern :: "YES_METALLURGIST["
+    - f_pattern :: "!NO_METALLURGIST!"
+
+*** Crucible
+    - Type :: Boolean
+    - t_pattern :: "YES_CRUCIBLE["
+    - f_pattern :: "YES_CRUCIBLE!"
+
+*** Blast Furnace
+    - Type :: Boolean
+    - t_pattern :: "YES_BLASTFURNACE["
+    - f_pattern :: "YES_BLASTFURNACE!"
+
+*** Volcanic Foundry
+    - Type :: Boolean
+    - t_pattern :: "YES_VOLCANIC["
+    - f_pattern :: "YES_VOLCANIC!"
+
+*** Crematory
+    - Type :: Boolean
+    - t_pattern :: "YES_CREMATORY["
+    - f_pattern :: "YES_CREMATORY!"
+
+*** Ore Processor
+    - Type :: Boolean
+    - t_pattern :: "YES_OREPROCESSOR["
+    - f_pattern :: "YES_OREPROCESSOR!"
+
+*** Brick Oven
+    - Type :: Boolean
+    - t_pattern :: "YES_BRICKOVEN["
+    - f_pattern :: "YES_BRICKOVEN!"
+
+** Forges
+*** Weaponry
+    - Type :: Boolean
+    - t_pattern :: "YES_WEAPONRY["
+    - f_pattern :: "YES_WEAPONRY!"
+
+*** Armory
+    - Type :: Boolean
+    - t_pattern :: "YES_ARMORY["
+    - f_pattern :: "YES_ARMORY!"
+
+*** Javelin Maker
+    - Type :: Boolean
+    - t_pattern :: "YES_JAVELIN["
+    - f_pattern :: "YES_JAVELIN!"
+
+*** Heavy Siegeworks
+    - Type :: Boolean
+    - t_pattern :: "YESHEAVYSIEGE["
+    - f_pattern :: "!NOHEAVYSIEGE!"
+
+*** Finishing Forge
+    - Type :: Boolean
+    - t_pattern :: "YES_FINISHING["
+    - f_pattern :: "YES_FINISHING!"
+
+*** Rockforge
+    - Type :: Boolean
+    - t_pattern :: "YES_ROCKFORGE["
+    - f_pattern :: "YES_ROCKFORGE!"
+
+*** Gemforge
+    - Type :: Boolean
+    - t_pattern :: "YES_GEMFORGE["
+    - f_pattern :: "YES_GEMFORGE!"
+
+*** Boneforge
+    - Type :: Boolean
+    - t_pattern :: "YES_BONEFORGE["
+    - f_pattern :: "YES_BONEFORGE!"
+
+*** Glassforge
+    - Type :: Boolean
+    - t_pattern :: "YES_GLASSFORGE["
+    - f_pattern :: "YES_GLASSFORGE!"
+
+*** Inventors Workbench
+    - Type :: Boolean
+    - t_pattern :: "YES_INVENTOR["
+    - f_pattern :: "YES_INVENTOR!"
+
+* Kobold Page
+  raw/objects/entity_savage_kobold.txt
+** Workshops
+*** Upholstery
+    - Type :: Boolean
+    - t_pattern :: "YES_UPHOLSTERY_KOBOLD["
+    - f_pattern :: "YES_UPHOLSTERY_KOBOLD!"
+
+*** Leathertrimmer
+    - Type :: Boolean
+    - t_pattern :: "YES_LEATHERTRIMMER_KOBOLD["
+    - f_pattern :: "YES_LEATHERTRIMMER_KOBOLD!"
+
+*** Scalecleaner
+    - Type :: Boolean
+    - t_pattern :: "YES_SCALE_KOBOLD["
+    - f_pattern :: "YES_SCALE_KOBOLD!"
+
+*** Shellsculptor
+    - Type :: Boolean
+    - t_pattern :: "YES_SHELL_KOBOLD["
+    - f_pattern :: "YES_SHELL_KOBOLD!"
+
+*** Glassblower
+    - Type :: Boolean
+    - t_pattern :: "YES_GLASS_KOBOLD["
+    - f_pattern :: "YES_GLASS_KOBOLD!"
+
+*** Clothcutter
+    - Type :: Boolean
+    - t_pattern :: "YES_CLOTH_KOBOLD["
+    - f_pattern :: "YES_CLOTH_KOBOLD!"
+
+*** Bonechipper
+    - Type :: Boolean
+    - t_pattern :: "YES_BONECHIPPER_KOBOLD["
+    - f_pattern :: "YES_BONECHIPPER_KOBOLD!"
+
+*** Chitinscrapper
+    - Type :: Boolean
+    - t_pattern :: "YES_CHITIN_KOBOLD["
+    - f_pattern :: "YES_CHITIN_KOBOLD!"
+
+*** Trapsetter
+    - Type :: Boolean
+    - t_pattern :: "YES_TRAP_KOBOLD["
+    - f_pattern :: "YES_TRAP_KOBOLD!"
+
+*** Thatchery
+    - Type :: Boolean
+    - t_pattern :: "YES_THATCH_KOBOLD["
+    - f_pattern :: "YES_THATCH_KOBOLD!"
+
+*** Woodcarver
+    - Type :: Boolean
+    - t_pattern :: "YES_WOODCARVER_KOBOLD["
+    - f_pattern :: "YES_WOODCARVER_KOBOLD!"
+
+** Training
+*** Parcour
+    - Type :: Boolean
+    - t_pattern :: "YES_PARCOUR_KOBOLD["
+    - f_pattern :: "YES_PARCOUR_KOBOLD!"
+
+*** Training Room
+    - Type :: Boolean
+    - t_pattern :: "YES_TRAINING_KOBOLD["
+    - f_pattern :: "YES_TRAINING_KOBOLD!"
+
+** Administration
+*** Breeding Warren
+    - Type :: Boolean
+    - t_pattern :: "YES_BREEDINGWARREN_KOBOLD["
+    - f_pattern :: "YES_BREEDINGWARREN_KOBOLD!"
+
+** Kobold Mining
+*** Shovels!
+    - Type :: Boolean
+    - t_pattern :: "YES_KOBOLD_MINING["
+    - f_pattern :: "YES_KOBOLD_MINING!"
+
+*** Stone undiggable!
+    raw/objects/material_template_default.txt
+    - Type :: Boolean
+    - t_pattern :: "YES_KOBOLD_UNDIGGABLE["
+    - f_pattern :: "YES_KOBOLD_UNDIGGABLE!"
+
+** Furnaces
+*** Crematory
+    - Type :: Boolean
+    - t_pattern :: "YES_CREMATORY_KOBOLD["
+    - f_pattern :: "YES_CREMATORY_KOBOLD!"
+
+*** Brick Oven
+    - Type :: Boolean
+    - t_pattern :: "YES_BRICK_KOBOLD["
+    - f_pattern :: "YES_BRICK_KOBOLD!"
+
+*** Booze Burner
+    - Type :: Boolean
+    - t_pattern :: "YES_BOOZEBURNER_KOBOLD["
+    - f_pattern :: "YES_BOOZEBURNER_KOBOLD!"
+
+*** Totempole
+    - Type :: Boolean
+    - t_pattern :: "YES_TOTEMPOLE_KOBOLD["
+    - f_pattern :: "YES_TOTEMPOLE_KOBOLD!"
+
+** Misc
+*** Handpump
+    - Type :: Boolean
+    - t_pattern :: "YES_HANDPUMP_KOBOLD["
+    - f_pattern :: "YES_HANDPUMP_KOBOLD!"
+
+*** Poison Vat
+    - Type :: Boolean
+    - t_pattern :: "YES_POISON_VAT_KOBOLD["
+    - f_pattern :: "YES_POISON_VAT_KOBOLD!"
+
+*** Great Archive
+    - Type :: Boolean
+    - t_pattern :: "YES_ARCHIVE_KOBOLD["
+    - f_pattern :: "YES_ARCHIVE_KOBOLD!"
+
+*** Menu titles
+    - Type :: Boolean
+    - t_pattern :: "YES_LABEL_KOBOLD["
+    - f_pattern :: "YES_LABEL_KOBOLD!"
+
+* Orc Page
+** Training
+*** Hermetic Garden
+    - Type :: Boolean
+    - t_pattern :: "YES_HERMETIC_ORC["
+    - f_pattern :: "YES_HERMETIC_ORC!"
+
+*** Sparring Pit
+    - Type :: Boolean
+    - t_pattern :: "YES_SPARRINGPIT_ORC["
+    - f_pattern :: "YES_SPARRINGPIT_ORC!"
+
+*** Dismemberment Theater
+    - Type :: Boolean
+    - t_pattern :: "YES_ANATOMIC_ORC["
+    - f_pattern :: "YES_ANATOMIC_ORC!"
+
+*** Blood Bowl Pitch
+    - Type :: Boolean
+    - t_pattern :: "YES_BLOODBOWL_ORC["
+    - f_pattern :: "YES_BLOODBOWL_ORC!"
+
+** Workshops
+*** Tribal Wargear
+    - Type :: Boolean
+    - t_pattern :: "YES_TRIBAL_ORC["
+    - f_pattern :: "YES_TRIBAL_ORC!"
+
+*** Raiders Drydock
+    - Type :: Boolean
+    - t_pattern :: "YES_RAIDER_ORC["
+    - f_pattern :: "YES_RAIDER_ORC!"
+
+*** Freelancers Guild
+    - Type :: Boolean
+    - t_pattern :: "YES_FREELANCER_ORC["
+    - f_pattern :: "YES_FREELANCER_ORC!"
+
+*** Orcish Factory
+    - Type :: Boolean
+    - t_pattern :: "YES_FACTORY_ORC["
+    - f_pattern :: "YES_FACTORY_ORC!"
+
+*** Fletcher
+    - Type :: Boolean
+    - t_pattern :: "YES_FLETCHER_ORC["
+    - f_pattern :: "YES_FLETCHER_ORC!"
+
+*** Outposts
+    - Type :: Boolean
+    - t_pattern :: "YES_OUTPOST_ORC["
+    - f_pattern :: "YES_OUTPOST_ORC!"
+
+** Caravanserai
+*** General Bazaar
+    - Type :: Boolean
+    - t_pattern :: "YES_CARAVAN_GENERAL_ORC["
+    - f_pattern :: "YES_CARAVAN_GENERAL_ORC!"
+
+*** Arms Bazaar
+    - Type :: Boolean
+    - t_pattern :: "YES_CARAVAN_ARMS_ORC["
+    - f_pattern :: "YES_CARAVAN_ARMS_ORC!"
+
+*** Farmers Bazaar
+    - Type :: Boolean
+    - t_pattern :: "YES_CARAVAN_FARM_ORC["
+    - f_pattern :: "YES_CARAVAN_FARM_ORC!"
+
+*** Shadowbroker
+    - Type :: Boolean
+    - t_pattern :: "YES_CARAVAN_SHADOW_ORC["
+    - f_pattern :: "YES_CARAVAN_SHADOW_ORC!"
+
+** Labor Cells
+*** Dwarf Cell
+    - Type :: Boolean
+    - t_pattern :: "YES_DWARF_CELL["
+    - f_pattern :: "YES_DWARF_CELL!"
+
+*** Human Cell
+    - Type :: Boolean
+    - t_pattern :: "YES_HUMAN_CELL["
+    - f_pattern :: "YES_HUMAN_CELL!"
+
+*** Elf Cell
+    - Type :: Boolean
+    - t_pattern :: "YES_ELF_CELL["
+    - f_pattern :: "YES_ELF_CELL!"
+
+** Ghetto
+*** Overseer
+    - Type :: Boolean
+    - t_pattern :: "YES_OVERSEER_ORC["
+    - f_pattern :: "YES_OVERSEER_ORC!"
+
+*** Stonecutter Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_QUARRY_ORC["
+    - f_pattern :: "YES_QUARRY_ORC!"
+
+*** Muckrakers Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_MUCKRACKER_ORC["
+    - f_pattern :: "YES_MUCKRACKER_ORC!"
+
+*** Tinkerers Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_TINKERER_ORC["
+    - f_pattern :: "YES_TINKERER_ORC!"
+
+*** Sawmill Sweatshop
+    - Type :: Boolean
+    - t_pattern :: "YES_SAWMILL_ORC["
+    - f_pattern :: "YES_SAWMILL_ORC!"
+
+*** Textile Sweatshop
+    - Type :: Boolean
+    - t_pattern :: "YES_TAILOR_ORC["
+    - f_pattern :: "YES_TAILOR_ORC!"
+
+*** Bonescrim Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_BONEGHETTO_ORC["
+    - f_pattern :: "YES_BONEGHETTO_ORC!"
+
+*** Poisoners Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_POISONGHETTO_ORC["
+    - f_pattern :: "YES_POISONGHETTO_ORC!"
+
+*** Thieves Shanty
+    - Type :: Boolean
+    - t_pattern :: "YES_THIEVES_ORC["
+    - f_pattern :: "YES_THIEVES_ORC!"
+
+** Furnaces
+*** Molten Pit
+    - Type :: Boolean
+    - t_pattern :: "YES_MOLTEN_PIT["
+    - f_pattern :: "YES_MOLTEN_PIT!"
+
+*** Blacksmoke Furnace
+    - Type :: Boolean
+    - t_pattern :: "YES_BLACKSMOKE_ORC["
+    - f_pattern :: "YES_BLACKSMOKE_ORC!"
+
+*** Ancient Foundry
+    - Type :: Boolean
+    - t_pattern :: "YES_ANCIENT_FOUNDRY_ORC["
+    - f_pattern :: "YES_ANCIENT_FOUNDRY_ORC!"
+
+*** Fluidcaster
+    - Type :: Boolean
+    - t_pattern :: "YES_FLUIDCASTER_ORC["
+    - f_pattern :: "YES_FLUIDCASTER_ORC!"
+
+*** Boneforge
+    - Type :: Boolean
+    - t_pattern :: "YES_BONEFORGE_ORC["
+    - f_pattern :: "YES_BONEFORGE_ORC!"
+
+*** Ashland Glassblower
+    - Type :: Boolean
+    - t_pattern :: "YES_ASHLANDGLASS_ORC["
+    - f_pattern :: "YES_ASHLANDGLASS_ORC!"
+
+*** Damasc Foundry
+    - Type :: Boolean
+    - t_pattern :: "YES_DAMASCFORGE_ORC["
+    - f_pattern :: "YES_DAMASCFORGE_ORC!"
+
+*** Totempole
+    - Type :: Boolean
+    - t_pattern :: "YES_TOTEMPOLE_ORC["
+    - f_pattern :: "YES_TOTEMPOLE_ORC!"
+
+*** Metallurgist
+    - Type :: Boolean
+    - t_pattern :: "YES_METALLURGIST_ORC["
+    - f_pattern :: "YES_METALLURGIST_ORC!"
+
+** Misc
+*** Handpump
+    - Type :: Boolean
+    - t_pattern :: "YES_HANDPUMP_ORC["
+    - f_pattern :: "YES_HANDPUMP_ORC!"
+
+*** Poison Vat
+    - Type :: Boolean
+    - t_pattern :: "YES_POISON_VAT_ORC["
+    - f_pattern :: "YES_POISON_VAT_ORC!"
+
+*** Great Archive
+    - Type :: Boolean
+    - t_pattern :: "YES_ARCHIVE_ORC["
+    - f_pattern :: "YES_ARCHIVE_ORC!"
+
+*** Menu Titles
+    - Type :: Boolean
+    - t_pattern :: "YES_ORC_LABEL["
+    - f_pattern :: "YES_ORC_LABEL!"
+
 
 * Data
             Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
             Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
-            OptionSingleReplace5.disabledValue = "YESGARRISON!"
-            OptionSingleReplace5.enabledValue = "YESGARRISON["
-            OptionSingleReplace6.disabledValue = "YESGUILDHALL!"
-            OptionSingleReplace6.enabledValue = "YESGUILDHALL["
-            OptionSingleReplace7.disabledValue = "YES_LIAISON!"
-            OptionSingleReplace7.enabledValue = "YES_LIAISON["
-            OptionSingleReplace8.disabledValue = "YES_LIBRARY!"
-            OptionSingleReplace8.enabledValue = "YES_LIBRARY["
-            OptionSingleReplace9.disabledValue = "YES_WEAPONRY!"
-            OptionSingleReplace9.enabledValue = "YES_WEAPONRY["
-            OptionSingleReplace10.disabledValue = "YES_ARMORY!"
-            OptionSingleReplace10.enabledValue = "YES_ARMORY["
-            OptionSingleReplace11.disabledValue = "YES_JAVELIN!"
-            OptionSingleReplace11.enabledValue = "YES_JAVELIN["
-            OptionSingleReplace12.disabledValue = "!NOHEAVYSIEGE!"
-            OptionSingleReplace12.enabledValue = "YESHEAVYSIEGE["
-            OptionSingleReplace13.disabledValue = "YES_FINISHING!"
-            OptionSingleReplace13.enabledValue = "YES_FINISHING["
-            OptionSingleReplace14.disabledValue = "!NO_METALLURGIST!"
-            OptionSingleReplace14.enabledValue = "YES_METALLURGIST["
-            OptionSingleReplace15.disabledValue = "YES_CRUCIBLE!"
-            OptionSingleReplace15.enabledValue = "YES_CRUCIBLE["
-            OptionSingleReplace16.disabledValue = "YES_BLASTFURNACE!"
-            OptionSingleReplace16.enabledValue = "YES_BLASTFURNACE["
-            OptionSingleReplace17.disabledValue = "YES_VOLCANIC!"
-            OptionSingleReplace17.enabledValue = "YES_VOLCANIC["
-            OptionSingleReplace18.disabledValue = "YES_BRICKOVEN!"
-            OptionSingleReplace18.enabledValue = "YES_BRICKOVEN["
-            OptionSingleReplace19.disabledValue = "YES_CREMATORY!"
-            OptionSingleReplace19.enabledValue = "YES_CREMATORY["
-            OptionSingleReplace20.disabledValue = "YES_OREPROCESSOR!"
-            OptionSingleReplace20.enabledValue = "YES_OREPROCESSOR["
-            OptionSingleReplace21.disabledValue = "!NOARCHEOLOGIST!"
-            OptionSingleReplace21.enabledValue = "YESARCHEOLOGIST["
-            OptionSingleReplace22.disabledValue = "YES_WEIGHTBENCH!"
-            OptionSingleReplace22.enabledValue = "YES_WEIGHTBENCH["
-            OptionSingleReplace23.disabledValue = "YES_SHRINE!"
-            OptionSingleReplace23.enabledValue = "YES_SHRINE["
-            OptionSingleReplace24.disabledValue = "YES_ALCHEMIST!"
-            OptionSingleReplace24.enabledValue = "YES_ALCHEMIST["
-            OptionSingleReplace25.disabledValue = "YES_TITLES!"
-            OptionSingleReplace25.enabledValue = "YES_TITLES["
-            OptionSingleReplace26.disabledValue = "YES_BONECARVER!"
-            OptionSingleReplace26.enabledValue = "YES_BONECARVER["
-            OptionSingleReplace27.disabledValue = "YES_GEMCUTTER!"
-            OptionSingleReplace27.enabledValue = "YES_GEMCUTTER["
-            OptionSingleReplace28.disabledValue = "YES_WOODCRAFTER!"
-            OptionSingleReplace28.enabledValue = "YES_WOODCRAFTER["
-            OptionSingleReplace29.disabledValue = "YES_STONECRAFTER!"
-            OptionSingleReplace29.enabledValue = "YES_STONECRAFTER["
-            OptionSingleReplace30.disabledValue = "YES_FURNITURE!"
-            OptionSingleReplace30.enabledValue = "YES_FURNITURE["
-            OptionSingleReplace31.disabledValue = "YES_TAILOR!"
-            OptionSingleReplace31.enabledValue = "YES_TAILOR["
-            OptionSingleReplace32.disabledValue = "YES_POTTERY!"
-            OptionSingleReplace32.enabledValue = "YES_POTTERY["
             Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
             Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
             Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -960,178 +1476,29 @@
             OptionSingleReplace35.enabledValue = "1"
             OptionSingleReplace36.disabledValue = "0"
             OptionSingleReplace36.enabledValue = "1"
-            OptionSingleReplace47.disabledValue = "YES_MERCHANTS_DWARF!"
-            OptionSingleReplace47.enabledValue = "YES_MERCHANTS_DWARF["
             Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
             Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
             OptionSingleReplace78.disabledValue = "#hi#de#"
             OptionSingleReplace78.enabledValue = "hide "
-            OptionSingleReplace87.disabledValue = "YES_ROCKFORGE!"
-            OptionSingleReplace87.enabledValue = "YES_ROCKFORGE["
-            OptionSingleReplace88.disabledValue = "YES_GEMFORGE!"
-            OptionSingleReplace88.enabledValue = "YES_GEMFORGE["
-            OptionSingleReplace89.disabledValue = "YES_BONEFORGE!"
-            OptionSingleReplace89.enabledValue = "YES_BONEFORGE["
-            OptionSingleReplace90.disabledValue = "YES_GLASSFORGE!"
-            OptionSingleReplace90.enabledValue = "YES_GLASSFORGE["
-            OptionSingleReplace91.disabledValue = "YES_DYER_STUDIO!"
-            OptionSingleReplace91.enabledValue = "YES_DYER_STUDIO["
-            OptionSingleReplace92.disabledValue = "YES_EMBROIDERY_STUDIO!"
-            OptionSingleReplace92.enabledValue = "YES_EMBROIDERY_STUDIO["
-            OptionSingleReplace93.disabledValue = "YES_THATCHERY_DWARF!"
-            OptionSingleReplace93.enabledValue = "YES_THATCHERY_DWARF["
-            OptionSingleReplace94.disabledValue = "YES_POISON_VAT!"
-            OptionSingleReplace94.enabledValue = "YES_POISON_VAT["
-            OptionSingleReplace107.disabledValue = "YES_HERMETIC_ORC!"
-            OptionSingleReplace107.enabledValue = "YES_HERMETIC_ORC["
-            OptionSingleReplace108.disabledValue = "YES_SPARRINGPIT_ORC!"
-            OptionSingleReplace108.enabledValue = "YES_SPARRINGPIT_ORC["
-            OptionSingleReplace109.disabledValue = "YES_ANATOMIC_ORC!"
-            OptionSingleReplace109.enabledValue = "YES_ANATOMIC_ORC["
-            OptionSingleReplace110.disabledValue = "YES_BLOODBOWL_ORC!"
-            OptionSingleReplace110.enabledValue = "YES_BLOODBOWL_ORC["
-            OptionSingleReplace111.disabledValue = "YES_CARAVAN_SHADOW_ORC!"
-            OptionSingleReplace111.enabledValue = "YES_CARAVAN_SHADOW_ORC["
-            OptionSingleReplace112.disabledValue = "YES_CARAVAN_FARM_ORC!"
-            OptionSingleReplace112.enabledValue = "YES_CARAVAN_FARM_ORC["
-            OptionSingleReplace113.disabledValue = "YES_CARAVAN_ARMS_ORC!"
-            OptionSingleReplace113.enabledValue = "YES_CARAVAN_ARMS_ORC["
-            OptionSingleReplace114.disabledValue = "YES_CARAVAN_GENERAL_ORC!"
-            OptionSingleReplace114.enabledValue = "YES_CARAVAN_GENERAL_ORC["
-            OptionSingleReplace115.disabledValue = "YES_TINKERER_ORC!"
-            OptionSingleReplace115.enabledValue = "YES_TINKERER_ORC["
-            OptionSingleReplace116.disabledValue = "YES_MUCKRACKER_ORC!"
-            OptionSingleReplace116.enabledValue = "YES_MUCKRACKER_ORC["
-            OptionSingleReplace117.disabledValue = "YES_QUARRY_ORC!"
-            OptionSingleReplace117.enabledValue = "YES_QUARRY_ORC["
-            OptionSingleReplace118.disabledValue = "YES_OVERSEER_ORC!"
-            OptionSingleReplace118.enabledValue = "YES_OVERSEER_ORC["
-            OptionSingleReplace119.disabledValue = "YES_CARPET_ORC!"
-            OptionSingleReplace119.enabledValue = "YES_CARPET_ORC["
-            OptionSingleReplace120.disabledValue = "YES_BANNER_ORC!"
-            OptionSingleReplace120.enabledValue = "YES_BANNER_ORC["
-            OptionSingleReplace121.disabledValue = "YES_CAMPFIRE_ORC!"
-            OptionSingleReplace121.enabledValue = "YES_CAMPFIRE_ORC["
-            OptionSingleReplace122.disabledValue = "YES_DISPLAYCASE_ORC!"
-            OptionSingleReplace122.enabledValue = "YES_DISPLAYCASE_ORC["
-            OptionSingleReplace123.disabledValue = "YES_FLUIDCASTER_ORC!"
-            OptionSingleReplace123.enabledValue = "YES_FLUIDCASTER_ORC["
-            OptionSingleReplace124.disabledValue = "YES_ANCIENT_FOUNDRY_ORC!"
-            OptionSingleReplace124.enabledValue = "YES_ANCIENT_FOUNDRY_ORC["
-            OptionSingleReplace125.disabledValue = "YES_BLACKSMOKE_ORC!"
-            OptionSingleReplace125.enabledValue = "YES_BLACKSMOKE_ORC["
-            OptionSingleReplace126.disabledValue = "YES_MOLTEN_PIT!"
-            OptionSingleReplace126.enabledValue = "YES_MOLTEN_PIT["
-            OptionSingleReplace127.disabledValue = "YES_POISONGHETTO_ORC!"
-            OptionSingleReplace127.enabledValue = "YES_POISONGHETTO_ORC["
-            OptionSingleReplace128.disabledValue = "YES_BONEGHETTO_ORC!"
-            OptionSingleReplace128.enabledValue = "YES_BONEGHETTO_ORC["
-            OptionSingleReplace129.disabledValue = "YES_TAILOR_ORC!"
-            OptionSingleReplace129.enabledValue = "YES_TAILOR_ORC["
-            OptionSingleReplace130.disabledValue = "YES_SAWMILL_ORC!"
-            OptionSingleReplace130.enabledValue = "YES_SAWMILL_ORC["
-            OptionSingleReplace131.disabledValue = "YES_THIEVES_ORC!"
-            OptionSingleReplace131.enabledValue = "YES_THIEVES_ORC["
-            OptionSingleReplace132.disabledValue = "YES_DWARF_CELL!"
-            OptionSingleReplace132.enabledValue = "YES_DWARF_CELL["
-            OptionSingleReplace133.disabledValue = "YES_ELF_CELL!"
-            OptionSingleReplace133.enabledValue = "YES_ELF_CELL["
-            OptionSingleReplace134.disabledValue = "YES_HUMAN_CELL!"
-            OptionSingleReplace134.enabledValue = "YES_HUMAN_CELL["
-            OptionSingleReplace135.disabledValue = "YES_ARCHIVE_ORC!"
-            OptionSingleReplace135.enabledValue = "YES_ARCHIVE_ORC["
-            OptionSingleReplace136.disabledValue = "YES_POISON_VAT_ORC!"
-            OptionSingleReplace136.enabledValue = "YES_POISON_VAT_ORC["
-            OptionSingleReplace137.disabledValue = "YES_HANDPUMP_ORC!"
-            OptionSingleReplace137.enabledValue = "YES_HANDPUMP_ORC["
-            OptionSingleReplace138.disabledValue = "YES_FREELANCER_ORC!"
-            OptionSingleReplace138.enabledValue = "YES_FREELANCER_ORC["
-            OptionSingleReplace139.disabledValue = "YES_RAIDER_ORC!"
-            OptionSingleReplace139.enabledValue = "YES_RAIDER_ORC["
-            OptionSingleReplace140.disabledValue = "YES_TRIBAL_ORC!"
-            OptionSingleReplace140.enabledValue = "YES_TRIBAL_ORC["
-            OptionSingleReplace141.disabledValue = "YES_BONEFORGE_ORC!"
-            OptionSingleReplace141.enabledValue = "YES_BONEFORGE_ORC["
-            OptionSingleReplace142.disabledValue = "YES_FACTORY_ORC!"
-            OptionSingleReplace142.enabledValue = "YES_FACTORY_ORC["
-            OptionSingleReplace143.disabledValue = "YES_FLETCHER_ORC!"
-            OptionSingleReplace143.enabledValue = "YES_FLETCHER_ORC["
-            OptionSingleReplace144.disabledValue = "YES_DAMASCFORGE_ORC!"
-            OptionSingleReplace144.enabledValue = "YES_DAMASCFORGE_ORC["
-            OptionSingleReplace145.disabledValue = "YES_TOTEMPOLE_ORC!"
-            OptionSingleReplace145.enabledValue = "YES_TOTEMPOLE_ORC["
-            OptionSingleReplace146.disabledValue = "YES_ASHLANDGLASS_ORC!"
-            OptionSingleReplace146.enabledValue = "YES_ASHLANDGLASS_ORC["
-            OptionSingleReplace147.disabledValue = "YES_INVENTOR!"
-            OptionSingleReplace147.enabledValue = "YES_INVENTOR["
-            OptionSingleReplace148.disabledValue = "YES_HANDPUMP_DWARF!"
-            OptionSingleReplace148.enabledValue = "YES_HANDPUMP_DWARF["
-            OptionSingleReplace149.disabledValue = "YES_METALLURGIST_ORC!"
-            OptionSingleReplace149.enabledValue = "YES_METALLURGIST_ORC["
-            OptionSingleReplace150.disabledValue = "YES_ORC_LABEL!"
-            OptionSingleReplace150.enabledValue = "YES_ORC_LABEL["
-            OptionSingleReplace154.disabledValue = "YES_OUTPOST_ORC!"
-            OptionSingleReplace154.enabledValue = "YES_OUTPOST_ORC["
-            OptionSingleReplace155.disabledValue = "YES_LABEL_KOBOLD!"
-            OptionSingleReplace155.enabledValue = "YES_LABEL_KOBOLD["
-            OptionSingleReplace156.disabledValue = "YES_ARCHIVE_KOBOLD!"
-            OptionSingleReplace156.enabledValue = "YES_ARCHIVE_KOBOLD["
-            OptionSingleReplace157.disabledValue = "YES_POISON_VAT_KOBOLD!"
-            OptionSingleReplace157.enabledValue = "YES_POISON_VAT_KOBOLD["
-            OptionSingleReplace158.disabledValue = "YES_HANDPUMP_KOBOLD!"
-            OptionSingleReplace158.enabledValue = "YES_HANDPUMP_KOBOLD["
             OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
             OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
             OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
             OptionSingleReplace160.enabledValue = "[PET_EXOTIC]REDUCE_PET_MOD"
-            OptionSingleReplace161.disabledValue = "YES_DISPLAYCASE_KOBOLD!"
-            OptionSingleReplace161.enabledValue = "YES_DISPLAYCASE_KOBOLD["
-            OptionSingleReplace162.disabledValue = "YES_CAMPFIRE_KOBOLD!"
-            OptionSingleReplace162.enabledValue = "YES_CAMPFIRE_KOBOLD["
-            OptionSingleReplace163.disabledValue = "YES_CREMATORY_KOBOLD!"
-            OptionSingleReplace163.enabledValue = "YES_CREMATORY_KOBOLD["
-            OptionSingleReplace164.disabledValue = "YES_BRICK_KOBOLD!"
-            OptionSingleReplace164.enabledValue = "YES_BRICK_KOBOLD["
-            OptionSingleReplace165.disabledValue = "YES_BOOZEBURNER_KOBOLD!"
-            OptionSingleReplace165.enabledValue = "YES_BOOZEBURNER_KOBOLD["
-            OptionSingleReplace166.disabledValue = "YES_TOTEMPOLE_KOBOLD!"
-            OptionSingleReplace166.enabledValue = "YES_TOTEMPOLE_KOBOLD["
             OptionSingleReplace167.disabledValue = "season-palette stop "
             OptionSingleReplace167.enabledValue = "season-palette start"
-            OptionSingleReplace168.disabledValue = "YES_CLOTH_KOBOLD!"
-            OptionSingleReplace168.enabledValue = "YES_CLOTH_KOBOLD["
-            OptionSingleReplace169.disabledValue = "YES_GLASS_KOBOLD!"
-            OptionSingleReplace169.enabledValue = "YES_GLASS_KOBOLD["
-            OptionSingleReplace170.disabledValue = "YES_SHELL_KOBOLD!"
-            OptionSingleReplace170.enabledValue = "YES_SHELL_KOBOLD["
-            OptionSingleReplace171.disabledValue = "YES_SCALE_KOBOLD!"
-            OptionSingleReplace171.enabledValue = "YES_SCALE_KOBOLD["
-            OptionSingleReplace172.disabledValue = "YES_LEATHERTRIMMER_KOBOLD!"
-            OptionSingleReplace172.enabledValue = "YES_LEATHERTRIMMER_KOBOLD["
-            OptionSingleReplace173.disabledValue = "YES_UPHOLSTERY_KOBOLD!"
-            OptionSingleReplace173.enabledValue = "YES_UPHOLSTERY_KOBOLD["
-            OptionSingleReplace174.disabledValue = "YES_BONECHIPPER_KOBOLD!"
-            OptionSingleReplace174.enabledValue = "YES_BONECHIPPER_KOBOLD["
-            OptionSingleReplace175.disabledValue = "YES_CHITIN_KOBOLD!"
-            OptionSingleReplace175.enabledValue = "YES_CHITIN_KOBOLD["
-            OptionSingleReplace176.disabledValue = "YES_THATCH_KOBOLD!"
-            OptionSingleReplace176.enabledValue = "YES_THATCH_KOBOLD["
-            OptionSingleReplace177.disabledValue = "YES_BREEDINGWARREN_KOBOLD!"
-            OptionSingleReplace177.enabledValue = "YES_BREEDINGWARREN_KOBOLD["
-            OptionSingleReplace178.disabledValue = "YES_TRAINING_KOBOLD!"
-            OptionSingleReplace178.enabledValue = "YES_TRAINING_KOBOLD["
-            OptionSingleReplace179.disabledValue = "YES_PARCOUR_KOBOLD!"
-            OptionSingleReplace179.enabledValue = "YES_PARCOUR_KOBOLD["
-            OptionSingleReplace180.disabledValue = "YES_TRAP_KOBOLD!"
-            OptionSingleReplace180.enabledValue = "YES_TRAP_KOBOLD["
-            OptionSingleReplace181.disabledValue = "YES_WOODCARVER_KOBOLD!"
-            OptionSingleReplace181.enabledValue = "YES_WOODCARVER_KOBOLD["
-            OptionSingleReplace182.disabledValue = "YES_KOBOLD_MINING!"
-            OptionSingleReplace182.enabledValue = "YES_KOBOLD_MINING["
-            OptionSingleReplace185.disabledValue = "YES_KOBOLD_UNDIGGABLE!"
-            OptionSingleReplace185.enabledValue = "YES_KOBOLD_UNDIGGABLE["
             Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
 
 
 
+* Unused
+  OptionSingleReplace161.disabledValue = "YES_DISPLAYCASE_KOBOLD!"
+  OptionSingleReplace161.enabledValue = "YES_DISPLAYCASE_KOBOLD["
+  OptionSingleReplace122.disabledValue = "YES_DISPLAYCASE_ORC!"
+  OptionSingleReplace122.enabledValue = "YES_DISPLAYCASE_ORC["
+  OptionSingleReplace119.disabledValue = "YES_CARPET_ORC!"
+  OptionSingleReplace119.enabledValue = "YES_CARPET_ORC["
+  OptionSingleReplace120.disabledValue = "YES_BANNER_ORC!"
+  OptionSingleReplace120.enabledValue = "YES_BANNER_ORC["
+  OptionSingleReplace121.disabledValue = "YES_CAMPFIRE_ORC!"
+  OptionSingleReplace121.enabledValue = "YES_CAMPFIRE_ORC["
