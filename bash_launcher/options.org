@@ -1251,6 +1251,7 @@
     - f_pattern :: "YES_LABEL_KOBOLD!"
 
 * Orc Page
+  raw/objects/entity_slaver_orc.txt
 ** Training
 *** Hermetic Garden
     - Type :: Boolean
@@ -1453,10 +1454,240 @@
     - t_pattern :: "YES_ORC_LABEL["
     - f_pattern :: "YES_ORC_LABEL!"
 
+* World Gen.
+  data/init/world_gen.txt
+** Currently Editing
+   - Type :: Menu
+   - Action :: Set world generator(s) to modify
+** Hostiles & Interactions
+*** Megabeasts
+    - Token :: MEGABEAST_CAP
+    - Type :: Integer
+    - Values :: 
+
+*** Semi-Megabeasts
+    - Token :: SEMIMEGABEAST_CAP
+    - Type :: Integer
+    - Values :: 
+
+*** Titans
+    - Token :: TITAN_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Demons
+    - Token :: DEMON_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Night Creatures
+    - Token :: NIGHT_TROLL_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Bogeymen
+    - Token :: BOGEYMAN_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Vampires
+    - Token :: VAMPIRE_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Were-beasts
+    - Token :: WEREBEAST_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Necromancers
+    - Token :: SECRET_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Evil Interactions
+    - Token :: REGIONAL_INTERACTION_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Disturbed Dead
+    - Token :: DISTURBANCE_INTERACTION_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Evil Clouds
+    - Token :: EVIL_CLOUD_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Evil Rains
+    - Token :: EVIL_RAIN_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+** Caverns & Layers
+*** Caverns
+    - Token :: CAVERN_LAYER_COUNT
+    - Type :: Integer
+    - Values :: 
+
+*** Cavern Openness
+    - Token :: CAVERN_LAYER_OPENNESS_MIN CAVERN_LAYER_OPENNESS_MAX
+    - Type :: Integer:Integer
+    - Values :: 
+
+*** Cavern Passages 
+    - Token :: CAVERN_LAYER_PASSAGE_DENSITY_MIN CAVERN_LAYER_PASSAGE_DENSITY_MAX
+    - Type :: Integer:Integer
+    - Values ::
+
+*** Cavern Water
+    - Tokens :: CAVERN_LAYER_WATER_MIN CAVERN_LAYER_WATER_MAX
+    - Type :: Integer:Integer
+    - Values :: 
+
+*** Levels Above 1st Cavern
+    - Token :: LEVELS_ABOVE_LAYER_1
+    - Type :: Integer
+    - Values :: 
+
+*** Levels Above 2nd Cavern
+    - Token :: LEVELS_ABOVE_LAYER_2
+    - Type :: Integer
+    - Values :: 
+
+*** Levels Above 3rd Cavern
+    - Token :: LEVELS_ABOVE_LAYER_3
+    - Type :: Integer
+    - Values :: 
+
+*** Levels Above Magma
+    - Token :: LEVELS_ABOVE_LAYER_4
+    - Type :: Integer
+    - Values :: 
+
+*** Levels Above HFS
+    - Token :: LEVELS_ABOVE_LAYER_5
+    - Type :: Integer
+    - Values :: 
+
+*** Magma Lake
+    - Token :: 
+    - Type :: Boolean
+    - Values :: 
+
+*** HFS
+    - Token :: 
+    - Type :: Boolean
+    - Values :: 
+
+
+** Areas
+*** Evil Areas
+    - Token :: EVIL_SQ_COUNTS
+    - Type :: Integer:Integer:Integer
+    - Values :: 
+
+*** Good Areas
+    - Token :: GOOD_SQ_COUNTS
+    - Type :: Integer:Integer:Integer
+    - Values :: 
+
+** Caves
+*** Cave Size Min/Max
+    - Token :: CAVE_MIN_SIZE CAVE_MAX_SIZE
+    - Type :: Integer:Integer
+    - Values :: 
+
+*** Mountain Caves
+    - Tokens :: MOUNTAIN_CAVE_MIN
+    - Type :: Integer
+    - Values :: 
+
+*** Other Caves
+    - Token :: NON_MOUNTAIN_CAVE_MIN
+    - Type :: Integer
+    - Values :: 
+
+*** Caves Visible
+    - Token :: ALL_CAVES_VISIBLE
+    - Type :: Boolean
+    - Values :: 
+
+** Miscellaneous
+*** Number of Civs
+    - Token :: TOTAL_CIV_NUMBER
+    - Type :: Integer
+    - Values :: 
+
+*** Embark Points
+    - Token :: EMBARK_POINTS
+    - Type :: Integer
+    - Values :: 
+
+*** End Year
+    - Token :: END_YEAR
+    - Type :: Integer
+    - Values :: 
+
+*** Population Cap
+    - Token :: TOTAL_CIV_POPULATION
+    - Type :: Integer
+    - Values :: 
+
+*** Mineral Scarcity
+    - Token :: MINERAL_SCARCITY
+    - Type :: Integer
+    - Values :: 
+
+
+* 
+
+	[DRAINAGE:0:100:400:400]
+	[VOLCANISM:0:100:400:400]
+	[SAVAGERY:0:100:400:400]
+	[ELEVATION_FREQUENCY:1:1:1:1:1:1]
+	[RAIN_FREQUENCY:1:1:1:1:1:1]
+	[DRAINAGE_FREQUENCY:1:1:1:1:1:1]
+	[TEMPERATURE_FREQUENCY:1:1:1:1:1:1]
+	[SAVAGERY_FREQUENCY:1:1:1:1:1:1]
+	[VOLCANISM_FREQUENCY:1:1:1:1:1:1]
+	[POLE:NORTH_AND_OR_SOUTH]
+	[TITAN_ATTACK_TRIGGER:80:0:100000]
+	[GENERATE_DIVINE_MATERIALS:1]
+	[PEAK_NUMBER_MIN:12]
+	[PARTIAL_OCEAN_EDGE_MIN:0]
+	[COMPLETE_OCEAN_EDGE_MIN:4]
+	[VOLCANO_MIN:4]
+	[REGION_COUNTS:SWAMP:252:1:1]
+	[REGION_COUNTS:DESERT:252:1:1]
+	[REGION_COUNTS:FOREST:1008:3:2]
+	[REGION_COUNTS:MOUNTAINS:2016:2:2]
+	[REGION_COUNTS:OCEAN:2016:1:1]
+	[REGION_COUNTS:GLACIER:63:0:0]
+	[REGION_COUNTS:TUNDRA:126:0:0]
+	[REGION_COUNTS:GRASSLAND:2016:3:2]
+	[REGION_COUNTS:HILLS:2016:3:2]
+	[EROSION_CYCLE_COUNT:250]
+	[RIVER_MINS:100:100]
+	[PERIODICALLY_ERODE_EXTREMES:1]
+	[OROGRAPHIC_PRECIPITATION:1]
+	[SUBREGION_MAX:3500]
+	[HAVE_BOTTOM_LAYER_1:1]
+	[HAVE_BOTTOM_LAYER_2:1]
+	[LEVELS_ABOVE_GROUND:15]
+	[LEVELS_AT_BOTTOM:1]
+	[SHOW_EMBARK_TUNNEL:2]
+	[SITE_CAP:1500]
+	[PLAYABLE_CIVILIZATION_REQUIRED:1]
+	[ELEVATION_RANGES:33000:4032:2016]
+	[RAIN_RANGES:2016:4032:2016]
+	[DRAINAGE_RANGES:2016:4032:2016]
+	[SAVAGERY_RANGES:2016:4032:2016]
+	[VOLCANISM_RANGES:2016:4032:2016]
+
 
 * Data
-            Me.optNumPatternEmbarkGroupSize.Value = New Decimal(New Integer() {7, 0, 0, 0})
-            Me.optNumPatternTwbtLevels.Value = New Decimal(New Integer() {10, 0, 0, 0})
             Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
             Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
             Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
