@@ -1572,15 +1572,14 @@
     - Values :: 
 
 *** Magma Lake
-    - Token :: 
+    - Token :: HAVE_BOTTOM_LAYER_1
     - Type :: Boolean
-    - Values :: 
+    - Values :: 0|1
 
 *** HFS
-    - Token :: 
+    - Token :: HAVE_BOTTOM_LAYER_2
     - Type :: Boolean
-    - Values :: 
-
+    - Values :: 0|1
 
 ** Areas
 *** Evil Areas
@@ -1612,7 +1611,7 @@
 *** Caves Visible
     - Token :: ALL_CAVES_VISIBLE
     - Type :: Boolean
-    - Values :: 
+    - Values :: 0|1
 
 ** Miscellaneous
 *** Number of Civs
@@ -1641,88 +1640,16 @@
     - Values :: 
 
 
-* 
-
-	[DRAINAGE:0:100:400:400]
-	[VOLCANISM:0:100:400:400]
-	[SAVAGERY:0:100:400:400]
-	[ELEVATION_FREQUENCY:1:1:1:1:1:1]
-	[RAIN_FREQUENCY:1:1:1:1:1:1]
-	[DRAINAGE_FREQUENCY:1:1:1:1:1:1]
-	[TEMPERATURE_FREQUENCY:1:1:1:1:1:1]
-	[SAVAGERY_FREQUENCY:1:1:1:1:1:1]
-	[VOLCANISM_FREQUENCY:1:1:1:1:1:1]
-	[POLE:NORTH_AND_OR_SOUTH]
-	[TITAN_ATTACK_TRIGGER:80:0:100000]
-	[GENERATE_DIVINE_MATERIALS:1]
-	[PEAK_NUMBER_MIN:12]
-	[PARTIAL_OCEAN_EDGE_MIN:0]
-	[COMPLETE_OCEAN_EDGE_MIN:4]
-	[VOLCANO_MIN:4]
-	[REGION_COUNTS:SWAMP:252:1:1]
-	[REGION_COUNTS:DESERT:252:1:1]
-	[REGION_COUNTS:FOREST:1008:3:2]
-	[REGION_COUNTS:MOUNTAINS:2016:2:2]
-	[REGION_COUNTS:OCEAN:2016:1:1]
-	[REGION_COUNTS:GLACIER:63:0:0]
-	[REGION_COUNTS:TUNDRA:126:0:0]
-	[REGION_COUNTS:GRASSLAND:2016:3:2]
-	[REGION_COUNTS:HILLS:2016:3:2]
-	[EROSION_CYCLE_COUNT:250]
-	[RIVER_MINS:100:100]
-	[PERIODICALLY_ERODE_EXTREMES:1]
-	[OROGRAPHIC_PRECIPITATION:1]
-	[SUBREGION_MAX:3500]
-	[HAVE_BOTTOM_LAYER_1:1]
-	[HAVE_BOTTOM_LAYER_2:1]
-	[LEVELS_ABOVE_GROUND:15]
-	[LEVELS_AT_BOTTOM:1]
-	[SHOW_EMBARK_TUNNEL:2]
-	[SITE_CAP:1500]
-	[PLAYABLE_CIVILIZATION_REQUIRED:1]
-	[ELEVATION_RANGES:33000:4032:2016]
-	[RAIN_RANGES:2016:4032:2016]
-	[DRAINAGE_RANGES:2016:4032:2016]
-	[SAVAGERY_RANGES:2016:4032:2016]
-	[VOLCANISM_RANGES:2016:4032:2016]
-
-
 * Data
-            Me.optNumMineralScarcity.Value = New Decimal(New Integer() {100, 0, 0, 0})
-            Me.optNumCivNumber.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumEmbarkPoints.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumEndYear.Value = New Decimal(New Integer() {2, 0, 0, 0})
-            Me.optNumPopSize.Value = New Decimal(New Integer() {1, 0, 0, -2147483648})
-            Me.optNumCaveSizeMin.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumCaveSizeMax.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            OptionSingleReplace34.disabledValue = "0"
-            OptionSingleReplace34.enabledValue = "1"
-            Me.optNumCaverns.Value = New Decimal(New Integer() {3, 0, 0, 0})
-            Me.optNumAboveCav1.Value = New Decimal(New Integer() {5, 0, 0, 0})
-            Me.optNumAboveCav2.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumAboveCav3.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumAboveMagma.Value = New Decimal(New Integer() {1, 0, 0, 0})
-            Me.optNumAboveHFS.Value = New Decimal(New Integer() {2, 0, 0, 0})
-            OptionSingleReplace35.disabledValue = "0"
-            OptionSingleReplace35.enabledValue = "1"
-            OptionSingleReplace36.disabledValue = "0"
-            OptionSingleReplace36.enabledValue = "1"
-            Me.OptionNumeric2.Value = New Decimal(New Integer() {50, 0, 0, 0})
-            Me.OptionNumeric1.Value = New Decimal(New Integer() {50, 0, 0, 0})
-            Me.OptionNumeric3.Value = New Decimal(New Integer() {100, 0, 0, 0})
             OptionSingleReplace78.disabledValue = "#hi#de#"
             OptionSingleReplace78.enabledValue = "hide "
             OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
             OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
             OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
             OptionSingleReplace160.enabledValue = "[PET_EXOTIC]REDUCE_PET_MOD"
-            OptionSingleReplace167.disabledValue = "season-palette stop "
-            OptionSingleReplace167.enabledValue = "season-palette start"
-            Me.optNumHFSLevels.Value = New Decimal(New Integer() {1, 0, 0, 0})
-
-
 
 * Unused
+** No Keys in files
   OptionSingleReplace161.disabledValue = "YES_DISPLAYCASE_KOBOLD!"
   OptionSingleReplace161.enabledValue = "YES_DISPLAYCASE_KOBOLD["
   OptionSingleReplace122.disabledValue = "YES_DISPLAYCASE_ORC!"
@@ -1733,3 +1660,9 @@
   OptionSingleReplace120.enabledValue = "YES_BANNER_ORC["
   OptionSingleReplace121.disabledValue = "YES_CAMPFIRE_ORC!"
   OptionSingleReplace121.enabledValue = "YES_CAMPFIRE_ORC["
+
+** Has Keys in files  
+  OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
+  OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
+  OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
+  OptionSingleReplace160.enabledValue = "[PET_EXOTIC]REDUCE_PET_MOD"
