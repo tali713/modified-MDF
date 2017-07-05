@@ -6,7 +6,7 @@
 
 * Init Page
 ** General World
-    - File :: d_init.txt
+    - File :: data/init/d_init.txt
 *** Temperature
     - Token :: TEMPERATURE
     - Type :: Boolean
@@ -58,7 +58,7 @@
     - Values :: Cap|Percentage
 
 ** Save & Load
-    - File :: d_init.txt
+    - File :: data/init/d_init.txt
 *** Auto-Save
     - Token :: AUTOSAVE
     - Type :: Menu
@@ -90,7 +90,7 @@
     - Values :: YES|NO
 
 ** Announcements
-   announcements.txt
+   data/init/announcements.txt
 *** Transform Message
     - Type :: Boolean
     - t_pattern :: ":BOX:P:R]YES_STOP_TRANS"
@@ -105,20 +105,20 @@
 
 ** Graphics
 *** Color
-    colors.txt
+    data/init/colors.txt
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/Colors/
     - Values :: f(get themes from file name)
     - Action :: Copy file to data/init/colors.txt
 
 *** Print Mode
-    init.txt
+    data/init/init.txt
     - Token :: PRINT_MODE
     - Type :: Menu
     - Values :: 2D|2DSW|2DASYNC|STANDARD|ACCUM|FRAME|VBO|TWBT
 
 *** Font
-    font.ttf
+    data/art/font.ttf
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/Colors/
     - Values :: f(get fonts from file name)
@@ -132,20 +132,20 @@
                 optionally set color theme, maybe do something depending on ASCII/MDF?
 
 *** Truetype Font
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: TRUETYPE
     - Values YES|NO
 
 *** Creature Sprites
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: GRAPHICS
     - Values :: YES|NO
 
 ** Text-Will-Be-Text Plugin
 *** TWBT Font
-    font.png
+    data/art/font.png
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/TwbtFonts/
     - Values :: f(get fonts from file name)
@@ -159,38 +159,38 @@
 
 ** FPS & Sound
 *** FPS Display
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: FPS
     - Values :: YES|NO
 
 *** Graphics Cap
-    init.txt
+    data/init/init.txt
     - Type :: Integer
     - Token :: G_FPS_CAP
     - Values :: 0-9999
 
 *** FPS Cap
-    init.txt
+    data/init/init.txt
     - Type :: Integer
     - Token :: FPS_CAP
     - Values :: 0-9999
 
 *** Sound
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: SOUND
     - Values :: YES|NO
 
 *** Volume
-    init.txt
+    data/init/init.txt
     - Type :: Integer
     - Token :: VOLUME
     - Values :: 0-255
 
 ** Embark & Migrants
 *** Size
-    d_init.txt
+    data/init/d_init.txt
     - Type :: Integer
     - Token :: EMBARK_RECTANGLE
     - Values :: 1-16
@@ -208,63 +208,63 @@
     - Values :: 7-999999
 
 *** Embark Warning
-    d_init.txt
+    data/init/d_init.txt
     - Type :: Boolean
     - Token :: EMBARK_WARNING_ALWAYS
     - Values :: YES|NO
 
 *** Migrant Labors
-    d_init.txt
+    data/init/d_init.txt
     - Type :: Menu
     - Token :: SET_LABOR_LISTS
     - Values :: NO|UNIT_TYPE|SKILLS
 
 ** Miscellaneous
 *** Keybinds
-    interface.txt
+    data/init/interface.txt
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/Keybinds/
     - Values :: f(get names from files)
     - Action :: Copy file to data/init/interface.txt
 *** Arena
-    arena.txt
+    data/init/arena.txt
     - Type :: Menu
     - Data Source :: MasterworkDwarfFortress/Settings/Arena/
     - Values :: f(get names from files)
     - Action :: Copy file to data/init/arena.txt
 
 *** Window
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: WINDOWED
     - Values :: YES|NO
 
 *** Priority
-    init.txt
+    data/init/init.txt
     - Type :: Menu
     - Token :: PRIORITY
     - Values :: IDLE|BELOW_NORMAL|NORMAL|ABOVE_NORMAL|HIGH|REALTIME
 
 *** Macro
-    init.txt
+    data/init/init.txt
     - Type :: Integer
     - Token :: MACRO_MS
     - Values :: 0-999999
 
 *** Intro Movie
-    init.txt
+    data/init/init.txt
     - Type :: Boolean
     - Token :: INTRO
     - Values :: YES|NO
 
 *** Calendar
-    dfhack.init
+    data/init/dfhack.init
     - Type :: Menu
     - Token :: timestream (special)
     - Values :: 0.125|0.250|0.500|1.000|2.000|4.000|8.000
 
 *** Seasonal Colors
-    dfhack.init
+    data/init/dfhack.init
     - Type :: Boolean
     - t_pattern :: "season-palette start"
     - f_pattern :: "season-palette stop "
@@ -369,7 +369,7 @@
     - f_pattern :: "!NO_TANTRUM!"
 
 *** Grazing Coefficient
-    d_init.txt
+    data/init/d_init.txt
     - Type :: Integer
     - Token :: GRAZE_COEFFICIENT
     - Values :: 1-9999
@@ -1639,10 +1639,7 @@
     - Type :: Integer
     - Values :: 
 
-
 * Data
-            OptionSingleReplace78.disabledValue = "#hi#de#"
-            OptionSingleReplace78.enabledValue = "hide "
             OptionSingleReplace159.disabledValue = "!NO_MORE_ADV_OPTIONS!"
             OptionSingleReplace159.enabledValue = "YES_MORE_ADV_OPTIONS["
             OptionSingleReplace160.disabledValue = "[PET]EXOTIC!REDUCE_PET_MOD"
